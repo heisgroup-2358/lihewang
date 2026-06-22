@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ProductCard } from "@/components/shared/product-card";
-import { PRODUCTS } from "@/lib/mock-data";
+import { prisma } from "@/lib/prisma";
 
 export default async function ProductDetailPage({
   params,
@@ -13,12 +13,19 @@ export default async function ProductDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = PRODUCTS.find((p) => p.slug === slug);
+  const product = await prisma.product.findUnique({
+    where: { slug },
+    include: { category: true },
+  });
+
   if (!product) notFound();
 
-  const related = PRODUCTS.filter(
-    (p) => p.category === product.category && p.slug !== product.slug
-  ).slice(0, 3);
+  const details: string[] = JSON.parse(product.details);
+
+  const related = await prisma.product.findMany({
+    where: { categoryId: product.categoryId, slug: { not: slug }, isActive: true },
+    take: 3,
+  });
 
   return (
     <>
@@ -28,8 +35,8 @@ export default async function ProductDetailPage({
           <span className="mx-2">/</span>
           <Link href="/products" className="hover:text-foreground transition-colors">產品</Link>
           <span className="mx-2">/</span>
-          <Link href={`/products?category=${product.category}`} className="hover:text-foreground transition-colors">
-            {product.origin}
+          <Link href={`/products?category=${product.category.slug}`} className="hover:text-foreground transition-colors">
+            {product.category.name}
           </Link>
           <span className="mx-2">/</span>
           <span className="text-foreground">{product.name}</span>
@@ -73,7 +80,7 @@ export default async function ProductDetailPage({
 
             <div className="rounded-xl bg-primary/5 p-5">
               <p className="text-sm text-muted-foreground line-through">
-                零售價 ${product.price}
+                零售價 ${product.retailPrice}
               </p>
               <div className="mt-1 flex items-baseline gap-3">
                 <span className="font-heading text-3xl font-bold text-primary">
@@ -138,7 +145,7 @@ export default async function ProductDetailPage({
             <div>
               <h3 className="text-sm font-semibold mb-3">產品詳情</h3>
               <ul className="space-y-2">
-                {product.details.map((detail, i) => (
+                {details.map((detail, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
                     {detail}
@@ -164,10 +171,10 @@ export default async function ProductDetailPage({
                     name={p.name}
                     brand={p.brand}
                     origin={p.origin}
-                    price={p.price}
+                    price={p.retailPrice}
                     rating={p.rating}
                     reviewCount={p.reviewCount}
-                    badge={p.badge}
+                    badge={p.badge ?? undefined}
                   />
                 ))}
               </div>
