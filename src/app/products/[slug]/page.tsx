@@ -129,17 +129,22 @@ export default async function ProductDetailPage({
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 rounded-xl border border-border/60 p-4">
-              {[
-                { icon: Truck, text: "免運費" },
-                { icon: RefreshCw, text: "7日退換" },
-                { icon: Shield, text: "正品保證" },
-              ].map((item) => (
-                <div key={item.text} className="flex flex-col items-center gap-1.5 text-center">
-                  <item.icon className="h-5 w-5 text-primary" />
-                  <span className="text-xs text-muted-foreground">{item.text}</span>
-                </div>
-              ))}
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: Truck, text: "免運費" },
+                  { icon: Shield, text: "日本正貨保證" },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-center gap-2 rounded-xl border border-border/60 p-3">
+                    <item.icon className="h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-xs font-medium">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="rounded-xl border border-border/60 p-3 text-xs text-muted-foreground leading-relaxed">
+                食品及禮盒類產品不設退換，除非禮盒包裝嚴重損毀。
+                紙盒包裝有機會於運輸過程中產生輕微壓傷或小裂縫，屬正常情況，不影響產品品質。
+              </div>
             </div>
 
             <Separator />
