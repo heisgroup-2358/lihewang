@@ -65,7 +65,7 @@ export async function POST(req: Request) {
   }
 
   const items = await prisma.orderItem.findMany({ where: { orderId: cart.id } });
-  const total = items.reduce((sum, i) => sum + i.unitPrice * i.quantity, 0);
+  const total = (items as any[]).reduce((sum: number, i: any) => sum + i.unitPrice * i.quantity, 0);
   await prisma.order.update({ where: { id: cart.id }, data: { totalAmount: total } });
 
   return NextResponse.json({ success: true, cartId: cart.id, total });
@@ -80,7 +80,7 @@ export async function PATCH(req: Request) {
   });
 
   const items = await prisma.orderItem.findMany({ where: { orderId: item.orderId } });
-  const total = items.reduce((sum, i) => sum + i.unitPrice * i.quantity, 0);
+  const total = (items as any[]).reduce((sum: number, i: any) => sum + i.unitPrice * i.quantity, 0);
   await prisma.order.update({ where: { id: item.orderId }, data: { totalAmount: total } });
 
   return NextResponse.json({ success: true, total });
@@ -102,7 +102,7 @@ export async function DELETE(req: Request) {
   await prisma.orderItem.delete({ where: { id: itemId } });
 
   const items = await prisma.orderItem.findMany({ where: { orderId: item.orderId } });
-  const total = items.reduce((sum, i) => sum + i.unitPrice * i.quantity, 0);
+  const total = (items as any[]).reduce((sum: number, i: any) => sum + i.unitPrice * i.quantity, 0);
   await prisma.order.update({ where: { id: item.orderId }, data: { totalAmount: total } });
 
   return NextResponse.json({ success: true, total });

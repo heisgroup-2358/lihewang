@@ -45,7 +45,7 @@ export default async function ProductsPage() {
               <div>
                 <h4 className="mb-3 text-sm font-semibold">分類</h4>
                 <div className="space-y-2">
-                  {categories.map((cat) => (
+                  {categories.map((cat: any) => (
                     <label
                       key={cat.slug}
                       className="flex cursor-pointer items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -74,7 +74,7 @@ export default async function ProductsPage() {
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {products.map((product) => (
+              {products.map((product: any) => (
                 <ProductCard
                   key={product.slug}
                   slug={product.slug}

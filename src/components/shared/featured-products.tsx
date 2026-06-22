@@ -17,7 +17,7 @@ export async function FeaturedProducts() {
         <SectionHeading>精選產品</SectionHeading>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.slice(0, 3).map((product) => (
+          {products.slice(0, 3).map((product: any) => (
             <ProductCard
               key={product.slug}
               slug={product.slug}

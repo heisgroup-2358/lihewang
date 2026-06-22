@@ -166,7 +166,7 @@ export default async function ProductDetailPage({
                 你可能都鍾意
               </h2>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {related.map((p) => (
+                {related.map((p: any) => (
                   <ProductCard
                     key={p.slug}
                     slug={p.slug}
