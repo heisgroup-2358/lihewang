@@ -4,14 +4,10 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ProductCard } from "@/components/shared/product-card";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { prisma } from "@/lib/prisma";
+import { getFeaturedProducts } from "@/lib/data-service";
 
 export async function FeaturedProducts() {
-  const products = await prisma.product.findMany({
-    where: { isActive: true, stock: { gt: 0 } },
-    orderBy: { reviewCount: "desc" },
-    take: 6,
-  });
+  const products = await getFeaturedProducts();
 
   if (products.length === 0) return null;
 

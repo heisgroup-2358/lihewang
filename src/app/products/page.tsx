@@ -3,18 +3,14 @@ import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/shared/product-card";
-import { prisma } from "@/lib/prisma";
+import { getAllProducts, getCategories } from "@/lib/data-service";
 
 export const dynamic = "force-dynamic";
 
 export default async function ProductsPage() {
   const [products, categories] = await Promise.all([
-    prisma.product.findMany({
-      where: { isActive: true },
-      include: { category: true },
-      orderBy: { createdAt: "desc" },
-    }),
-    prisma.category.findMany(),
+    getAllProducts(),
+    getCategories(),
   ]);
 
   return (

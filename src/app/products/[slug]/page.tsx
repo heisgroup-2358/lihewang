@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ProductCard } from "@/components/shared/product-card";
-import { prisma } from "@/lib/prisma";
+import { getProductBySlug, getRelatedProducts } from "@/lib/data-service";
 
 export default async function ProductDetailPage({
   params,
@@ -13,19 +13,21 @@ export default async function ProductDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = await prisma.product.findUnique({
-    where: { slug },
-    include: { category: true },
-  });
+  const product = await getProductBySlug(slug);
 
   if (!product) notFound();
 
   const details: string[] = JSON.parse(product.details);
 
-  const related = await prisma.product.findMany({
-    where: { categoryId: product.categoryId, slug: { not: slug }, isActive: true },
-    take: 3,
-  });
+  const categorySlug: string = "categorySlug" in product
+    ? (product as { categorySlug?: string }).categorySlug ?? "snacks"
+    : (product.category as { slug?: string })?.slug ?? "snacks";
+
+  const related = await getRelatedProducts(slug, categorySlug);
+
+  const categoryName: string = "categoryName" in product
+    ? (product as { categoryName?: string }).categoryName ?? ""
+    : (product.category as { name?: string })?.name ?? "";
 
   return (
     <>
@@ -35,8 +37,8 @@ export default async function ProductDetailPage({
           <span className="mx-2">/</span>
           <Link href="/products" className="hover:text-foreground transition-colors">產品</Link>
           <span className="mx-2">/</span>
-          <Link href={`/products?category=${product.category.slug}`} className="hover:text-foreground transition-colors">
-            {product.category.name}
+          <Link href={`/products?category=${categorySlug}`} className="hover:text-foreground transition-colors">
+            {categoryName}
           </Link>
           <span className="mx-2">/</span>
           <span className="text-foreground">{product.name}</span>
