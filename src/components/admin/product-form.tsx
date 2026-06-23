@@ -16,6 +16,7 @@ type ProductFormProps = {
     slug: string;
     name: string;
     brand: string;
+    productCode: string | null;
     origin: string;
     categoryId: string;
     description: string;
@@ -46,6 +47,7 @@ export function ProductForm({ categories, product }: ProductFormProps) {
   const [name, setName] = useState(product?.name ?? "");
   const [manualSlug, setManualSlug] = useState<string | null>(null);
   const [brand, setBrand] = useState(product?.brand ?? "");
+  const [productCode, setProductCode] = useState(product?.productCode ?? "");
   const [origin, setOrigin] = useState(product?.origin ?? "");
   const [categoryId, setCategoryId] = useState(product?.categoryId ?? "");
   const [description, setDescription] = useState(product?.description ?? "");
@@ -98,6 +100,7 @@ export function ProductForm({ categories, product }: ProductFormProps) {
       name,
       slug,
       brand,
+      productCode: productCode || null,
       origin,
       categoryId,
       description,
@@ -192,6 +195,15 @@ export function ProductForm({ categories, product }: ProductFormProps) {
                 ))}
               </select>
             </div>
+          </div>
+
+          <div className="space-y-1.5">
+            <label className="text-sm font-medium">產品編號</label>
+            <Input
+              value={productCode}
+              onChange={(e) => setProductCode(e.target.value)}
+              placeholder="e.g. ISH-0001（品牌代號-序號）"
+            />
           </div>
 
           <div className="space-y-1.5">

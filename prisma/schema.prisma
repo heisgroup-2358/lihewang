@@ -53,6 +53,7 @@ model Product {
   name              String
   slug              String         @unique
   brand             String
+  productCode       String?
   origin            String
   categoryId        String
   description       String
