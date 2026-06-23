@@ -1,26 +1,12 @@
 import { NextResponse } from "next/server";
-import { PrismaClient } from "@/generated/prisma/client";
-import pg from "pg";
-import { PrismaPg } from "@prisma/adapter-pg";
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const results: Record<string, any> = {};
-  
   try {
-    const dbUrl = process.env.DATABASE_URL || "not set";
-    results.dbUrlPreview = dbUrl.slice(0, 60) + "...";
-    
-    // Try a simple DNS lookup
-    try {
-      const url = new URL(dbUrl);
-      results.host = url.hostname;
-      results.port = url.port;
-    } catch {
-      results.urlParseError = "could not parse URL";
-    }
-    
-    return NextResponse.json(results);
+    const dbUrl = (process.env.DATABASE_URL || "not set").slice(0, 60);
+    const count = await prisma.category.count();
+    return NextResponse.json({ dbUrl, categoryCount: count, status: "connected" });
   } catch (e: any) {
-    return NextResponse.json({ error: e?.message || "unknown", results }, { status: 500 });
+    return NextResponse.json({ error: e?.message || "unknown" }, { status: 500 });
   }
 }
