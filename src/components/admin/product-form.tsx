@@ -149,6 +149,8 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="flex gap-6">
+        <div className="flex-1 space-y-6">
       <Card>
         <CardHeader>
           <CardTitle>基本資訊</CardTitle>
@@ -332,47 +334,57 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>商品圖片</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex flex-wrap gap-3">
-            {images.map((url) => (
-              <div key={url} className="relative group">
-                <Image
-                  src={url}
-                  alt=""
-                  width={96}
-                  height={96}
-                  className="rounded-lg object-cover border border-border/60"
-                />
-                <button
-                  type="button"
-                  onClick={() => removeImage(url)}
-                  className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground opacity-0 group-hover:opacity-100 transition-opacity"
-                >
-                  ✕
-                </button>
-              </div>
-            ))}
-            <label className="flex h-24 w-24 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-border/60 text-sm text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors">
-              {uploading ? (
-                <span className="animate-pulse">上傳中...</span>
-              ) : (
-                <span>+ 新增</span>
-              )}
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="hidden"
-                disabled={uploading}
-              />
+      </div>
+
+      <div className="w-80 shrink-0 space-y-4">
+        <Card>
+          <CardHeader>
+            <CardTitle>商品圖片</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <label className="flex h-32 w-full cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-border/60 text-sm text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors">
+              {uploading ? <span className="animate-pulse">上傳中...</span> : <span>+ 點擊上傳圖片</span>}
+              <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" disabled={uploading} />
             </label>
-          </div>
-        </CardContent>
-      </Card>
+            <div className="space-y-2">
+              {images.map((url, i) => (
+                <div key={url} draggable
+                  onDragStart={(e) => { e.dataTransfer.setData("text/plain", String(i)); (e.currentTarget as HTMLElement).style.opacity = "0.4"; }}
+                  onDragOver={(e) => { e.preventDefault(); (e.currentTarget as HTMLElement).style.opacity = "0.8"; }}
+                  onDragLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    (e.currentTarget as HTMLElement).style.opacity = "1";
+                    const from = parseInt(e.dataTransfer.getData("text/plain"));
+                    const to = i;
+                    if (from !== to) {
+                      setImages((prev) => {
+                        const next = [...prev];
+                        const [moved] = next.splice(from, 1);
+                        next.splice(to, 0, moved);
+                        return next;
+                      });
+                    }
+                  }}
+                  className="group relative flex items-center gap-3 rounded-lg border border-border/40 bg-secondary/10 p-2 transition-colors hover:bg-secondary/30 cursor-grab active:cursor-grabbing"
+                >
+                  <Image src={url} alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-md object-cover border border-border/40" />
+                  <span className="flex-1 truncate text-xs text-muted-foreground">圖片 {i + 1}</span>
+                  <button type="button" onClick={() => removeImage(url)}
+                    className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-destructive/10 text-[10px] text-destructive opacity-0 group-hover:opacity-100 transition-opacity">✕</button>
+                </div>
+              ))}
+            </div>
+            {images.length === 0 && !uploading && (
+              <p className="text-center text-xs text-muted-foreground">尚未上傳圖片</p>
+            )}
+            {images.length > 0 && (
+              <p className="text-xs text-muted-foreground">拖曳圖片可調整排序</p>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+      </div>
 
       <div className="flex items-center gap-3">
         <Button type="submit" disabled={submitting}>
