@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
-import sgMail from "@sendgrid/mail";
+import { MailService } from "@sendgrid/mail";
 import { getTwilioClient, setEmailOtp } from "@/lib/auth";
+
+const sgMail = new MailService();
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 function generateCode(): string {
   return Math.floor(100000 + Math.random() * 900000).toString();
