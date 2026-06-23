@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 const ORDERS = [
   { id: "ORD-20250622-1024", date: "2025-06-22", total: 1878, status: "已付款", items: [{ name: "白之戀人", qty: 2 }, { name: "六花亭", qty: 1 }, { name: "Royce", qty: 3 }] },

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Star, Truck, RefreshCw, Shield, Minus, Plus, ShoppingBag, Heart } from "lucide-react";
+import { Star, Truck, Shield, Minus, Plus, ShoppingBag, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";

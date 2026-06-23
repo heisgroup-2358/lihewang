@@ -1,4 +1,4 @@
-import { TrendingUp, Package, ShoppingCart, Users, DollarSign } from "lucide-react";
+import { Package, ShoppingCart, Users, DollarSign } from "lucide-react";
 import { ADMIN_STATS } from "@/lib/admin-mock-data";
 
 export default function AdminDashboard() {

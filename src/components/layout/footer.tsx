@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE, CATEGORIES, NAV_LINKS } from "@/lib/constants";
+import { SITE, CATEGORIES } from "@/lib/constants";
 
 export function Footer() {
   return (

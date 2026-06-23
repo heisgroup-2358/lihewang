@@ -4,13 +4,10 @@ import {
   Wallet,
   Users,
   User,
-  Settings,
   ChevronRight,
   Truck,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { PRODUCTS } from "@/lib/mock-data";
 
 const RECENT_ORDERS = [
   { id: "ORD-20250622-1024", date: "2025-06-22", total: 1878, status: "已付款", items: 3 },
