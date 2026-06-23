@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -74,8 +74,14 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
       return [];
     }
   });
+  const [dims, setDims] = useState<Record<string, { w: number; h: number }>>({});
   const [uploading, setUploading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [hoveredImg, setHoveredImg] = useState<string | null>(null);
+
+  const onImgLoad = useCallback((url: string, w: number, h: number) => {
+    setDims((prev) => ({ ...prev, [url]: { w, h } }));
+  }, []);
 
   const slug = manualSlug ?? (isEdit ? product!.slug : toSlug(name));
   const isSlugAuto = manualSlug === null && !isEdit;
@@ -346,34 +352,49 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
               {uploading ? <span className="animate-pulse">上傳中...</span> : <span>+ 點擊上傳圖片</span>}
               <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" disabled={uploading} />
             </label>
-            <div className="space-y-2">
-              {images.map((url, i) => (
-                <div key={url} draggable
-                  onDragStart={(e) => { e.dataTransfer.setData("text/plain", String(i)); (e.currentTarget as HTMLElement).style.opacity = "0.4"; }}
-                  onDragOver={(e) => { e.preventDefault(); (e.currentTarget as HTMLElement).style.opacity = "0.8"; }}
-                  onDragLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
-                  onDrop={(e) => {
-                    e.preventDefault();
-                    (e.currentTarget as HTMLElement).style.opacity = "1";
-                    const from = parseInt(e.dataTransfer.getData("text/plain"));
-                    const to = i;
-                    if (from !== to) {
-                      setImages((prev) => {
-                        const next = [...prev];
-                        const [moved] = next.splice(from, 1);
-                        next.splice(to, 0, moved);
-                        return next;
-                      });
-                    }
-                  }}
-                  className="group relative flex items-center gap-3 rounded-lg border border-border/40 bg-secondary/10 p-2 transition-colors hover:bg-secondary/30 cursor-grab active:cursor-grabbing"
-                >
-                  <Image src={url} alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-md object-cover border border-border/40" />
-                  <span className="flex-1 truncate text-xs text-muted-foreground">圖片 {i + 1}</span>
-                  <button type="button" onClick={() => removeImage(url)}
-                    className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-destructive/10 text-[10px] text-destructive opacity-0 group-hover:opacity-100 transition-opacity">✕</button>
-                </div>
-              ))}
+            <div className="grid grid-cols-2 gap-2">
+              {images.map((url, i) => {
+                const d = dims[url];
+                return (
+                  <div key={url} draggable
+                    onDragStart={(e) => { e.dataTransfer.setData("text/plain", String(i)); (e.currentTarget as HTMLElement).style.opacity = "0.4"; }}
+                    onDragOver={(e) => { e.preventDefault(); (e.currentTarget as HTMLElement).style.opacity = "0.8"; }}
+                    onDragLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      (e.currentTarget as HTMLElement).style.opacity = "1";
+                      const from = parseInt(e.dataTransfer.getData("text/plain"));
+                      if (from !== i) {
+                        setImages((prev) => {
+                          const next = [...prev];
+                          const [moved] = next.splice(from, 1);
+                          next.splice(i, 0, moved);
+                          return next;
+                        });
+                      }
+                    }}
+                    onMouseEnter={() => setHoveredImg(url)}
+                    onMouseLeave={() => setHoveredImg(null)}
+                    className="group relative aspect-square cursor-grab active:cursor-grabbing overflow-hidden rounded-lg border border-border/40 bg-secondary/10 transition-colors hover:bg-secondary/30"
+                  >
+                    <Image src={url} alt="" fill className="object-cover" sizes="180px"
+                      onLoad={(e) => { const img = e.currentTarget; onImgLoad(url, img.naturalWidth, img.naturalHeight); }} />
+                    <div className="absolute left-1 top-1 rounded bg-black/50 px-1.5 py-0.5 text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                      #{i + 1} · {d ? `${d.w}×${d.h}` : "..."}
+                    </div>
+                    <button type="button" onClick={() => removeImage(url)}
+                      className="absolute right-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground opacity-0 group-hover:opacity-100 transition-opacity">✕</button>
+                    {hoveredImg === url && d && (
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-2 pt-6">
+                        <p className="text-[10px] text-white/90">{d.w} × {d.h} px</p>
+                      </div>
+                    )}
+                    <div className="absolute bottom-1 right-1 rounded bg-black/40 px-1 py-0.5 text-[9px] text-white/70">
+                      ↕
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             {images.length === 0 && !uploading && (
               <p className="text-center text-xs text-muted-foreground">尚未上傳圖片</p>
