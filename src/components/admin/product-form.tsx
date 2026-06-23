@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -419,7 +418,7 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
                     onMouseLeave={() => setHoveredImg(null)}
                     className="group relative aspect-square cursor-grab active:cursor-grabbing overflow-hidden rounded-lg border border-border/40 bg-secondary/10 transition-colors hover:bg-secondary/30"
                   >
-                    <Image src={url} alt="" fill className="object-cover" sizes="180px"
+                    <img src={url} alt="" className="absolute inset-0 h-full w-full object-cover"
                       onLoad={(e) => { const img = e.currentTarget; onImgLoad(url, img.naturalWidth, img.naturalHeight); }} />
                     <div className="absolute left-1 top-1 rounded bg-black/50 px-1.5 py-0.5 text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity">
                       #{i + 1} · {d ? `${d.w}×${d.h}` : "..."}
