@@ -149,7 +149,7 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="flex gap-6">
+      <div className="flex gap-8">
         <div className="flex-1 space-y-6">
       <Card>
         <CardHeader>
@@ -336,7 +336,7 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
 
       </div>
 
-      <div className="w-80 shrink-0 space-y-4">
+      <div className="flex-1 space-y-4">
         <Card>
           <CardHeader>
             <CardTitle>商品圖片</CardTitle>
