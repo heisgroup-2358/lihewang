@@ -445,13 +445,6 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
                 );
               })}
             </div>
-                    <div className="absolute bottom-1 right-1 rounded bg-black/40 px-1 py-0.5 text-[9px] text-white/70">
-                      ↕
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
             {images.length === 0 && !uploading && (
               <p className="text-center text-xs text-muted-foreground">尚未上傳圖片</p>
             )}
