@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Star, Truck, Shield, Minus, Plus, ShoppingBag, Heart } from "lucide-react";
+import { Star, Truck, Shield, Minus, Plus, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AddToCartButton } from "@/components/shared/add-to-cart-button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ProductCard } from "@/components/shared/product-card";
@@ -121,10 +122,7 @@ export default async function ProductDetailPage({
             </div>
 
             <div className="flex gap-3">
-              <Button size="lg" className="flex-1 rounded-full gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
-                <ShoppingBag className="h-5 w-5" />
-                加入購物車
-              </Button>
+              <AddToCartButton slug={product.slug} name={product.name} brand={product.brand} price={product.retailPrice} />
               <Button variant="outline" size="icon" className="rounded-full h-12 w-12" aria-label="收藏">
                 <Heart className="h-5 w-5" />
               </Button>

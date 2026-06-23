@@ -1,19 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import { PRODUCTS } from "@/lib/mock-data";
-
-const CART_ITEMS = PRODUCTS.slice(0, 3).map((p, i) => ({
-  ...p,
-  quantity: i === 0 ? 2 : i === 1 ? 1 : 3,
-}));
+import { useCart } from "@/lib/use-cart";
 
 export default function CartPage() {
-  const subtotal = CART_ITEMS.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const shipping = subtotal >= 300 ? 0 : 30;
+  const { items, updateQuantity, removeItem, total } = useCart();
+  const shipping = total >= 300 ? 0 : 30;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -21,7 +18,7 @@ export default function CartPage() {
 
       <div className="mt-10 grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-4">
-          {CART_ITEMS.map((item) => (
+          {items.map((item) => (
             <div
               key={item.slug}
               className="flex gap-4 rounded-xl border border-border/60 p-4 transition-colors hover:border-border"
@@ -50,15 +47,33 @@ export default function CartPage() {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Button variant="outline" size="icon-xs" className="rounded-full" aria-label="減少">
+                    <Button
+                      variant="outline"
+                      size="icon-xs"
+                      className="rounded-full"
+                      aria-label="減少"
+                      onClick={() => updateQuantity(item.slug, item.quantity - 1)}
+                    >
                       <Minus className="h-3 w-3" />
                     </Button>
                     <span className="w-8 text-center text-sm">{item.quantity}</span>
-                    <Button variant="outline" size="icon-xs" className="rounded-full" aria-label="增加">
+                    <Button
+                      variant="outline"
+                      size="icon-xs"
+                      className="rounded-full"
+                      aria-label="增加"
+                      onClick={() => updateQuantity(item.slug, item.quantity + 1)}
+                    >
                       <Plus className="h-3 w-3" />
                     </Button>
                   </div>
-                  <Button variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-destructive" aria-label="刪除">
+                  <Button
+                    variant="ghost"
+                    size="icon-sm"
+                    className="text-muted-foreground hover:text-destructive"
+                    aria-label="刪除"
+                    onClick={() => removeItem(item.slug)}
+                  >
                     <Trash2 className="h-4 w-4" />
                   </Button>
                 </div>
@@ -86,7 +101,7 @@ export default function CartPage() {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">小計</span>
-                <span>${subtotal.toLocaleString()}</span>
+                <span>${total.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">運費</span>
@@ -98,7 +113,7 @@ export default function CartPage() {
 
             <div className="flex justify-between text-lg font-bold">
               <span>總計</span>
-              <span>${(subtotal + shipping).toLocaleString()}</span>
+              <span>${(total + shipping).toLocaleString()}</span>
             </div>
 
             <Link
