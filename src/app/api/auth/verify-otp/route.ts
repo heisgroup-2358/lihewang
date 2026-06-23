@@ -1,46 +1,81 @@
 import { NextResponse } from "next/server";
-import { getTwilioClient, createSession } from "@/lib/auth";
+import { getTwilioClient, createSession, verifyEmailOtp } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
   try {
-    const { phone, code, name, referralCode } = await req.json();
-    if (!phone) {
-      return NextResponse.json({ error: "Phone required" }, { status: 400 });
-    }
+    const { channel, phone, email, code, name, referralCode } = await req.json();
     if (!code) {
       return NextResponse.json({ error: "Verification code required" }, { status: 400 });
     }
 
-    const client = getTwilioClient();
-    if (client) {
-      const verificationCheck = await client.verify.v2
-        .services(process.env.TWILIO_VERIFY_SERVICE_SID!)
-        .verificationChecks.create({ to: phone, code });
-      if (verificationCheck.status !== "approved") {
-        return NextResponse.json({ error: "Invalid code" }, { status: 400 });
+    if (channel === "whatsapp") {
+      if (!phone) {
+        return NextResponse.json({ error: "Phone required" }, { status: 400 });
       }
+      const client = getTwilioClient();
+      if (client) {
+        const verificationCheck = await client.verify.v2
+          .services(process.env.TWILIO_VERIFY_SERVICE_SID!)
+          .verificationChecks.create({ to: phone, code });
+        if (verificationCheck.status !== "approved") {
+          return NextResponse.json({ error: "Invalid code" }, { status: 400 });
+        }
+      }
+
+      const user = await prisma.user.upsert({
+        where: { phone },
+        update: { name: name ?? undefined },
+        create: {
+          phone,
+          email: email ?? undefined,
+          name: name ?? "User",
+          referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
+        },
+      });
+
+      if (referralCode) {
+        const referrer = await prisma.user.findUnique({ where: { referralCode } });
+        if (referrer && referrer.id !== user.id) {
+          await prisma.user.update({ where: { id: user.id }, data: { uplineId: referrer.id } });
+        }
+      }
+
+      await createSession(user.id, user.phone, user.role);
+      return NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
     }
 
-    const user = await prisma.user.upsert({
-      where: { phone },
-      update: { name: name ?? undefined },
-      create: {
-        phone,
-        name: name ?? "User",
-        referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
-      },
-    });
-
-    if (referralCode) {
-      const referrer = await prisma.user.findUnique({ where: { referralCode } });
-      if (referrer && referrer.id !== user.id) {
-        await prisma.user.update({ where: { id: user.id }, data: { uplineId: referrer.id } });
+    if (channel === "email") {
+      if (!email) {
+        return NextResponse.json({ error: "Email required" }, { status: 400 });
       }
+      if (!verifyEmailOtp(email, code)) {
+        return NextResponse.json({ error: "Invalid or expired code" }, { status: 400 });
+      }
+
+      const user = await prisma.user.upsert({
+        where: { email },
+        update: { name: name ?? undefined },
+        create: {
+          email,
+          phone: phone ?? "",
+          name: name ?? "User",
+          referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
+        },
+      });
+
+      if (referralCode) {
+        const referrer = await prisma.user.findUnique({ where: { referralCode } });
+        if (referrer && referrer.id !== user.id) {
+          await prisma.user.update({ where: { id: user.id }, data: { uplineId: referrer.id } });
+        }
+      }
+
+      await createSession(user.id, user.phone, user.role);
+      return NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
     }
 
-    await createSession(user.id, user.phone, user.role);
-    return NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
+    return NextResponse.json({ error: "Invalid channel" }, { status: 400 });
   } catch {
     return NextResponse.json({ error: "Verification failed" }, { status: 500 });
   }

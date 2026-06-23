@@ -1,9 +1,9 @@
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
+import twilio from "twilio";
+import { prisma } from "./prisma";
 
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "fallback-dev-secret-do-not-use-in-prod",
-);
+const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "fallback-dev-secret-do-not-use-in-prod");
 const COOKIE_NAME = "session";
 
 export type SessionPayload = {
@@ -11,6 +11,24 @@ export type SessionPayload = {
   phone: string;
   role: string;
 };
+
+const emailOtps = new Map<string, { code: string; expiresAt: number }>();
+
+export function setEmailOtp(email: string, code: string) {
+  emailOtps.set(email, { code, expiresAt: Date.now() + 10 * 60 * 1000 });
+}
+
+export function verifyEmailOtp(email: string, code: string): boolean {
+  const stored = emailOtps.get(email);
+  if (!stored) return false;
+  if (Date.now() > stored.expiresAt) {
+    emailOtps.delete(email);
+    return false;
+  }
+  if (stored.code !== code) return false;
+  emailOtps.delete(email);
+  return true;
+}
 
 export async function createSession(userId: string, phone: string, role: string) {
   const token = await new SignJWT({ userId, phone, role })
@@ -49,7 +67,5 @@ export function getTwilioClient() {
   const sid = process.env.TWILIO_ACCOUNT_SID;
   const token = process.env.TWILIO_AUTH_TOKEN;
   if (!sid || !token) return null;
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const twilio = require("twilio");
   return twilio(sid, token);
 }
