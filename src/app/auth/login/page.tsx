@@ -19,7 +19,7 @@ export default function LoginPage() {
 
   const sendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!captchaToken) {
+    if (!captchaToken && process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) {
       setError("請完成驗證");
       return;
     }

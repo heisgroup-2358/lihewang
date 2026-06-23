@@ -11,6 +11,8 @@ declare global {
   }
 }
 
+const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
 export function TurnstileWidget({
   onVerify,
 }: {
@@ -20,6 +22,11 @@ export function TurnstileWidget({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!siteKey) {
+      onVerify("dev-skip");
+      return;
+    }
+
     const script = document.createElement("script");
     script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
     script.async = true;
@@ -29,7 +36,7 @@ export function TurnstileWidget({
     script.onload = () => {
       if (containerRef.current && window.turnstile) {
         widgetId.current = window.turnstile.render(containerRef.current, {
-          sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!,
+          sitekey: siteKey,
           callback: onVerify,
         });
       }
@@ -41,6 +48,8 @@ export function TurnstileWidget({
       }
     };
   }, [onVerify]);
+
+  if (!siteKey) return null;
 
   return <div ref={containerRef} />;
 }
