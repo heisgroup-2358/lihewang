@@ -88,11 +88,11 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
       const formData = new FormData();
       formData.append("file", file);
       const res = await fetch("/api/upload", { method: "POST", body: formData });
-      if (!res.ok) throw new Error("Upload failed");
       const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Upload failed");
       setImages((prev) => [...prev, data.url]);
-    } catch {
-      alert("上傳圖片失敗");
+    } catch (e) {
+      alert("上傳圖片失敗: " + (e instanceof Error ? e.message : "Unknown error"));
     } finally {
       setUploading(false);
     }
