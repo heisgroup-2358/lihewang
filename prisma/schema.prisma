@@ -11,6 +11,7 @@ model Brand {
   id   String @id @default(cuid())
   name String @unique
   slug String @unique
+  code String @unique // e.g. "ISH" for Ishiya → ISH-0001
 }
 
 model Origin {
