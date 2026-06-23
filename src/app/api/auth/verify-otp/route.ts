@@ -91,7 +91,7 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ error: "Invalid channel" }, { status: 400 });
-  } catch (e: any) {
-    return NextResponse.json({ error: e?.message || "Verification failed" }, { status: 500 });
+  } catch {
+    return NextResponse.json({ error: "Verification failed" }, { status: 500 });
   }
 }
