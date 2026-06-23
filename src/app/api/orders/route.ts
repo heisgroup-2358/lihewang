@@ -37,7 +37,7 @@ export async function POST(req: Request) {
         include: { product: true },
       });
 
-      const costTotal = (items as any[]).reduce((sum: number, i: any) => sum + i.product.costPrice * i.quantity, 0);
+      const costTotal = items.reduce((sum: number, i) => sum + i.product.costPrice * i.quantity, 0);
       const profit = updated.totalAmount - costTotal;
       const rate = upline.role === "wholesale_lv2" ? 0.15 : 0.1;
       const commission = Math.round(profit * rate * 100) / 100;

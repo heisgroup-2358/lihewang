@@ -1,17 +1,14 @@
-import { PrismaClient } from "@/generated/prisma";
+import { PrismaClient } from "@/generated/prisma/client";
+import pg from "pg";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-const globalForPrisma = globalThis as unknown as { prisma: ReturnType<typeof createPrisma> };
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient };
 
 function createPrisma() {
-  if (process.env.DATABASE_URL?.startsWith("postgresql")) {
-    const pg = require("pg");
-    const { PrismaPg } = require("@prisma/adapter-pg");
-    const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
-    return new PrismaClient({ adapter: new PrismaPg(pool) }) as any;
-  }
-  return new PrismaClient({} as any) as any;
+  const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+  return new PrismaClient({ adapter: new PrismaPg(pool) });
 }
 
-export const prisma = globalForPrisma.prisma ?? createPrisma() as any;
+export const prisma = globalForPrisma.prisma ?? createPrisma();
 
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;

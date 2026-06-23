@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { ProductCard } from "@/components/shared/product-card";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { getFeaturedProducts } from "@/lib/data-service";
+import type { DbProduct } from "@/lib/data-service";
 
 export async function FeaturedProducts() {
   const products = await getFeaturedProducts();
@@ -17,7 +18,7 @@ export async function FeaturedProducts() {
         <SectionHeading>精選產品</SectionHeading>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.slice(0, 3).map((product: any) => (
+          {products.slice(0, 3).map((product: DbProduct) => (
             <ProductCard
               key={product.slug}
               slug={product.slug}

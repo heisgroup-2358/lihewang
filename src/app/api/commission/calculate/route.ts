@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Order not found" }, { status: 404 });
   }
 
-  const costTotal = (order.items as any[]).reduce((sum: number, i: any) => sum + i.product.costPrice * i.quantity, 0);
+  const costTotal = order.items.reduce((sum: number, i) => sum + i.product.costPrice * i.quantity, 0);
   const profit = order.totalAmount - costTotal;
 
   return NextResponse.json({

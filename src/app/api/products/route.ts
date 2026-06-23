@@ -53,7 +53,7 @@ export async function GET(req: Request) {
 
     return NextResponse.json(products);
   } catch {
-    const { PRODUCTS } = require("@/lib/mock-data");
+    const { PRODUCTS } = await import("@/lib/mock-data");
     return NextResponse.json(PRODUCTS);
   }
 }

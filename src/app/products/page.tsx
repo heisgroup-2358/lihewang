@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/shared/product-card";
 import { getAllProducts, getCategories } from "@/lib/data-service";
+import type { DbProduct } from "@/lib/data-service";
 
 export const dynamic = "force-dynamic";
 
@@ -45,7 +46,7 @@ export default async function ProductsPage() {
               <div>
                 <h4 className="mb-3 text-sm font-semibold">分類</h4>
                 <div className="space-y-2">
-                  {categories.map((cat: any) => (
+                  {categories.map((cat: { slug: string; name: string }) => (
                     <label
                       key={cat.slug}
                       className="flex cursor-pointer items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -74,7 +75,7 @@ export default async function ProductsPage() {
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {products.map((product: any) => (
+              {products.map((product: DbProduct) => (
                 <ProductCard
                   key={product.slug}
                   slug={product.slug}

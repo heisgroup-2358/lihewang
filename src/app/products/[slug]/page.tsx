@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ProductCard } from "@/components/shared/product-card";
 import { getProductBySlug, getRelatedProducts } from "@/lib/data-service";
+import type { DbProduct } from "@/lib/data-service";
 
 export default async function ProductDetailPage({
   params,
@@ -171,7 +172,7 @@ export default async function ProductDetailPage({
                 你可能都鍾意
               </h2>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {related.map((p: any) => (
+                {related.map((p: DbProduct) => (
                   <ProductCard
                     key={p.slug}
                     slug={p.slug}
