@@ -78,7 +78,7 @@ export async function getAdminProducts() {
       sales: p.reviewCount,
     }));
   } catch {
-    return ADMIN_PRODUCTS;
+    return ADMIN_PRODUCTS.map((p, i) => ({ ...p, slug: "mock-" + i, productCode: null, sortOrder: 0 }));
   }
 }
 
