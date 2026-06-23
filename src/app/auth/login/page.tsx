@@ -184,11 +184,11 @@ export default function LoginPage() {
                   ].map(([line1, line2]) => (
                     <div
                       key={`${line1}-${line2}`}
-                      className="flex items-center gap-1 rounded-lg border border-border/40 bg-secondary/20 px-1.5 py-1.5"
+                      className="flex flex-col items-center gap-0.5 rounded-lg border border-border/40 bg-secondary/20 px-1 py-1.5"
                     >
-                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green-500" />
-                      <span className="text-[9px] lg:text-[10px] font-medium text-muted-foreground whitespace-nowrap">
-                        {line1} {line2}
+                      <span className="h-1 w-1 shrink-0 rounded-full bg-green-500" />
+                      <span className="text-[8px] lg:text-[9px] font-medium text-muted-foreground leading-tight text-center">
+                        {line1}<br />{line2}
                       </span>
                     </div>
                   ))}
