@@ -12,22 +12,28 @@ export type SessionPayload = {
   role: string;
 };
 
-const emailOtps = new Map<string, { code: string; expiresAt: number }>();
+const OTP_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "fallback-dev-secret-do-not-use-in-prod");
 
-export function setEmailOtp(email: string, code: string) {
-  emailOtps.set(email, { code, expiresAt: Date.now() + 10 * 60 * 1000 });
+export type OtpPayload = {
+  target: string;
+  code: string;
+};
+
+export async function createOtpToken(target: string, code: string): Promise<string> {
+  return await new SignJWT({ target, code })
+    .setProtectedHeader({ alg: "HS256" })
+    .setExpirationTime("10m")
+    .sign(OTP_SECRET);
 }
 
-export function verifyEmailOtp(email: string, code: string): boolean {
-  const stored = emailOtps.get(email);
-  if (!stored) return false;
-  if (Date.now() > stored.expiresAt) {
-    emailOtps.delete(email);
+export async function verifyOtpToken(token: string, target: string, code: string): Promise<boolean> {
+  try {
+    const { payload } = await jwtVerify(token, OTP_SECRET);
+    const otp = payload as unknown as OtpPayload;
+    return otp.target === target && otp.code === code;
+  } catch {
     return false;
   }
-  if (stored.code !== code) return false;
-  emailOtps.delete(email);
-  return true;
 }
 
 export async function createSession(userId: string, phone: string, role: string) {

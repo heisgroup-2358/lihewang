@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { MailService } from "@sendgrid/mail";
-import { getTwilioClient, setEmailOtp } from "@/lib/auth";
+import { getTwilioClient, createOtpToken } from "@/lib/auth";
 
 const sgMail = new MailService();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
@@ -53,7 +53,7 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: "Invalid email" }, { status: 400 });
       }
       const code = generateCode();
-      setEmailOtp(email, code);
+      const otpToken = await createOtpToken(email, code);
 
       sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
       await sgMail.send({
@@ -63,7 +63,7 @@ export async function POST(req: Request) {
         text: `您的驗證碼是：${code}\n\n此驗證碼將於10分鐘後失效。`,
       });
 
-      return NextResponse.json({ success: true });
+      return NextResponse.json({ success: true, otpToken });
     }
 
     return NextResponse.json({ error: "Invalid channel" }, { status: 400 });

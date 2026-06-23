@@ -7,6 +7,15 @@ datasource db {
   provider = "postgresql"
 }
 
+model VerificationCode {
+  id        String   @id @default(cuid())
+  target    String   @unique // email or phone
+  code      String
+  channel   String   // "email" or "whatsapp"
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
 model User {
   id                   String                    @id @default(cuid())
   email                String?                   @unique

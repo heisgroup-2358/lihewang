@@ -16,6 +16,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
   const [cooldown, setCooldown] = useState(0);
+  const [otpToken, setOtpToken] = useState("");
 
   const sendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,6 +35,8 @@ export default function LoginPage() {
       body: JSON.stringify(body),
     });
     if (res.ok) {
+      const data = await res.json();
+      if (data.otpToken) setOtpToken(data.otpToken);
       setStep("otp");
       startCooldown();
     } else {
@@ -47,8 +50,8 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
     const body = channel === "whatsapp"
-      ? { channel, phone, code }
-      : { channel, email, code };
+      ? { channel, phone, code, otpToken }
+      : { channel, email, code, otpToken };
     const res = await fetch("/api/auth/verify-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
