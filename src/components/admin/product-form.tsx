@@ -127,13 +127,19 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
     if (!files || files.length === 0) return;
     setUploading(true);
     try {
-      const urls: string[] = [];
+      const results: { url: string; size: number }[] = [];
       for (const f of files) {
         if (!f.type.startsWith("image/")) continue;
-        const url = await uploadFile(f);
-        if (url) urls.push(url);
+        const r = await uploadFile(f);
+        if (r) results.push(r);
       }
-      setImages((prev) => [...prev, ...urls]);
+      setImages((prev) => [...prev, ...results.map((r) => r.url)]);
+      const sizes: Record<string, string> = {};
+      for (const r of results) {
+        const kb = r.size / 1024;
+        sizes[r.url] = kb < 1024 ? `${kb.toFixed(0)}KB` : `${(kb / 1024).toFixed(1)}MB`;
+      }
+      setFileSizes((prev) => ({ ...prev, ...sizes }));
     } catch (e) {
       alert("上傳圖片失敗: " + (e instanceof Error ? e.message : "Unknown error"));
     } finally {
