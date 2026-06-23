@@ -1,5 +1,6 @@
 import { ProductForm } from "@/components/admin/product-form";
-import { getCategories, getBrands, getOrigins } from "@/lib/admin-data-service";
+import { getBrands, getOrigins } from "@/lib/admin-data-service";
+import { getCategories } from "@/lib/data-service";
 
 export default async function NewProductPage() {
   const [categories, brands, origins] = await Promise.all([
