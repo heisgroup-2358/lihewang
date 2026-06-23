@@ -1,4 +1,4 @@
-import { ADMIN_ORDERS } from "@/lib/admin-mock-data";
+import { getAdminOrders } from "@/lib/admin-data-service";
 import { Badge } from "@/components/ui/badge";
 
 const STATUS_STYLES: Record<string, string> = {
@@ -21,7 +21,8 @@ const PAYMENT_LABELS: Record<string, string> = {
   refunded: "已退款",
 };
 
-export default function AdminOrdersPage() {
+export default async function AdminOrdersPage() {
+  const ADMIN_ORDERS = await getAdminOrders();
   return (
     <div>
       <h1 className="font-heading text-2xl font-bold">訂單管理</h1>

@@ -1,6 +1,7 @@
-import { COMMISSION_REPORT } from "@/lib/admin-mock-data";
+import { getCommissionTransactions } from "@/lib/admin-data-service";
 
-export default function AdminCommissionPage() {
+export default async function AdminCommissionPage() {
+  const COMMISSION_REPORT = await getCommissionTransactions();
   return (
     <div>
       <h1 className="font-heading text-2xl font-bold">佣金報表</h1>

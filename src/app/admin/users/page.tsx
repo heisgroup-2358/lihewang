@@ -1,4 +1,4 @@
-import { ADMIN_USERS, WHOLESALE_APPLICATIONS } from "@/lib/admin-mock-data";
+import { getAdminUsers, getWholesaleApplications } from "@/lib/admin-data-service";
 import { Badge } from "@/components/ui/badge";
 
 const ROLE_LABELS: Record<string, string> = {
@@ -19,7 +19,11 @@ const APP_STATUS_STYLES: Record<string, string> = {
   rejected: "bg-red-100 text-red-700 border-0",
 };
 
-export default function AdminUsersPage() {
+export default async function AdminUsersPage() {
+  const [ADMIN_USERS, WHOLESALE_APPLICATIONS] = await Promise.all([
+    getAdminUsers(),
+    getWholesaleApplications(),
+  ]);
   return (
     <div>
       <h1 className="font-heading text-2xl font-bold">會員管理</h1>

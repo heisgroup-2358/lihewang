@@ -1,7 +1,8 @@
 import { Package, ShoppingCart, Users, DollarSign } from "lucide-react";
-import { ADMIN_STATS } from "@/lib/admin-mock-data";
+import { getAdminStats } from "@/lib/admin-data-service";
 
-export default function AdminDashboard() {
+export default async function AdminDashboard() {
+  const ADMIN_STATS = await getAdminStats();
   return (
     <div>
       <h1 className="font-heading text-2xl font-bold">儀表板</h1>

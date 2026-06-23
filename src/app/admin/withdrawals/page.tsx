@@ -1,4 +1,4 @@
-import { WITHDRAWAL_REQUESTS } from "@/lib/admin-mock-data";
+import { getWithdrawalRequests } from "@/lib/admin-data-service";
 import { Badge } from "@/components/ui/badge";
 
 const STATUS_STYLES: Record<string, string> = {
@@ -6,7 +6,8 @@ const STATUS_STYLES: Record<string, string> = {
   completed: "bg-green-100 text-green-700 border-0",
 };
 
-export default function AdminWithdrawalsPage() {
+export default async function AdminWithdrawalsPage() {
+  const WITHDRAWAL_REQUESTS = await getWithdrawalRequests();
   return (
     <div>
       <h1 className="font-heading text-2xl font-bold">提現審批</h1>

@@ -1,7 +1,8 @@
-import { ADMIN_PRODUCTS } from "@/lib/admin-mock-data";
+import { getAdminProducts } from "@/lib/admin-data-service";
 import { Badge } from "@/components/ui/badge";
 
-export default function AdminProductsPage() {
+export default async function AdminProductsPage() {
+  const ADMIN_PRODUCTS = await getAdminProducts();
   return (
     <div>
       <div className="flex items-center justify-between">
