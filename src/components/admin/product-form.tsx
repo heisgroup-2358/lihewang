@@ -8,9 +8,13 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Category = { id: string; name: string; slug: string; image: string | null };
+type Brand = { id: string; name: string; slug: string; code: string };
+type Origin = { id: string; name: string; slug: string };
 
 type ProductFormProps = {
   categories: Category[];
+  brands: Brand[];
+  origins: Origin[];
   product?: {
     id: string;
     slug: string;
@@ -40,7 +44,7 @@ function toSlug(text: string) {
     .replace(/^-|-$/g, "");
 }
 
-export function ProductForm({ categories, product }: ProductFormProps) {
+export function ProductForm({ categories, brands, origins, product }: ProductFormProps) {
   const router = useRouter();
   const isEdit = !!product;
 
@@ -173,11 +177,23 @@ export function ProductForm({ categories, product }: ProductFormProps) {
           <div className="grid grid-cols-3 gap-4">
             <div className="space-y-1.5">
               <label className="text-sm font-medium">品牌</label>
-              <Input value={brand} onChange={(e) => setBrand(e.target.value)} required />
+              <select value={brand} onChange={(e) => setBrand(e.target.value)} required
+                className="h-8 w-full rounded-lg border border-input bg-transparent px-2.5 py-1 text-sm transition-colors focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50">
+                <option value="">選擇品牌</option>
+                {brands.map((b) => (
+                  <option key={b.id} value={b.name}>{b.name} ({b.code})</option>
+                ))}
+              </select>
             </div>
             <div className="space-y-1.5">
               <label className="text-sm font-medium">產地</label>
-              <Input value={origin} onChange={(e) => setOrigin(e.target.value)} required />
+              <select value={origin} onChange={(e) => setOrigin(e.target.value)} required
+                className="h-8 w-full rounded-lg border border-input bg-transparent px-2.5 py-1 text-sm transition-colors focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50">
+                <option value="">選擇產地</option>
+                {origins.map((o) => (
+                  <option key={o.id} value={o.name}>{o.name}</option>
+                ))}
+              </select>
             </div>
             <div className="space-y-1.5">
               <label className="text-sm font-medium">分類</label>

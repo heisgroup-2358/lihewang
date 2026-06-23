@@ -210,3 +210,19 @@ export async function getWithdrawalRequests() {
     return WITHDRAWAL_REQUESTS;
   }
 }
+
+export async function getBrands() {
+  try {
+    return await prisma.brand.findMany({ orderBy: { name: "asc" } });
+  } catch {
+    return [];
+  }
+}
+
+export async function getOrigins() {
+  try {
+    return await prisma.origin.findMany({ orderBy: { name: "asc" } });
+  } catch {
+    return [];
+  }
+}
