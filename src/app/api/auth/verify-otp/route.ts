@@ -26,16 +26,22 @@ export async function POST(req: Request) {
         }
       }
 
-      const user = await prisma.user.upsert({
-        where: { phone },
-        update: { name: name ?? undefined },
-        create: {
-          phone,
-          email: email ?? undefined,
-          name: name ?? "User",
-          referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
-        },
-      });
+      let user = await prisma.user.findFirst({ where: { phone } });
+      if (user) {
+        user = await prisma.user.update({
+          where: { id: user.id },
+          data: { name: name ?? undefined },
+        });
+      } else {
+        user = await prisma.user.create({
+          data: {
+            phone,
+            email: email ?? undefined,
+            name: name ?? "User",
+            referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
+          },
+        });
+      }
 
       if (referralCode) {
         const referrer = await prisma.user.findUnique({ where: { referralCode } });
@@ -56,16 +62,22 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: "Invalid or expired code" }, { status: 400 });
       }
 
-      const user = await prisma.user.upsert({
-        where: { email },
-        update: { name: name ?? undefined },
-        create: {
-          email,
-          phone: phone ?? "",
-          name: name ?? "User",
-          referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
-        },
-      });
+      let user = await prisma.user.findFirst({ where: { email } });
+      if (user) {
+        user = await prisma.user.update({
+          where: { id: user.id },
+          data: { name: name ?? undefined },
+        });
+      } else {
+        user = await prisma.user.create({
+          data: {
+            email,
+            phone: phone ?? "",
+            name: name ?? "User",
+            referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
+          },
+        });
+      }
 
       if (referralCode) {
         const referrer = await prisma.user.findUnique({ where: { referralCode } });
