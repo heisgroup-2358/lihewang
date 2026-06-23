@@ -79,6 +79,17 @@ export async function getAdminProducts() {
   }
 }
 
+export async function getProduct(id: string) {
+  try {
+    return await prisma.product.findUnique({
+      where: { id },
+      include: { category: true },
+    });
+  } catch {
+    return null;
+  }
+}
+
 export async function getAdminOrders() {
   try {
     const orders = await prisma.order.findMany({
