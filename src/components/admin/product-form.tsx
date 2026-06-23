@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -74,9 +74,9 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
     }
   });
   const [dims, setDims] = useState<Record<string, { w: number; h: number }>>({});
+  const [fileSizes, setFileSizes] = useState<Record<string, string>>({});
   const [uploading, setUploading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [hoveredImg, setHoveredImg] = useState<string | null>(null);
   const [isDragOver, setIsDragOver] = useState(false);
 
   const onImgLoad = useCallback((url: string, w: number, h: number) => {
@@ -86,13 +86,13 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
   const slug = manualSlug ?? (isEdit ? product!.slug : toSlug(name));
   const isSlugAuto = manualSlug === null && !isEdit;
 
-  async function uploadFile(file: File): Promise<string | null> {
+  async function uploadFile(file: File): Promise<{ url: string; size: number } | null> {
     const formData = new FormData();
     formData.append("file", file);
     const res = await fetch("/api/upload", { method: "POST", body: formData });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "Upload failed");
-    return data.url;
+    return { url: data.url, size: file.size };
   }
 
   async function handleImageUpload(e: React.ChangeEvent<HTMLInputElement>) {
@@ -100,12 +100,18 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
     if (!files || files.length === 0) return;
     setUploading(true);
     try {
-      const urls: string[] = [];
+      const results: { url: string; size: number }[] = [];
       for (const f of files) {
-        const url = await uploadFile(f);
-        if (url) urls.push(url);
+        const r = await uploadFile(f);
+        if (r) results.push(r);
       }
-      setImages((prev) => [...prev, ...urls]);
+      setImages((prev) => [...prev, ...results.map((r) => r.url)]);
+      const sizes: Record<string, string> = {};
+      for (const r of results) {
+        const kb = r.size / 1024;
+        sizes[r.url] = kb < 1024 ? `${kb.toFixed(0)}KB` : `${(kb / 1024).toFixed(1)}MB`;
+      }
+      setFileSizes((prev) => ({ ...prev, ...sizes }));
     } catch (e) {
       alert("上傳圖片失敗: " + (e instanceof Error ? e.message : "Unknown error"));
     } finally {
@@ -414,22 +420,17 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
                         });
                       }
                     }}
-                    onMouseEnter={() => setHoveredImg(url)}
-                    onMouseLeave={() => setHoveredImg(null)}
                     className="group relative aspect-square cursor-grab active:cursor-grabbing overflow-hidden rounded-lg border border-border/40 bg-secondary/10 transition-colors hover:bg-secondary/30"
                   >
                     <img src={url} alt="" className="absolute inset-0 h-full w-full object-cover"
                       onLoad={(e) => { const img = e.currentTarget; onImgLoad(url, img.naturalWidth, img.naturalHeight); }} />
-                    <div className="absolute left-1 top-1 rounded bg-black/50 px-1.5 py-0.5 text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                      #{i + 1} · {d ? `${d.w}×${d.h}` : "..."}
-                    </div>
                     <button type="button" onClick={() => removeImage(url)}
-                      className="absolute right-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground opacity-0 group-hover:opacity-100 transition-opacity">✕</button>
-                    {hoveredImg === url && d && (
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-2 pt-6">
-                        <p className="text-[10px] text-white/90">{d.w} × {d.h} px</p>
-                      </div>
-                    )}
+                      className="absolute right-1 top-1 z-10 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground shadow-sm hover:scale-110 transition-transform">✕</button>
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-1.5 pt-4">
+                      <p className="text-[9px] text-white/80 leading-tight">
+                        #{i + 1}{d ? ` · ${d.w}×${d.h}` : ""}{fileSizes[url] ? ` · ${fileSizes[url]}` : ""}
+                      </p>
+                    </div>
                     <div className="absolute bottom-1 right-1 rounded bg-black/40 px-1 py-0.5 text-[9px] text-white/70">
                       ↕
                     </div>
