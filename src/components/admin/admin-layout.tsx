@@ -9,6 +9,9 @@ import {
   Users,
   DollarSign,
   Wallet,
+  Tags,
+  MapPin,
+  FolderTree,
   ChevronLeft,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -20,6 +23,9 @@ const SIDEBAR_LINKS = [
   { href: "/admin/users", label: "會員管理", icon: Users },
   { href: "/admin/commission", label: "佣金報表", icon: DollarSign },
   { href: "/admin/withdrawals", label: "提現審批", icon: Wallet },
+  { href: "/admin/brands", label: "品牌管理", icon: Tags },
+  { href: "/admin/origins", label: "產地管理", icon: MapPin },
+  { href: "/admin/categories", label: "分類管理", icon: FolderTree },
 ];
 
 export function AdminSidebar() {
