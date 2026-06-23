@@ -21,6 +21,15 @@ export default function CheckoutPage() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [shippingMethod, setShippingMethod] = useState("順豐站自取");
+  const [paymentMethod, setPaymentMethod] = useState("Fps");
+
+  const PAYMENT_METHODS = [
+    { id: "Fps", label: "FPS 轉數快", icon: "💳" },
+    { id: "Alipay", label: "Alipay 支付寶", icon: "💳" },
+    { id: "Wechat", label: "WeChat Pay 微信支付", icon: "💳" },
+    { id: "Octopus", label: "八達通", icon: "🐙" },
+    { id: "PayMe", label: "PayMe", icon: "💳" },
+  ];
 
   const shipping = total >= 300 ? 0 : 30;
   const grandTotal = total + shipping;
@@ -30,27 +39,46 @@ export default function CheckoutPage() {
     setSubmitting(true);
     setError(null);
     try {
-      const res = await fetch("/api/orders", {
+      // 1. Create order
+      const orderRes = await fetch("/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           items: items.map((i) => ({ slug: i.slug, quantity: i.quantity })),
           shippingAddress: `${name}, ${phone}, ${email}, ${district}, ${address}`,
           shippingMethod,
-          paymentMethod: "payme",
+          paymentMethod,
           orderType: "retail",
         }),
       });
-      const data = await res.json();
-      if (res.ok) {
-        clearCart();
-        router.push(`/order/confirm/${data.orderId}`);
-      } else {
-        setError(data.error ?? "提交失敗");
+      const orderData = await orderRes.json();
+      if (!orderRes.ok) {
+        setError(orderData.error ?? "提交失敗");
+        setSubmitting(false);
+        return;
       }
+
+      // 2. Create PaymentAsia payment
+      const paymentRes = await fetch("/api/payment/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          orderId: orderData.orderId,
+          network: paymentMethod,
+        }),
+      });
+      const paymentData = await paymentRes.json();
+      if (!paymentRes.ok) {
+        setError(paymentData.error ?? "創建付款失敗");
+        setSubmitting(false);
+        return;
+      }
+
+      // 3. Clear cart and redirect to PaymentAsia
+      clearCart();
+      window.location.href = paymentData.payment_url;
     } catch {
       setError("網絡錯誤，請稍後再試");
-    } finally {
       setSubmitting(false);
     }
   };
@@ -161,9 +189,18 @@ export default function CheckoutPage() {
 
           <section>
             <h2 className="font-heading text-xl font-bold mb-4">付款方式</h2>
-            <div className="rounded-xl border border-border/60 p-6 text-center">
-              <CreditCard className="mx-auto h-12 w-12 text-primary" />
-              <p className="mt-3 font-medium">Payme</p>
+            <div className="space-y-3">
+              {PAYMENT_METHODS.map((m) => (
+                <label key={m.id} className="flex cursor-pointer items-center justify-between rounded-xl border border-border/60 p-4 transition-colors hover:border-primary has-checked:border-primary has-checked:bg-primary/5">
+                  <div className="flex items-center gap-3">
+                    <input type="radio" name="payment" value={m.id} defaultChecked={m.id === paymentMethod}
+                      onChange={() => setPaymentMethod(m.id)} className="h-4 w-4 accent-primary" />
+                    <span className="text-lg">{m.icon}</span>
+                    <span className="text-sm font-medium">{m.label}</span>
+                  </div>
+                </label>
+              ))}
+            </div>
               <p className="mt-1 text-sm text-muted-foreground">
                 結帳後將顯示 Payme QR Code 進行付款
               </p>
