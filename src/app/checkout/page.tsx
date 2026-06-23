@@ -201,13 +201,6 @@ export default function CheckoutPage() {
                 </label>
               ))}
             </div>
-              <p className="mt-1 text-sm text-muted-foreground">
-                結帳後將顯示 Payme QR Code 進行付款
-              </p>
-              <div className="mx-auto mt-4 h-48 w-48 rounded-xl bg-secondary/40 flex items-center justify-center">
-                <span className="text-sm text-muted-foreground">Payme QR Code</span>
-              </div>
-            </div>
           </section>
         </div>
 
