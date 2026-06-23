@@ -18,3 +18,36 @@ export async function GET(
 
   return NextResponse.json(product);
 }
+
+export async function PATCH(
+  req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  try {
+    const { slug } = await params;
+    const body = await req.json();
+    const product = await prisma.product.update({
+      where: { slug },
+      data: body,
+    });
+    return NextResponse.json(product);
+  } catch {
+    return NextResponse.json({ error: "Failed to update product" }, { status: 500 });
+  }
+}
+
+export async function DELETE(
+  _req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  try {
+    const { slug } = await params;
+    await prisma.product.update({
+      where: { slug },
+      data: { isActive: false },
+    });
+    return NextResponse.json({ success: true });
+  } catch {
+    return NextResponse.json({ error: "Failed to delete product" }, { status: 500 });
+  }
+}
