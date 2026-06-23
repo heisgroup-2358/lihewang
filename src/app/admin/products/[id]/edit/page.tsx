@@ -22,7 +22,7 @@ export default async function EditProductPage({
     <div>
       <h1 className="font-heading text-2xl font-bold">編輯產品</h1>
       <p className="mt-1 text-sm text-muted-foreground">{product.name}</p>
-      <div className="mt-6 max-w-2xl">
+      <div className="mt-6">
         <ProductForm categories={categories} brands={brands} origins={origins} product={product} />
       </div>
     </div>
