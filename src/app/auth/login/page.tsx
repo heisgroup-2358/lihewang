@@ -80,19 +80,19 @@ export default function LoginPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-secondary/40 to-background px-4 py-16">
-      <div className="w-full max-w-sm">
+      <div className="w-full max-w-sm md:max-w-md lg:max-w-lg">
         <div className="text-center">
-          <Link href="/" className="font-heading text-2xl font-bold tracking-wide text-primary">
+          <Link href="/" className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide text-primary">
             禮盒王
           </Link>
         </div>
 
-        <div className="mt-6 rounded-2xl border border-border/60 bg-card p-6 shadow-sm">
+        <div className="mt-6 md:mt-8 rounded-2xl border border-border/60 bg-card p-6 md:p-8 lg:p-10 shadow-sm">
           {step === "input" ? (
             <>
               <div className="text-center">
-                <h1 className="font-heading text-xl font-bold">歡迎回來</h1>
-                <p className="mt-1 text-xs text-muted-foreground">
+                <h1 className="font-heading text-xl md:text-2xl font-bold">歡迎回來</h1>
+                <p className="mt-1 text-xs md:text-sm text-muted-foreground">
                   Welcome Back · 禮盒王 · 日本直送禮品專家
                 </p>
               </div>
@@ -139,7 +139,7 @@ export default function LoginPage() {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+852 5111 1234"
-                      className="mt-1.5 w-full rounded-full border border-border h-11 px-5 text-sm"
+                      className="mt-1.5 w-full rounded-full border border-border h-11 lg:h-12 px-5 text-sm lg:text-base"
                       required
                     />
                   ) : (
@@ -148,7 +148,7 @@ export default function LoginPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your@email.com"
-                      className="mt-1.5 w-full rounded-full border border-border h-11 px-5 text-sm"
+                      className="mt-1.5 w-full rounded-full border border-border h-11 lg:h-12 px-5 text-sm lg:text-base"
                       required
                     />
                   )}
@@ -169,7 +169,7 @@ export default function LoginPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full rounded-full bg-primary h-11 text-sm text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+                  className="w-full rounded-full bg-primary h-11 lg:h-12 text-sm lg:text-base text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
                 >
                   {loading ? "..." : "發送驗證碼 Send Code"}
                 </button>
@@ -187,7 +187,7 @@ export default function LoginPage() {
                       className="flex items-center gap-1.5 rounded-lg border border-border/40 bg-secondary/20 px-2.5 py-2"
                     >
                       <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green-500" />
-                      <span className="text-[10px] font-medium text-muted-foreground leading-tight">
+                      <span                     className="text-[10px] lg:text-xs font-medium text-muted-foreground leading-tight">
                         {line1}<br />{line2}
                       </span>
                     </div>
@@ -198,8 +198,8 @@ export default function LoginPage() {
           ) : (
             <>
               <div className="text-center">
-                <h1 className="font-heading text-xl font-bold">輸入驗證碼</h1>
-                <p className="mt-1 text-xs text-muted-foreground">
+                <h1 className="font-heading text-xl md:text-2xl font-bold">輸入驗證碼</h1>
+                <p className="mt-1 text-xs md:text-sm text-muted-foreground">
                   Enter Verification Code
                 </p>
               </div>
