@@ -175,7 +175,7 @@ export default function LoginPage() {
                 </button>
                 {error && <p className="text-sm text-red-500">{error}</p>}
 
-                <div className="grid grid-cols-2 gap-2 pt-1">
+                <div className="grid grid-cols-4 gap-1.5 pt-1">
                   {[
                     ["256-bit SSL", "Encryption"],
                     ["Cloudflare", "Protected"],
@@ -184,11 +184,11 @@ export default function LoginPage() {
                   ].map(([line1, line2]) => (
                     <div
                       key={`${line1}-${line2}`}
-                      className="flex items-center gap-1.5 rounded-lg border border-border/40 bg-secondary/20 px-2.5 py-2"
+                      className="flex items-center gap-1 rounded-lg border border-border/40 bg-secondary/20 px-1.5 py-1.5"
                     >
                       <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green-500" />
-                      <span                     className="text-[10px] lg:text-xs font-medium text-muted-foreground leading-tight">
-                        {line1}<br />{line2}
+                      <span className="text-[9px] lg:text-[10px] font-medium text-muted-foreground whitespace-nowrap">
+                        {line1} {line2}
                       </span>
                     </div>
                   ))}
