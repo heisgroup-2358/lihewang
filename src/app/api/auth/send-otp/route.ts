@@ -6,9 +6,31 @@ function generateCode(): string {
   return Math.floor(100000 + Math.random() * 900000).toString();
 }
 
+async function verifyCaptcha(token: string): Promise<boolean> {
+  if (!token) return false;
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret) return true; // dev: skip if not configured
+  try {
+    const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ secret, response: token }),
+    });
+    const data = await res.json();
+    return data.success === true;
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(req: Request) {
   try {
-    const { channel, phone, email } = await req.json();
+    const { channel, phone, email, captchaToken } = await req.json();
+
+    const isValidCaptcha = await verifyCaptcha(captchaToken);
+    if (!isValidCaptcha) {
+      return NextResponse.json({ error: "Verification failed" }, { status: 400 });
+    }
 
     if (channel === "whatsapp") {
       if (!phone || !/^\+?[1-9]\d{6,14}$/.test(phone)) {

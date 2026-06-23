@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { TurnstileWidget } from "@/components/shared/turnstile";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -13,12 +14,19 @@ export default function LoginPage() {
   const [step, setStep] = useState<"input" | "otp">("input");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState("");
 
   const sendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!captchaToken) {
+      setError("請完成驗證");
+      return;
+    }
     setLoading(true);
     setError("");
-    const body = channel === "whatsapp" ? { channel, phone } : { channel, email };
+    const body = channel === "whatsapp"
+      ? { channel, phone, captchaToken }
+      : { channel, email, captchaToken };
     const res = await fetch("/api/auth/send-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -45,6 +53,10 @@ export default function LoginPage() {
     else setError("驗證碼錯誤");
     setLoading(false);
   };
+
+  const onCaptchaVerify = useCallback((token: string) => {
+    setCaptchaToken(token);
+  }, []);
 
   return (
     <div className="flex min-h-[70vh] items-center justify-center px-4 py-16">
@@ -103,6 +115,19 @@ export default function LoginPage() {
                 required
               />
             )}
+
+            <div className="flex justify-center">
+              <TurnstileWidget onVerify={onCaptchaVerify} />
+            </div>
+
+            {channel === "whatsapp" && (
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                繼續即表示您同意接收 WhatsApp 驗證訊息。
+                <br />
+                By continuing, you agree to receive WhatsApp verification messages.
+              </p>
+            )}
+
             <button
               type="submit"
               disabled={loading}
@@ -111,6 +136,24 @@ export default function LoginPage() {
               {loading ? "..." : "發送驗證碼"}
             </button>
             {error && <p className="text-sm text-red-500">{error}</p>}
+
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+              {[
+                "256-bit SSL",
+                "Cloudflare",
+                "Bot Defense",
+                "Turnstile",
+                "OTP Verified",
+              ].map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-1 rounded-full bg-secondary/50 px-3 py-1 text-[10px] font-medium text-muted-foreground"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
+                  {badge}
+                </span>
+              ))}
+            </div>
           </form>
         ) : (
           <form onSubmit={verifyOtp} className="mt-8 space-y-4">
