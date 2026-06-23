@@ -78,6 +78,7 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
   const [uploading, setUploading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [hoveredImg, setHoveredImg] = useState<string | null>(null);
+  const [isDragOver, setIsDragOver] = useState(false);
 
   const onImgLoad = useCallback((url: string, w: number, h: number) => {
     setDims((prev) => ({ ...prev, [url]: { w, h } }));
@@ -86,17 +87,48 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
   const slug = manualSlug ?? (isEdit ? product!.slug : toSlug(name));
   const isSlugAuto = manualSlug === null && !isEdit;
 
+  async function uploadFile(file: File): Promise<string | null> {
+    const formData = new FormData();
+    formData.append("file", file);
+    const res = await fetch("/api/upload", { method: "POST", body: formData });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Upload failed");
+    return data.url;
+  }
+
   async function handleImageUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
     setUploading(true);
     try {
-      const formData = new FormData();
-      formData.append("file", file);
-      const res = await fetch("/api/upload", { method: "POST", body: formData });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Upload failed");
-      setImages((prev) => [...prev, data.url]);
+      const urls: string[] = [];
+      for (const f of files) {
+        const url = await uploadFile(f);
+        if (url) urls.push(url);
+      }
+      setImages((prev) => [...prev, ...urls]);
+    } catch (e) {
+      alert("上傳圖片失敗: " + (e instanceof Error ? e.message : "Unknown error"));
+    } finally {
+      setUploading(false);
+      e.target.value = "";
+    }
+  }
+
+  async function handleDrop(e: React.DragEvent) {
+    e.preventDefault();
+    setIsDragOver(false);
+    const files = e.dataTransfer.files;
+    if (!files || files.length === 0) return;
+    setUploading(true);
+    try {
+      const urls: string[] = [];
+      for (const f of files) {
+        if (!f.type.startsWith("image/")) continue;
+        const url = await uploadFile(f);
+        if (url) urls.push(url);
+      }
+      setImages((prev) => [...prev, ...urls]);
     } catch (e) {
       alert("上傳圖片失敗: " + (e instanceof Error ? e.message : "Unknown error"));
     } finally {
@@ -348,10 +380,20 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
             <CardTitle>商品圖片</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <label className="flex h-32 w-full cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-border/60 text-sm text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors">
-              {uploading ? <span className="animate-pulse">上傳中...</span> : <span>+ 點擊上傳圖片</span>}
-              <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" disabled={uploading} />
-            </label>
+            <div
+              onDragOver={(e) => { e.preventDefault(); e.stopPropagation(); setIsDragOver(true); }}
+              onDragLeave={() => setIsDragOver(false)}
+              onDrop={handleDrop}
+              onClick={() => document.getElementById("img-upload")?.click()}
+              className={`flex h-32 w-full cursor-pointer items-center justify-center rounded-lg border-2 border-dashed text-sm transition-colors ${
+                isDragOver
+                  ? "border-primary bg-primary/5 text-primary"
+                  : "border-border/60 text-muted-foreground hover:border-primary/50 hover:text-primary"
+              } ${uploading ? "pointer-events-none opacity-50" : ""}`}
+            >
+              {uploading ? <span className="animate-pulse">上傳中...</span> : <span>{isDragOver ? "放開以上傳" : "點擊或拖曳圖片到這裡"}</span>}
+            </div>
+            <input id="img-upload" type="file" accept="image/*" multiple onChange={handleImageUpload} className="hidden" disabled={uploading} />
             <div className="grid grid-cols-2 gap-2">
               {images.map((url, i) => {
                 const d = dims[url];
