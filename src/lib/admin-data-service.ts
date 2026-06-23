@@ -67,11 +67,14 @@ export async function getAdminProducts() {
     });
     return products.map((p) => ({
       id: p.id,
+      slug: p.slug,
       name: p.name,
       brand: p.brand,
+      productCode: p.productCode,
       price: p.retailPrice,
       stock: p.stock,
       status: p.isActive ? "active" as const : "inactive" as const,
+      sortOrder: p.sortOrder,
       sales: p.reviewCount,
     }));
   } catch {

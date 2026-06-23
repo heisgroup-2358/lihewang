@@ -21,6 +21,9 @@ type ProductFormProps = {
     name: string;
     brand: string;
     productCode: string | null;
+    isPreOrder: boolean;
+    estimatedArrival: string | null;
+    sortOrder: number;
     origin: string;
     categoryId: string;
     description: string;
@@ -61,6 +64,9 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
   const [costPrice, setCostPrice] = useState(product?.costPrice.toString() ?? "");
   const [stock, setStock] = useState(product?.stock.toString() ?? "0");
   const [badge, setBadge] = useState(product?.badge ?? "");
+  const [isPreOrder, setIsPreOrder] = useState(product?.isPreOrder ?? false);
+  const [estimatedArrival, setEstimatedArrival] = useState(product?.estimatedArrival ?? "");
+  const [sortOrder, setSortOrder] = useState(product?.sortOrder?.toString() ?? "0");
   const [images, setImages] = useState<string[]>(() => {
     try {
       return product?.images ? JSON.parse(product.images) : [];
@@ -116,6 +122,9 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
       costPrice: Number(costPrice),
       stock: Number(stock),
       badge: badge || null,
+      isPreOrder,
+      estimatedArrival: estimatedArrival || null,
+      sortOrder: Number(sortOrder),
     };
 
     try {
@@ -220,6 +229,23 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
               onChange={(e) => setProductCode(e.target.value)}
               placeholder="e.g. ISH-0001（品牌代號-序號）"
             />
+          </div>
+
+          <div className="flex items-center gap-4">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" checked={isPreOrder} onChange={(e) => setIsPreOrder(e.target.checked)}
+                className="h-5 w-5 rounded border-border accent-primary" />
+              <span className="text-sm font-medium">📦 預購商品</span>
+            </label>
+            <div className="flex-1 space-y-1.5">
+              <label className="text-sm font-medium">預計到港日期</label>
+              <Input value={estimatedArrival} onChange={(e) => setEstimatedArrival(e.target.value)}
+                placeholder="e.g. 預計 2026年7月中旬到港" />
+            </div>
+            <div className="w-24 space-y-1.5">
+              <label className="text-sm font-medium">排序</label>
+              <Input type="number" min="0" value={sortOrder} onChange={(e) => setSortOrder(e.target.value)} />
+            </div>
           </div>
 
           <div className="space-y-1.5">

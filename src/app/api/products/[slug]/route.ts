@@ -37,11 +37,16 @@ export async function PATCH(
 }
 
 export async function DELETE(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
     const { slug } = await params;
+    const { password } = await req.json();
+    const adminPassword = process.env.ADMIN_DELETE_PASSWORD;
+    if (adminPassword && password !== adminPassword) {
+      return NextResponse.json({ error: "Invalid password" }, { status: 403 });
+    }
     await prisma.product.update({
       where: { slug },
       data: { isActive: false },

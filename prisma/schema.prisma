@@ -68,6 +68,9 @@ model Product {
   reviewCount       Int            @default(0)
   badge             String?
   isActive          Boolean        @default(true)
+  isPreOrder        Boolean        @default(false)
+  estimatedArrival  String?
+  sortOrder         Int            @default(0)
   createdAt         DateTime       @default(now())
   updatedAt         DateTime       @updatedAt
   category          Category       @relation(fields: [categoryId], references: [id])
