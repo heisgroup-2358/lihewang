@@ -405,7 +405,7 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
               {uploading ? <span className="animate-pulse">上傳中...</span> : <span>{isDragOver ? "放開以上傳" : "點擊或拖曳圖片到這裡"}</span>}
             </div>
             <input id="img-upload" type="file" accept="image/*" multiple onChange={handleImageUpload} className="hidden" disabled={uploading} />
-            <div className="grid grid-cols-2 gap-2">
+            <div className="space-y-2">
               {images.map((url, i) => {
                 const d = dims[url];
                 return (
@@ -426,17 +426,25 @@ export function ProductForm({ categories, brands, origins, product }: ProductFor
                         });
                       }
                     }}
-                    className="group relative aspect-square cursor-grab active:cursor-grabbing overflow-hidden rounded-lg border border-border/40 bg-secondary/10 transition-colors hover:bg-secondary/30"
+                    className="group flex items-center gap-2 cursor-grab active:cursor-grabbing rounded-lg border border-border/40 bg-secondary/10 p-1.5 transition-colors hover:bg-secondary/30"
                   >
-                    <img src={url} alt="" className="absolute inset-0 h-full w-full object-cover"
-                      onLoad={(e) => { const img = e.currentTarget; onImgLoad(url, img.naturalWidth, img.naturalHeight); }} />
-                    <button type="button" onClick={() => removeImage(url)}
-                      className="absolute right-1 top-1 z-10 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground shadow-sm hover:scale-110 transition-transform">✕</button>
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-1.5 pt-4">
-                      <p className="text-[9px] text-white/80 leading-tight">
-                        #{i + 1}{d ? ` · ${d.w}×${d.h}` : ""}{fileSizes[url] ? ` · ${fileSizes[url]}` : ""}
+                    <div className="relative h-[60px] w-[80px] shrink-0 overflow-hidden rounded-md">
+                      <img src={url} alt="" className="h-full w-full object-cover"
+                        onLoad={(e) => { const img = e.currentTarget; onImgLoad(url, img.naturalWidth, img.naturalHeight); }} />
+                      <button type="button" onClick={() => removeImage(url)}
+                        className="absolute right-0.5 top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[8px] text-destructive-foreground shadow-sm hover:scale-110 transition-transform opacity-0 group-hover:opacity-100">✕</button>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[10px] font-medium truncate">圖片 #{i + 1}</p>
+                      <p className="text-[9px] text-muted-foreground truncate">
+                        {d ? `${d.w}×${d.h}` : "..."}{fileSizes[url] ? ` · ${fileSizes[url]}` : ""}
                       </p>
                     </div>
+                    <span className="text-muted-foreground/40 text-xs">⠿</span>
+                  </div>
+                );
+              })}
+            </div>
                     <div className="absolute bottom-1 right-1 rounded bg-black/40 px-1 py-0.5 text-[9px] text-white/70">
                       ↕
                     </div>
