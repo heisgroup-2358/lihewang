@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
-import { MailService } from "@sendgrid/mail";
+import { Resend } from "resend";
 import { getTwilioClient, createOtpToken } from "@/lib/auth";
 
-const sgMail = new MailService();
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+const resend = new Resend(process.env.RESEND_API_KEY!);
 
 function generateCode(): string {
   return Math.floor(100000 + Math.random() * 900000).toString();
@@ -55,12 +54,16 @@ export async function POST(req: Request) {
       const code = generateCode();
       const otpToken = await createOtpToken(email, code);
 
-      sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
-      await sgMail.send({
+      await resend.emails.send({
+        from: "onboarding@resend.dev",
         to: email,
-        from: process.env.SENDGRID_FROM_EMAIL || "noreply@lihewang.com",
         subject: "您的驗證碼",
-        text: `您的驗證碼是：${code}\n\n此驗證碼將於10分鐘後失效。`,
+        html: `<div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
+          <h2 style="color:#d97706;">禮盒王 Lihewang</h2>
+          <p>您的驗證碼是：</p>
+          <div style="font-size:32px;font-weight:bold;letter-spacing:8px;text-align:center;padding:16px;background:#fef3c7;border-radius:8px;margin:16px 0;">${code}</div>
+          <p style="color:#6b7280;font-size:14px;">此驗證碼將於10分鐘後失效。</p>
+        </div>`,
       });
 
       return NextResponse.json({ success: true, otpToken });
