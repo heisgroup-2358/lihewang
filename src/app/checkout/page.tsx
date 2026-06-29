@@ -20,13 +20,11 @@ export default function CheckoutPage() {
   const [email, setEmail] = useState("");
   const [shippingMethod, setShippingMethod] = useState("順豐站自取");
   const [paymentMethod, setPaymentMethod] = useState("Fps");
-  const [savedAddresses, setSavedAddresses] = useState<Record<string, string>[]>([]);
+  const [savedAddresses, setSavedAddresses] = useState<{ id: string; label: string; name: string; phone: string; district: string; detail: string }[]>([]);
   const [useSavedAddress, setUseSavedAddress] = useState(false);
 
   useEffect(() => {
-    fetch("/api/profile").then((r) => r.json()).then((d) => {
-      if (d.addresses) setSavedAddresses(d.addresses);
-    });
+    fetch("/api/addresses").then((r) => r.json()).then(setSavedAddresses).catch(() => {});
   }, []);
 
   const PAYMENT_METHODS = [

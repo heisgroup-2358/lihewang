@@ -172,6 +172,16 @@ export default function ProfilePage() {
                   <p className="text-sm">{addr.detail}</p>
                   <p className="text-xs text-muted-foreground">{addr.name} · {addr.phone}</p>
                   {addr.sfCode && <p className="text-xs text-muted-foreground">點碼: {addr.sfCode}</p>}
+                  <div className="flex gap-2 mt-2">
+                    <button onClick={() => window.location.href = `/account/profile/addresses/${addr.id}`}
+                      className="text-xs text-primary hover:underline">編輯</button>
+                    <button onClick={async () => {
+                      if (confirm("確定刪除？")) {
+                        await fetch(`/api/addresses/${addr.id}`, { method: "DELETE" });
+                        window.location.reload();
+                      }
+                    }} className="text-xs text-red-500 hover:underline">刪除</button>
+                  </div>
                 </div>
               </div>
             ))}
