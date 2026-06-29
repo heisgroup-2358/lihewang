@@ -127,6 +127,13 @@
       "address": "軒尼詩道302號集成中心地下G05號舖"
     },
     {
+      "code": "852CAC",
+      "name": "中環順豐站",
+      "district": "香港島",
+      "area": "中環",
+      "address": "中環"
+    },
+    {
       "code": "852CAL",
       "name": "灣仔駱克道順豐站",
       "district": "香港島",
@@ -139,6 +146,20 @@
       "district": "香港島",
       "area": "銅鑼灣",
       "address": "銅鑼灣廣場一期地下G16號舖"
+    },
+    {
+      "code": "852CC1007",
+      "name": "將軍澳景林商場順豐站",
+      "district": "新界",
+      "area": "將軍澳",
+      "address": "將軍澳景林邨景林商場第2號舖"
+    },
+    {
+      "code": "852CC1033",
+      "name": "將軍澳富麗花園順豐站",
+      "district": "新界",
+      "area": "將軍澳",
+      "address": "將軍澳毓雅里7號富麗花園地下2號舖"
     },
     {
       "code": "852CCL",
@@ -209,6 +230,13 @@
       "district": "香港島",
       "area": "筲箕灣",
       "address": "愛禮街2號愛蝶灣地下G09號舖"
+    },
+    {
+      "code": "852CUL",
+      "name": "坑口安寧花園順豐站",
+      "district": "新界",
+      "area": "將軍澳",
+      "address": "將軍澳常寧道10號安寧花園1座地下14號舖"
     },
     {
       "code": "852DAL",
@@ -407,6 +435,20 @@
       "address": "慈雲山中心地下G22號舖"
     },
     {
+      "code": "852FXL",
+      "name": "西貢翠塘花園順豐站",
+      "district": "新界",
+      "area": "西貢",
+      "address": "西貢翠塘路1號翠塘花園地下1號舖"
+    },
+    {
+      "code": "852FYL",
+      "name": "西貢福民路順豐站",
+      "district": "新界",
+      "area": "西貢",
+      "address": "西貢福民路22-40號西貢苑地下10號舖"
+    },
+    {
       "code": "852GAL",
       "name": "黃大仙中心順豐站",
       "district": "九龍",
@@ -519,6 +561,13 @@
       "address": "福華街146-152號黃金電腦商場地下G01號舖"
     },
     {
+      "code": "852HDSM",
+      "name": "屯門HANDS順豐站",
+      "district": "新界",
+      "area": "屯門",
+      "address": "屯門HANDS"
+    },
+    {
       "code": "852HEL",
       "name": "深水埗西九龍中心順豐站",
       "district": "九龍",
@@ -545,6 +594,13 @@
       "district": "新界",
       "area": "荃灣",
       "address": "西樓角路64-98號南豐中心638-639室"
+    },
+    {
+      "code": "852HHUM",
+      "name": "坑口南豐廣場順豐站",
+      "district": "新界",
+      "area": "將軍澳",
+      "address": "將軍澳培成路8號南豐廣場1樓B28-B31舖"
     },
     {
       "code": "852HIL",
@@ -792,6 +848,13 @@
       "address": "新都城中心地下G22號舖"
     },
     {
+      "code": "852KIIM",
+      "name": "尖沙咀K11順豐站",
+      "district": "九龍",
+      "area": "尖沙咀",
+      "address": "尖沙咀K11 MUSEA"
+    },
+    {
       "code": "852KIL",
       "name": "坑口東港城順豐站",
       "district": "新界",
@@ -855,46 +918,88 @@
       "address": "西貢宜春街66號地下10號舖"
     },
     {
-      "code": "852FXL",
-      "name": "西貢翠塘花園順豐站",
+      "code": "852TCSM",
+      "name": "屯門仁愛大廈順豐站",
       "district": "新界",
-      "area": "西貢",
-      "address": "西貢翠塘路1號翠塘花園地下1號舖"
+      "area": "屯門",
+      "address": "屯門仁愛大廈"
     },
     {
-      "code": "852FYL",
-      "name": "西貢福民路順豐站",
-      "district": "新界",
-      "area": "西貢",
-      "address": "西貢福民路22-40號西貢苑地下10號舖"
+      "code": "852WCLM",
+      "name": "石硤尾金玉樓順豐站",
+      "district": "九龍",
+      "area": "石硤尾",
+      "address": "石硤尾金玉樓"
     },
     {
-      "code": "852CC1033",
-      "name": "將軍澳富麗花園順豐站",
+      "code": "852YMCM",
+      "name": "牛頭角裕民中心順豐站",
+      "district": "九龍",
+      "area": "牛頭角",
+      "address": "牛頭角裕民中心"
+    },
+    {
+      "code": "852Z101",
+      "name": "將軍澳康城順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "將軍澳毓雅里7號富麗花園地下2號舖"
+      "address": "將軍澳康城"
     },
     {
-      "code": "852CC1007",
-      "name": "將軍澳景林商場順豐站",
-      "district": "新界",
-      "area": "將軍澳",
-      "address": "將軍澳景林邨景林商場第2號舖"
+      "code": "852Z151",
+      "name": "觀塘興業街順豐站",
+      "district": "九龍",
+      "area": "觀塘",
+      "address": "觀塘興業街"
     },
     {
-      "code": "852CUL",
-      "name": "坑口安寧花園順豐站",
-      "district": "新界",
-      "area": "將軍澳",
-      "address": "將軍澳常寧道10號安寧花園1座地下14號舖"
+      "code": "852Z201",
+      "name": "深水埗南昌站順豐站",
+      "district": "九龍",
+      "area": "深水埗",
+      "address": "深水埗南昌站"
     },
     {
-      "code": "852HHUM",
-      "name": "坑口南豐廣場順豐站",
+      "code": "852Z251",
+      "name": "尖沙咀海港城順豐站",
+      "district": "九龍",
+      "area": "尖沙咀",
+      "address": "尖沙咀海港城"
+    },
+    {
+      "code": "852Z352",
+      "name": "東涌東薈城2期順豐站",
       "district": "新界",
-      "area": "將軍澳",
-      "address": "將軍澳培成路8號南豐廣場1樓B28-B31舖"
+      "area": "東涌",
+      "address": "東涌東薈城2期"
+    },
+    {
+      "code": "852Z353",
+      "name": "馬灣田寮新村順豐站",
+      "district": "新界",
+      "area": "馬灣",
+      "address": "馬灣田寮新村"
+    },
+    {
+      "code": "852Z551",
+      "name": "天后永興街順豐站",
+      "district": "香港島",
+      "area": "天后",
+      "address": "天后永興街"
+    },
+    {
+      "code": "852Z552",
+      "name": "小西灣藍灣廣場順豐站",
+      "district": "香港島",
+      "area": "小西灣",
+      "address": "小西灣藍灣廣場"
+    },
+    {
+      "code": "852Z601",
+      "name": "薄扶林數碼港順豐站",
+      "district": "香港島",
+      "area": "薄扶林",
+      "address": "薄扶林數碼港"
     }
   ]
 }
