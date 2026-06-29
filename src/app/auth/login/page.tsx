@@ -2,11 +2,9 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { TurnstileWidget } from "@/components/shared/turnstile";
 
 export default function LoginPage() {
-  const router = useRouter();
   const [channel, setChannel] = useState<"whatsapp" | "email">("whatsapp");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -57,7 +55,7 @@ export default function LoginPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    if (res.ok) router.push("/account");
+    if (res.ok) { setLoading(false); window.location.href = "/account"; return; }
     else setError("驗證碼錯誤");
     setLoading(false);
   };

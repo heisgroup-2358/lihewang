@@ -53,12 +53,12 @@ export async function POST(req: Request) {
       }
 
       const token = await createSessionToken(user.id, user.phone, user.role);
-      const res = NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
-      res.cookies.set("session", token, {
+      const cookieStore = await cookies();
+      cookieStore.set("session", token, {
         httpOnly: true, secure: process.env.NODE_ENV === "production",
         sameSite: "lax", path: "/", maxAge: 60 * 60 * 24 * 30,
       });
-      return res;
+      return NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
     }
 
     if (channel === "email") {
@@ -94,12 +94,12 @@ export async function POST(req: Request) {
       }
 
       const token = await createSessionToken(user.id, user.phone, user.role);
-      const res = NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
-      res.cookies.set("session", token, {
+      const cookieStore = await cookies();
+      cookieStore.set("session", token, {
         httpOnly: true, secure: process.env.NODE_ENV === "production",
         sameSite: "lax", path: "/", maxAge: 60 * 60 * 24 * 30,
       });
-      return res;
+      return NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
     }
 
     return NextResponse.json({ error: "Invalid channel" }, { status: 400 });
