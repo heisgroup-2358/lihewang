@@ -42,13 +42,29 @@ export default function ProfilePage() {
   const [verifySaving, setVerifySaving] = useState(false);
 
   useEffect(() => {
-    fetch("/api/profile").then((r) => r.json()).then((d) => {
-      setProfile(d);
-      setLastName(d.lastName || "");
-      setFirstName(d.firstName || "");
-      setBirthday(d.birthday ? d.birthday.slice(0, 10) : "");
-      setLoading(false);
-    });
+    fetch("/api/profile")
+      .then((r) => r.json())
+      .then((d) => {
+        if (d && !d.error) {
+          setProfile({ ...d, addresses: d.addresses || [] });
+          setLastName(d.lastName || "");
+          setFirstName(d.firstName || "");
+          setBirthday(d.birthday ? d.birthday.slice(0, 10) : "");
+        } else {
+          setProfile({
+            lastName: null, firstName: null, phone: "", email: null,
+            phoneVerified: false, emailVerified: false, birthday: null, addresses: [],
+          });
+        }
+        setLoading(false);
+      })
+      .catch(() => {
+        setProfile({
+          lastName: null, firstName: null, phone: "", email: null,
+          phoneVerified: false, emailVerified: false, birthday: null, addresses: [],
+        });
+        setLoading(false);
+      });
   }, []);
 
   const saveProfile = async () => {

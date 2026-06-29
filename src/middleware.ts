@@ -8,7 +8,7 @@ function getJwtSecret(): Uint8Array {
   return new TextEncoder().encode(secret);
 }
 
-const protectedRoutes = ["/account", "/wholesale", "/api/orders", "/api/cart", "/api/withdrawals", "/api/profile", "/api/addresses"];
+const protectedRoutes = ["/wholesale", "/api/orders", "/api/cart", "/api/withdrawals"];
 const adminRoutes = ["/admin"];
 
 export async function middleware(req: NextRequest) {
@@ -41,5 +41,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/account/:path*", "/admin/:path*", "/wholesale/:path*", "/api/orders", "/api/cart", "/api/withdrawals", "/api/profile/:path*", "/api/addresses/:path*"],
+  matcher: ["/admin/:path*", "/wholesale/:path*", "/api/orders", "/api/cart", "/api/withdrawals"],
 };
