@@ -1,13 +1,4 @@
 import { prisma } from "./prisma";
-import {
-  ADMIN_STATS,
-  ADMIN_PRODUCTS,
-  ADMIN_ORDERS,
-  ADMIN_USERS,
-  WHOLESALE_APPLICATIONS,
-  COMMISSION_REPORT,
-  WITHDRAWAL_REQUESTS,
-} from "./admin-mock-data";
 
 export async function getAdminStats() {
   try {
@@ -15,16 +6,9 @@ export async function getAdminStats() {
     const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
 
     const [
-      totalProducts,
-      activeProducts,
-      totalOrders,
-      pendingOrders,
-      totalUsers,
-      wholesaleUsers,
-      pendingApplications,
-      pendingWithdrawals,
-      revenueAgg,
-      monthlyAgg,
+      totalProducts, activeProducts, totalOrders, pendingOrders,
+      totalUsers, wholesaleUsers, pendingApplications, pendingWithdrawals,
+      revenueAgg, monthlyAgg,
     ] = await Promise.all([
       prisma.product.count(),
       prisma.product.count({ where: { isActive: true } }),
@@ -42,20 +26,18 @@ export async function getAdminStats() {
     ]);
 
     return {
-      totalProducts,
-      activeProducts,
-      totalOrders,
-      pendingOrders,
-      totalUsers,
-      wholesaleUsers,
-      pendingApplications,
-      pendingWithdrawals,
+      totalProducts, activeProducts, totalOrders, pendingOrders,
+      totalUsers, wholesaleUsers, pendingApplications, pendingWithdrawals,
       totalRevenue: revenueAgg._sum.totalAmount ?? 0,
       monthlyRevenue: monthlyAgg._sum.totalAmount ?? 0,
       totalCommissionPaid: 0,
     };
   } catch {
-    return ADMIN_STATS;
+    return {
+      totalProducts: 0, activeProducts: 0, totalOrders: 0, pendingOrders: 0,
+      totalUsers: 0, wholesaleUsers: 0, pendingApplications: 0, pendingWithdrawals: 0,
+      totalRevenue: 0, monthlyRevenue: 0, totalCommissionPaid: 0,
+    };
   }
 }
 
@@ -78,7 +60,7 @@ export async function getAdminProducts() {
       sales: p.reviewCount,
     }));
   } catch {
-    return ADMIN_PRODUCTS.map((p, i) => ({ ...p, slug: "mock-" + i, productCode: null, sortOrder: 0 }));
+    return [];
   }
 }
 
@@ -111,7 +93,7 @@ export async function getAdminOrders() {
       payment: o.paymentStatus,
     }));
   } catch {
-    return ADMIN_ORDERS;
+    return [];
   }
 }
 
@@ -131,7 +113,7 @@ export async function getAdminUsers() {
       joined: u.createdAt.toISOString().split("T")[0],
     }));
   } catch {
-    return ADMIN_USERS;
+    return [];
   }
 }
 
@@ -151,7 +133,7 @@ export async function getWholesaleApplications() {
       status: a.status,
     }));
   } catch {
-    return WHOLESALE_APPLICATIONS;
+    return [];
   }
 }
 
@@ -190,7 +172,7 @@ export async function getCommissionTransactions() {
       pending: g.pending,
     }));
   } catch {
-    return COMMISSION_REPORT;
+    return [];
   }
 }
 
@@ -210,7 +192,7 @@ export async function getWithdrawalRequests() {
       status: r.status,
     }));
   } catch {
-    return WITHDRAWAL_REQUESTS;
+    return [];
   }
 }
 
