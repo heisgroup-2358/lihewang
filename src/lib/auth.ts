@@ -44,7 +44,7 @@ export async function verifyOtpToken(token: string, target: string, code: string
 export async function createSession(userId: string, phone: string, role: string) {
   const token = await new SignJWT({ userId, phone, role })
     .setProtectedHeader({ alg: "HS256" })
-    .setExpirationTime("7d")
+    .setExpirationTime("30d")
     .sign(getJwtSecret());
 
   const cookieStore = await cookies();
@@ -53,7 +53,7 @@ export async function createSession(userId: string, phone: string, role: string)
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     path: "/",
-    maxAge: 60 * 60 * 24 * 7,
+    maxAge: 60 * 60 * 24 * 30,
   });
 }
 
