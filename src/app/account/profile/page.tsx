@@ -68,7 +68,7 @@ export default function ProfilePage() {
     const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ [verifyModal]: newValue }),
+      body: JSON.stringify(verifyModal === "phone" ? { phone: newValue } : { email: newValue }),
     });
     const data = await res.json();
     setVerifySaving(false);
@@ -84,7 +84,7 @@ export default function ProfilePage() {
     const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ [verifyModal]: newValue, code: otpCode, otpToken }),
+      body: JSON.stringify({ ...(verifyModal === "phone" ? { phone: newValue } : { email: newValue }), code: otpCode, otpToken }),
     });
     const data = await res.json();
     setVerifySaving(false);
