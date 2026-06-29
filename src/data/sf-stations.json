@@ -5,1001 +5,1144 @@
       "name": "香港仔富嘉工業大廈順豐站",
       "district": "香港島",
       "area": "香港仔",
-      "address": "香港仔大道234號富嘉工業大廈9樓6室"
+      "address": "香港仔大道234號富嘉工業大廈9樓6室",
+      "type": "store"
     },
     {
       "code": "852ABL",
       "name": "香港仔中心順豐站",
       "district": "香港島",
       "area": "香港仔",
-      "address": "香港仔中心4期1樓10A號舖"
+      "address": "香港仔中心4期1樓10A號舖",
+      "type": "store"
     },
     {
       "code": "852ACL",
       "name": "華貴邨順豐站",
       "district": "香港島",
       "area": "香港仔",
-      "address": "華貴邨華貴商場地下8號舖"
+      "address": "華貴邨華貴商場地下8號舖",
+      "type": "store"
     },
     {
       "code": "852ADL",
       "name": "鴨脷洲海怡廣場順豐站",
       "district": "香港島",
       "area": "鴨脷洲",
-      "address": "海怡半島海怡廣場西翼地下G51號舖"
+      "address": "海怡半島海怡廣場西翼地下G51號舖",
+      "type": "store"
     },
     {
       "code": "852AEL",
       "name": "鴨脷洲利東邨順豐站",
       "district": "香港島",
       "area": "鴨脷洲",
-      "address": "利東邨利東商場2樓206號舖"
+      "address": "利東邨利東商場2樓206號舖",
+      "type": "store"
     },
     {
       "code": "852AFL",
       "name": "黃竹坑南匯廣場順豐站",
       "district": "香港島",
       "area": "香港仔",
-      "address": "黃竹坑道42號南匯廣場地下"
+      "address": "黃竹坑道42號南匯廣場地下",
+      "type": "store"
     },
     {
       "code": "852BAL",
       "name": "薄扶林置富花園順豐站",
       "district": "香港島",
       "area": "薄扶林",
-      "address": "置富花園置富南區廣場地下7號舖"
+      "address": "置富花園置富南區廣場地下7號舖",
+      "type": "store"
     },
     {
       "code": "852BBL",
       "name": "薄扶林華富邨順豐站",
       "district": "香港島",
       "area": "薄扶林",
-      "address": "華富邨華富商場1樓15號舖"
+      "address": "華富邨華富商場1樓15號舖",
+      "type": "store"
     },
     {
       "code": "852BCL",
       "name": "堅尼地城西寶城順豐站",
       "district": "香港島",
       "area": "西環",
-      "address": "卑路乍街8號西寶城地下G28號舖"
+      "address": "卑路乍街8號西寶城地下G28號舖",
+      "type": "store"
     },
     {
       "code": "852BDL",
       "name": "堅尼地城科士街順豐站",
       "district": "香港島",
       "area": "西環",
-      "address": "科士街40號地下D舖"
+      "address": "科士街40號地下D舖",
+      "type": "store"
     },
     {
       "code": "852BEL",
       "name": "西環均益大廈順豐站",
       "district": "香港島",
       "area": "西環",
-      "address": "德輔道西343號均益大廈地下11號舖"
+      "address": "德輔道西343號均益大廈地下11號舖",
+      "type": "store"
     },
     {
       "code": "852BFL",
       "name": "上環文咸東街順豐站",
       "district": "香港島",
       "area": "上環",
-      "address": "文咸東街22號地下"
+      "address": "文咸東街22號地下",
+      "type": "store"
     },
     {
       "code": "852BGL",
       "name": "上環南豐大廈順豐站",
       "district": "香港島",
       "area": "上環",
-      "address": "永樂街153號地下"
+      "address": "永樂街153號地下",
+      "type": "store"
     },
     {
       "code": "852BHL",
       "name": "中環和記大廈順豐站",
       "district": "香港島",
       "area": "中環",
-      "address": "夏愨道10號和記大廈地下G04號舖"
+      "address": "夏愨道10號和記大廈地下G04號舖",
+      "type": "store"
     },
     {
       "code": "852BIL",
       "name": "中環萬宜大廈順豐站",
       "district": "香港島",
       "area": "中環",
-      "address": "德輔道中68號萬宜大廈地下A舖"
+      "address": "德輔道中68號萬宜大廈地下A舖",
+      "type": "store"
     },
     {
       "code": "852BJL",
       "name": "金鐘遠東金融中心順豐站",
       "district": "香港島",
       "area": "中環",
-      "address": "夏愨道16號遠東金融中心地下G5號舖"
+      "address": "夏愨道16號遠東金融中心地下G5號舖",
+      "type": "store"
     },
     {
       "code": "852BKL",
       "name": "灣仔軒尼詩道順豐站",
       "district": "香港島",
       "area": "灣仔",
-      "address": "軒尼詩道397號地下"
+      "address": "軒尼詩道397號地下",
+      "type": "store"
     },
     {
       "code": "852BLL",
       "name": "灣仔集成中心順豐站",
       "district": "香港島",
       "area": "灣仔",
-      "address": "軒尼詩道302號集成中心地下G05號舖"
+      "address": "軒尼詩道302號集成中心地下G05號舖",
+      "type": "store"
     },
     {
       "code": "852CAC",
       "name": "中環順豐站",
       "district": "香港島",
       "area": "中環",
-      "address": "中環"
+      "address": "中環",
+      "type": "store"
     },
     {
       "code": "852CAL",
       "name": "灣仔駱克道順豐站",
       "district": "香港島",
       "area": "灣仔",
-      "address": "駱克道405號地下"
+      "address": "駱克道405號地下",
+      "type": "store"
     },
     {
       "code": "852CBL",
       "name": "銅鑼灣廣場一期順豐站",
       "district": "香港島",
       "area": "銅鑼灣",
-      "address": "銅鑼灣廣場一期地下G16號舖"
+      "address": "銅鑼灣廣場一期地下G16號舖",
+      "type": "store"
     },
     {
       "code": "852CC1007",
       "name": "將軍澳景林商場順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "將軍澳景林邨景林商場第2號舖"
+      "address": "將軍澳景林邨景林商場第2號舖",
+      "type": "store"
     },
     {
       "code": "852CC1033",
       "name": "將軍澳富麗花園順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "將軍澳毓雅里7號富麗花園地下2號舖"
+      "address": "將軍澳毓雅里7號富麗花園地下2號舖",
+      "type": "store"
     },
     {
       "code": "852CCL",
       "name": "銅鑼灣時代廣場順豐站",
       "district": "香港島",
       "area": "銅鑼灣",
-      "address": "勿地臣街1號時代廣場地庫B227號舖"
+      "address": "勿地臣街1號時代廣場地庫B227號舖",
+      "type": "store"
     },
     {
       "code": "852CDL",
       "name": "銅鑼灣利園山道順豐站",
       "district": "香港島",
       "area": "銅鑼灣",
-      "address": "利園山道36號地下"
+      "address": "利園山道36號地下",
+      "type": "store"
     },
     {
       "code": "852CEL",
       "name": "天后電氣道順豐站",
       "district": "香港島",
       "area": "銅鑼灣",
-      "address": "電氣道54號地下"
+      "address": "電氣道54號地下",
+      "type": "store"
     },
     {
       "code": "852CFL",
       "name": "北角健威坊順豐站",
       "district": "香港島",
       "area": "北角",
-      "address": "英皇道560號健威坊地下G12號舖"
+      "address": "英皇道560號健威坊地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852CGL",
       "name": "北角北角匯順豐站",
       "district": "香港島",
       "area": "北角",
-      "address": "北角匯二期地下G03號舖"
+      "address": "北角匯二期地下G03號舖",
+      "type": "store"
     },
     {
       "code": "852CHL",
       "name": "北角城市花園順豐站",
       "district": "香港島",
       "area": "北角",
-      "address": "城市花園道9號城市花園商場地下6號舖"
+      "address": "城市花園道9號城市花園商場地下6號舖",
+      "type": "store"
     },
     {
       "code": "852CIL",
       "name": "鰂魚涌太古坊順豐站",
       "district": "香港島",
       "area": "北角",
-      "address": "英皇道979號太古坊地下G4號舖"
+      "address": "英皇道979號太古坊地下G4號舖",
+      "type": "store"
     },
     {
       "code": "852CJL",
       "name": "西灣河嘉亨灣順豐站",
       "district": "香港島",
       "area": "西灣河",
-      "address": "太康街38號嘉亨灣地下G02號舖"
+      "address": "太康街38號嘉亨灣地下G02號舖",
+      "type": "store"
     },
     {
       "code": "852CKL",
       "name": "西灣河鯉景灣順豐站",
       "district": "香港島",
       "area": "西灣河",
-      "address": "鯉景灣地下9號舖"
+      "address": "鯉景灣地下9號舖",
+      "type": "store"
     },
     {
       "code": "852CLL",
       "name": "筲箕灣愛蝶灣順豐站",
       "district": "香港島",
       "area": "筲箕灣",
-      "address": "愛禮街2號愛蝶灣地下G09號舖"
+      "address": "愛禮街2號愛蝶灣地下G09號舖",
+      "type": "store"
     },
     {
       "code": "852CUL",
       "name": "坑口安寧花園順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "將軍澳常寧道10號安寧花園1座地下14號舖"
+      "address": "將軍澳常寧道10號安寧花園1座地下14號舖",
+      "type": "store"
     },
     {
       "code": "852DAL",
       "name": "筲箕灣東大街順豐站",
       "district": "香港島",
       "area": "筲箕灣",
-      "address": "東大街42號地下"
+      "address": "東大街42號地下",
+      "type": "store"
     },
     {
       "code": "852DBL",
       "name": "柴灣永利中心順豐站",
       "district": "香港島",
       "area": "柴灣",
-      "address": "柴灣道333號永利中心地下G17號舖"
+      "address": "柴灣道333號永利中心地下G17號舖",
+      "type": "store"
     },
     {
       "code": "852DCL",
       "name": "柴灣新翠商場順豐站",
       "district": "香港島",
       "area": "柴灣",
-      "address": "柴灣道233號新翠商場地下G06號舖"
+      "address": "柴灣道233號新翠商場地下G06號舖",
+      "type": "store"
     },
     {
       "code": "852DDL",
       "name": "柴灣杏花新城順豐站",
       "district": "香港島",
       "area": "柴灣",
-      "address": "盛泰道100號杏花新城地下G18號舖"
+      "address": "盛泰道100號杏花新城地下G18號舖",
+      "type": "store"
     },
     {
       "code": "852EAL",
       "name": "旺角富榮花園順豐站",
       "district": "九龍",
       "area": "旺角",
-      "address": "海泓道富榮花園2期地下38號舖"
+      "address": "海泓道富榮花園2期地下38號舖",
+      "type": "store"
     },
     {
       "code": "852EBL",
       "name": "旺角家樂坊順豐站",
       "district": "九龍",
       "area": "旺角",
-      "address": "登打士街56號家樂坊16樓1626室"
+      "address": "登打士街56號家樂坊16樓1626室",
+      "type": "store"
     },
     {
       "code": "852ECL",
       "name": "旺角新之城順豐站",
       "district": "九龍",
       "area": "旺角",
-      "address": "亞皆老街65號新之城地下G12號舖"
+      "address": "亞皆老街65號新之城地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852EDL",
       "name": "旺角弼街順豐站",
       "district": "九龍",
       "area": "旺角",
-      "address": "弼街43號地下"
+      "address": "弼街43號地下",
+      "type": "store"
     },
     {
       "code": "852EEL",
       "name": "太子聯合廣場順豐站",
       "district": "九龍",
       "area": "太子",
-      "address": "彌敦道760號聯合廣場地下G18號舖"
+      "address": "彌敦道760號聯合廣場地下G18號舖",
+      "type": "store"
     },
     {
       "code": "852EFL",
       "name": "太子始創中心順豐站",
       "district": "九龍",
       "area": "太子",
-      "address": "彌敦道750號始創中心地下G05號舖"
+      "address": "彌敦道750號始創中心地下G05號舖",
+      "type": "store"
     },
     {
       "code": "852EGL",
       "name": "油麻地彌敦道順豐站",
       "district": "九龍",
       "area": "油麻地",
-      "address": "彌敦道530號地下"
+      "address": "彌敦道530號地下",
+      "type": "store"
     },
     {
       "code": "852EHL",
       "name": "油麻地砵蘭街順豐站",
       "district": "九龍",
       "area": "油麻地",
-      "address": "砵蘭街70號地下"
+      "address": "砵蘭街70號地下",
+      "type": "store"
     },
     {
       "code": "852EIL",
       "name": "佐敦恒豐中心順豐站",
       "district": "九龍",
       "area": "佐敦",
-      "address": "彌敦道222號恒豐中心地下G03號舖"
+      "address": "彌敦道222號恒豐中心地下G03號舖",
+      "type": "store"
     },
     {
       "code": "852EJL",
       "name": "佐敦道順豐站",
       "district": "九龍",
       "area": "佐敦",
-      "address": "佐敦道35號地下"
+      "address": "佐敦道35號地下",
+      "type": "store"
     },
     {
       "code": "852EKL",
       "name": "尖沙咀美麗華廣場順豐站",
       "district": "九龍",
       "area": "尖沙咀",
-      "address": "彌敦道132號美麗華廣場地下G11號舖"
+      "address": "彌敦道132號美麗華廣場地下G11號舖",
+      "type": "store"
     },
     {
       "code": "852ELL",
       "name": "尖沙咀K11順豐站",
       "district": "九龍",
       "area": "尖沙咀",
-      "address": "河內道18號K11地下G07號舖"
+      "address": "河內道18號K11地下G07號舖",
+      "type": "store"
     },
     {
       "code": "852FAL",
       "name": "尖沙咀海港城順豐站",
       "district": "九龍",
       "area": "尖沙咀",
-      "address": "廣東道3號海港城地下G08號舖"
+      "address": "廣東道3號海港城地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852FBL",
       "name": "紅磡黃埔天地順豐站",
       "district": "九龍",
       "area": "紅磡",
-      "address": "黃埔天地地下G32號舖"
+      "address": "黃埔天地地下G32號舖",
+      "type": "store"
     },
     {
       "code": "852FCL",
       "name": "紅磡海逸豪園順豐站",
       "district": "九龍",
       "area": "紅磡",
-      "address": "海逸道8號海逸坊地下G09號舖"
+      "address": "海逸道8號海逸坊地下G09號舖",
+      "type": "store"
     },
     {
       "code": "852FDL",
       "name": "土瓜灣翔龍灣廣場順豐站",
       "district": "九龍",
       "area": "土瓜灣",
-      "address": "土瓜灣道246號翔龍灣廣場地下G15號舖"
+      "address": "土瓜灣道246號翔龍灣廣場地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852FEL",
       "name": "土瓜灣美景街順豐站",
       "district": "九龍",
       "area": "土瓜灣",
-      "address": "美景街88號地下"
+      "address": "美景街88號地下",
+      "type": "store"
     },
     {
       "code": "852FFL",
       "name": "九龍城廣場順豐站",
       "district": "九龍",
       "area": "九龍城",
-      "address": "九龍城廣場地下G03號舖"
+      "address": "九龍城廣場地下G03號舖",
+      "type": "store"
     },
     {
       "code": "852FGL",
       "name": "九龍城衙前圍道順豐站",
       "district": "九龍",
       "area": "九龍城",
-      "address": "衙前圍道112號地下"
+      "address": "衙前圍道112號地下",
+      "type": "store"
     },
     {
       "code": "852FHL",
       "name": "新蒲崗Mikiki順豐站",
       "district": "九龍",
       "area": "新蒲崗",
-      "address": "太子道東638號Mikiki地下G18號舖"
+      "address": "太子道東638號Mikiki地下G18號舖",
+      "type": "store"
     },
     {
       "code": "852FIL",
       "name": "新蒲崗大有街順豐站",
       "district": "九龍",
       "area": "新蒲崗",
-      "address": "大有街36號地下"
+      "address": "大有街36號地下",
+      "type": "store"
     },
     {
       "code": "852FJL",
       "name": "彩虹匯八坊順豐站",
       "district": "九龍",
       "area": "彩虹",
-      "address": "彩虹邨匯八坊地下G06號舖"
+      "address": "彩虹邨匯八坊地下G06號舖",
+      "type": "store"
     },
     {
       "code": "852FKL",
       "name": "鑽石山荷里活廣場順豐站",
       "district": "九龍",
       "area": "鑽石山",
-      "address": "荷里活廣場地下G11號舖"
+      "address": "荷里活廣場地下G11號舖",
+      "type": "store"
     },
     {
       "code": "852FLL",
       "name": "慈雲山慈雲山中心順豐站",
       "district": "九龍",
       "area": "慈雲山",
-      "address": "慈雲山中心地下G22號舖"
+      "address": "慈雲山中心地下G22號舖",
+      "type": "store"
     },
     {
       "code": "852FXL",
       "name": "西貢翠塘花園順豐站",
       "district": "新界",
       "area": "西貢",
-      "address": "西貢翠塘路1號翠塘花園地下1號舖"
+      "address": "西貢翠塘路1號翠塘花園地下1號舖",
+      "type": "store"
     },
     {
       "code": "852FYL",
       "name": "西貢福民路順豐站",
       "district": "新界",
       "area": "西貢",
-      "address": "西貢福民路22-40號西貢苑地下10號舖"
+      "address": "西貢福民路22-40號西貢苑地下10號舖",
+      "type": "store"
     },
     {
       "code": "852GAL",
       "name": "黃大仙中心順豐站",
       "district": "九龍",
       "area": "黃大仙",
-      "address": "黃大仙中心地下G15號舖"
+      "address": "黃大仙中心地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852GBL",
       "name": "黃大仙現崇山順豐站",
       "district": "九龍",
       "area": "黃大仙",
-      "address": "鳳舞街38號現崇山地下G01號舖"
+      "address": "鳳舞街38號現崇山地下G01號舖",
+      "type": "store"
     },
     {
       "code": "852GCL",
       "name": "樂富廣場順豐站",
       "district": "九龍",
       "area": "黃大仙",
-      "address": "樂富廣場地下G08號舖"
+      "address": "樂富廣場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852GDL",
       "name": "觀塘APM順豐站",
       "district": "九龍",
       "area": "觀塘",
-      "address": "觀塘道418號APM地下G08號舖"
+      "address": "觀塘道418號APM地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852GEL",
       "name": "觀塘裕民坊順豐站",
       "district": "九龍",
       "area": "觀塘",
-      "address": "裕民坊16號地下"
+      "address": "裕民坊16號地下",
+      "type": "store"
     },
     {
       "code": "852GFL",
       "name": "牛頭角得寶花園順豐站",
       "district": "九龍",
       "area": "牛頭角",
-      "address": "牛頭角道3號得寶花園地下G11號舖"
+      "address": "牛頭角道3號得寶花園地下G11號舖",
+      "type": "store"
     },
     {
       "code": "852GGL",
       "name": "九龍灣德福廣場順豐站",
       "district": "九龍",
       "area": "九龍灣",
-      "address": "德福廣場地下G22號舖"
+      "address": "德福廣場地下G22號舖",
+      "type": "store"
     },
     {
       "code": "852GHL",
       "name": "九龍灣MegaBox順豐站",
       "district": "九龍",
       "area": "九龍灣",
-      "address": "MegaBox地下G08號舖"
+      "address": "MegaBox地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852GIL",
       "name": "藍田啟田商場順豐站",
       "district": "九龍",
       "area": "藍田",
-      "address": "啟田商場地下G12號舖"
+      "address": "啟田商場地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852GJL",
       "name": "藍田匯景廣場順豐站",
       "district": "九龍",
       "area": "藍田",
-      "address": "匯景廣場地下G05號舖"
+      "address": "匯景廣場地下G05號舖",
+      "type": "store"
     },
     {
       "code": "852GKL",
       "name": "油塘大本型順豐站",
       "district": "九龍",
       "area": "油塘",
-      "address": "油塘高超道38號大本型地下G08號舖"
+      "address": "油塘高超道38號大本型地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852GLL",
       "name": "長沙灣長沙灣廣場順豐站",
       "district": "九龍",
       "area": "長沙灣",
-      "address": "長沙灣廣場地下G15號舖"
+      "address": "長沙灣廣場地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852HAL",
       "name": "長沙灣麗閣邨順豐站",
       "district": "九龍",
       "area": "長沙灣",
-      "address": "麗閣邨麗閣商場地下G03號舖"
+      "address": "麗閣邨麗閣商場地下G03號舖",
+      "type": "store"
     },
     {
       "code": "852HBL",
       "name": "荔枝角泓景匯順豐站",
       "district": "九龍",
       "area": "荔枝角",
-      "address": "泓景匯地下G08號舖"
+      "address": "泓景匯地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852HCL",
       "name": "荔枝角宇晴滙順豐站",
       "district": "九龍",
       "area": "荔枝角",
-      "address": "宇晴滙地下G12號舖"
+      "address": "宇晴滙地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852HDL",
       "name": "深水埗黃金電腦商場順豐站",
       "district": "九龍",
       "area": "深水埗",
-      "address": "福華街146-152號黃金電腦商場地下G01號舖"
+      "address": "福華街146-152號黃金電腦商場地下G01號舖",
+      "type": "store"
     },
     {
       "code": "852HDSM",
       "name": "屯門HANDS順豐站",
       "district": "新界",
       "area": "屯門",
-      "address": "屯門HANDS"
+      "address": "屯門HANDS",
+      "type": "store"
     },
     {
       "code": "852HEL",
       "name": "深水埗西九龍中心順豐站",
       "district": "九龍",
       "area": "深水埗",
-      "address": "欽州街37號西九龍中心地下G08號舖"
+      "address": "欽州街37號西九龍中心地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852HFL",
       "name": "大角咀奧海城順豐站",
       "district": "九龍",
       "area": "大角咀",
-      "address": "奧海城一期地下G06號舖"
+      "address": "奧海城一期地下G06號舖",
+      "type": "store"
     },
     {
       "code": "852HGL",
       "name": "大角咀港湾豪庭順豐站",
       "district": "九龍",
       "area": "大角咀",
-      "address": "港湾豪庭廣場地下G15號舖"
+      "address": "港湾豪庭廣場地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852HHL",
       "name": "荃灣南豐中心順豐站",
       "district": "新界",
       "area": "荃灣",
-      "address": "西樓角路64-98號南豐中心638-639室"
+      "address": "西樓角路64-98號南豐中心638-639室",
+      "type": "store"
     },
     {
       "code": "852HHUM",
       "name": "坑口南豐廣場順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "將軍澳培成路8號南豐廣場1樓B28-B31舖"
+      "address": "將軍澳培成路8號南豐廣場1樓B28-B31舖",
+      "type": "store"
     },
     {
       "code": "852HIL",
       "name": "荃灣荃新天地順豐站",
       "district": "新界",
       "area": "荃灣",
-      "address": "荃新天地地下G12號舖"
+      "address": "荃新天地地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852HJL",
       "name": "荃灣廣場順豐站",
       "district": "新界",
       "area": "荃灣",
-      "address": "荃灣廣場地下G08號舖"
+      "address": "荃灣廣場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852HKL",
       "name": "荃灣綠楊坊順豐站",
       "district": "新界",
       "area": "荃灣",
-      "address": "綠楊坊地下G16號舖"
+      "address": "綠楊坊地下G16號舖",
+      "type": "store"
     },
     {
       "code": "852HLL",
       "name": "葵涌葵涌廣場順豐站",
       "district": "新界",
       "area": "葵涌",
-      "address": "葵涌廣場地下G11號舖"
+      "address": "葵涌廣場地下G11號舖",
+      "type": "store"
     },
     {
       "code": "852IAL",
       "name": "葵涌新都會廣場順豐站",
       "district": "新界",
       "area": "葵涌",
-      "address": "新都會廣場地下G08號舖"
+      "address": "新都會廣場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852IBL",
       "name": "葵涌石籬商場順豐站",
       "district": "新界",
       "area": "葵涌",
-      "address": "石籬商場地下G03號舖"
+      "address": "石籬商場地下G03號舖",
+      "type": "store"
     },
     {
       "code": "852ICL",
       "name": "青衣長發廣場順豐站",
       "district": "新界",
       "area": "青衣",
-      "address": "長發廣場地下G15號舖"
+      "address": "長發廣場地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852IDL",
       "name": "青衣城順豐站",
       "district": "新界",
       "area": "青衣",
-      "address": "青衣城地下G22號舖"
+      "address": "青衣城地下G22號舖",
+      "type": "store"
     },
     {
       "code": "852IEL",
       "name": "屯門市廣場順豐站",
       "district": "新界",
       "area": "屯門",
-      "address": "屯門市廣場地下G18號舖"
+      "address": "屯門市廣場地下G18號舖",
+      "type": "store"
     },
     {
       "code": "852IFL",
       "name": "屯門V City順豐站",
       "district": "新界",
       "area": "屯門",
-      "address": "V City地下G08號舖"
+      "address": "V City地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852IGL",
       "name": "屯門蝴蝶邨順豐站",
       "district": "新界",
       "area": "屯門",
-      "address": "蝴蝶邨蝴蝶廣場地下G06號舖"
+      "address": "蝴蝶邨蝴蝶廣場地下G06號舖",
+      "type": "store"
     },
     {
       "code": "852IHL",
       "name": "屯門良景邨順豐站",
       "district": "新界",
       "area": "屯門",
-      "address": "良景邨良景商場地下G09號舖"
+      "address": "良景邨良景商場地下G09號舖",
+      "type": "store"
     },
     {
       "code": "852IIL",
       "name": "元朗廣場順豐站",
       "district": "新界",
       "area": "元朗",
-      "address": "元朗廣場地下G12號舖"
+      "address": "元朗廣場地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852IJL",
       "name": "元朗YOHO Mall順豐站",
       "district": "新界",
       "area": "元朗",
-      "address": "YOHO Mall地下G08號舖"
+      "address": "YOHO Mall地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852IKL",
       "name": "元朗教育路順豐站",
       "district": "新界",
       "area": "元朗",
-      "address": "教育路36號地下"
+      "address": "教育路36號地下",
+      "type": "store"
     },
     {
       "code": "852ILL",
       "name": "天水圍天耀廣場順豐站",
       "district": "新界",
       "area": "天水圍",
-      "address": "天耀廣場地下G11號舖"
+      "address": "天耀廣場地下G11號舖",
+      "type": "store"
     },
     {
       "code": "852JAL",
       "name": "天水圍頌富商場順豐站",
       "district": "新界",
       "area": "天水圍",
-      "address": "頌富商場地下G08號舖"
+      "address": "頌富商場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852JBL",
       "name": "天水圍天澤邨順豐站",
       "district": "新界",
       "area": "天水圍",
-      "address": "天澤邨天澤商場地下G05號舖"
+      "address": "天澤邨天澤商場地下G05號舖",
+      "type": "store"
     },
     {
       "code": "852JCL",
       "name": "粉嶺名都商場順豐站",
       "district": "新界",
       "area": "粉嶺",
-      "address": "粉嶺名都商場地下G12號舖"
+      "address": "粉嶺名都商場地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852JDL",
       "name": "粉嶺聯和墟順豐站",
       "district": "新界",
       "area": "粉嶺",
-      "address": "聯和墟聯和商場地下G06號舖"
+      "address": "聯和墟聯和商場地下G06號舖",
+      "type": "store"
     },
     {
       "code": "852JEL",
       "name": "上水廣場順豐站",
       "district": "新界",
       "area": "上水",
-      "address": "上水廣場地下G15號舖"
+      "address": "上水廣場地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852JFL",
       "name": "上水石湖墟順豐站",
       "district": "新界",
       "area": "上水",
-      "address": "石湖墟商場地下G08號舖"
+      "address": "石湖墟商場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852JGL",
       "name": "沙田新城市廣場順豐站",
       "district": "新界",
       "area": "沙田",
-      "address": "新城市廣場地下G08號舖"
+      "address": "新城市廣場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852JHL",
       "name": "沙田好運中心順豐站",
       "district": "新界",
       "area": "沙田",
-      "address": "好運中心地下G15號舖"
+      "address": "好運中心地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852JIL",
       "name": "沙田第一城順豐站",
       "district": "新界",
       "area": "沙田",
-      "address": "第一城商場地下G11號舖"
+      "address": "第一城商場地下G11號舖",
+      "type": "store"
     },
     {
       "code": "852JKL",
       "name": "大圍圍方順豐站",
       "district": "新界",
       "area": "大圍",
-      "address": "圍方地下G08號舖"
+      "address": "圍方地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852JLL",
       "name": "大圍美林商場順豐站",
       "district": "新界",
       "area": "大圍",
-      "address": "美林商場地下G06號舖"
+      "address": "美林商場地下G06號舖",
+      "type": "store"
     },
     {
       "code": "852KAL",
       "name": "馬鞍山新港城中心順豐站",
       "district": "新界",
       "area": "馬鞍山",
-      "address": "新港城中心大街地下G-3/68B號舖"
+      "address": "新港城中心大街地下G-3/68B號舖",
+      "type": "store"
     },
     {
       "code": "852KBL",
       "name": "馬鞍山馬鞍山廣場順豐站",
       "district": "新界",
       "area": "馬鞍山",
-      "address": "馬鞍山廣場地下G12號舖"
+      "address": "馬鞍山廣場地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852KCL",
       "name": "大埔超級城順豐站",
       "district": "新界",
       "area": "大埔",
-      "address": "大埔超級城地下G15號舖"
+      "address": "大埔超級城地下G15號舖",
+      "type": "store"
     },
     {
       "code": "852KDL",
       "name": "大埔廣場順豐站",
       "district": "新界",
       "area": "大埔",
-      "address": "大埔廣場地下G08號舖"
+      "address": "大埔廣場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852KEL",
       "name": "大埔太和邨順豐站",
       "district": "新界",
       "area": "大埔",
-      "address": "太和邨太和商場地下G06號舖"
+      "address": "太和邨太和商場地下G06號舖",
+      "type": "store"
     },
     {
       "code": "852KFL",
       "name": "將軍澳東港城順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "東港城地下G12號舖"
+      "address": "東港城地下G12號舖",
+      "type": "store"
     },
     {
       "code": "852KGL",
       "name": "將軍澳PopCorn順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "PopCorn地下G08號舖"
+      "address": "PopCorn地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852KHL",
       "name": "將軍澳新都城中心順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "新都城中心地下G22號舖"
+      "address": "新都城中心地下G22號舖",
+      "type": "store"
     },
     {
       "code": "852KIIM",
       "name": "尖沙咀K11順豐站",
       "district": "九龍",
       "area": "尖沙咀",
-      "address": "尖沙咀K11 MUSEA"
+      "address": "尖沙咀K11 MUSEA",
+      "type": "store"
     },
     {
       "code": "852KIL",
       "name": "坑口東港城順豐站",
       "district": "新界",
       "area": "坑口",
-      "address": "東港城地下G16號舖"
+      "address": "東港城地下G16號舖",
+      "type": "store"
     },
     {
       "code": "852KJL",
       "name": "坑口南豐廣場順豐站",
       "district": "新界",
       "area": "坑口",
-      "address": "南豐廣場地下G08號舖"
+      "address": "南豐廣場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852KKL",
       "name": "調景嶺都會駅順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "都會駅地下G11號舖"
+      "address": "都會駅地下G11號舖",
+      "type": "store"
     },
     {
       "code": "852LAL",
       "name": "東涌東薈城順豐站",
       "district": "離島",
       "area": "東涌",
-      "address": "東薈城地下G08號舖"
+      "address": "東薈城地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852LBL",
       "name": "東涌映灣園順豐站",
       "district": "離島",
       "area": "東涌",
-      "address": "映灣園商場地下G03號舖"
+      "address": "映灣園商場地下G03號舖",
+      "type": "store"
     },
     {
       "code": "852LCL",
       "name": "東涌昇薈順豐站",
       "district": "離島",
       "area": "東涌",
-      "address": "昇薈商場地下G05號舖"
+      "address": "昇薈商場地下G05號舖",
+      "type": "store"
     },
     {
       "code": "852LDL",
       "name": "長洲順豐站",
       "district": "離島",
       "area": "長洲",
-      "address": "長洲大新街25號地下"
+      "address": "長洲大新街25號地下",
+      "type": "store"
     },
     {
       "code": "852LEL",
       "name": "愉景灣順豐站",
       "district": "離島",
       "area": "東涌",
-      "address": "愉景灣廣場地下G08號舖"
+      "address": "愉景灣廣場地下G08號舖",
+      "type": "store"
     },
     {
       "code": "852SKL",
       "name": "西貢宜春街順豐站",
       "district": "新界",
       "area": "西貢",
-      "address": "西貢宜春街66號地下10號舖"
+      "address": "西貢宜春街66號地下10號舖",
+      "type": "store"
     },
     {
       "code": "852TCSM",
       "name": "屯門仁愛大廈順豐站",
       "district": "新界",
       "area": "屯門",
-      "address": "屯門仁愛大廈"
+      "address": "屯門仁愛大廈",
+      "type": "store"
     },
     {
       "code": "852WCLM",
       "name": "石硤尾金玉樓順豐站",
       "district": "九龍",
       "area": "石硤尾",
-      "address": "石硤尾金玉樓"
+      "address": "石硤尾金玉樓",
+      "type": "store"
     },
     {
       "code": "852YMCM",
       "name": "牛頭角裕民中心順豐站",
       "district": "九龍",
       "area": "牛頭角",
-      "address": "牛頭角裕民中心"
+      "address": "牛頭角裕民中心",
+      "type": "store"
     },
     {
       "code": "852Z101",
       "name": "將軍澳康城順豐站",
       "district": "新界",
       "area": "將軍澳",
-      "address": "將軍澳康城"
+      "address": "將軍澳康城",
+      "type": "store"
     },
     {
       "code": "852Z151",
       "name": "觀塘興業街順豐站",
       "district": "九龍",
       "area": "觀塘",
-      "address": "觀塘興業街"
+      "address": "觀塘興業街",
+      "type": "store"
     },
     {
       "code": "852Z201",
       "name": "深水埗南昌站順豐站",
       "district": "九龍",
       "area": "深水埗",
-      "address": "深水埗南昌站"
+      "address": "深水埗南昌站",
+      "type": "store"
     },
     {
       "code": "852Z251",
       "name": "尖沙咀海港城順豐站",
       "district": "九龍",
       "area": "尖沙咀",
-      "address": "尖沙咀海港城"
+      "address": "尖沙咀海港城",
+      "type": "store"
     },
     {
       "code": "852Z352",
       "name": "東涌東薈城2期順豐站",
       "district": "新界",
       "area": "東涌",
-      "address": "東涌東薈城2期"
+      "address": "東涌東薈城2期",
+      "type": "store"
     },
     {
       "code": "852Z353",
       "name": "馬灣田寮新村順豐站",
       "district": "新界",
       "area": "馬灣",
-      "address": "馬灣田寮新村"
+      "address": "馬灣田寮新村",
+      "type": "store"
     },
     {
       "code": "852Z551",
       "name": "天后永興街順豐站",
       "district": "香港島",
       "area": "天后",
-      "address": "天后永興街"
+      "address": "天后永興街",
+      "type": "store"
     },
     {
       "code": "852Z552",
       "name": "小西灣藍灣廣場順豐站",
       "district": "香港島",
       "area": "小西灣",
-      "address": "小西灣藍灣廣場"
+      "address": "小西灣藍灣廣場",
+      "type": "store"
     },
     {
       "code": "852Z601",
       "name": "薄扶林數碼港順豐站",
       "district": "香港島",
       "area": "薄扶林",
-      "address": "薄扶林數碼港"
+      "address": "薄扶林數碼港",
+      "type": "store"
     }
   ]
 }

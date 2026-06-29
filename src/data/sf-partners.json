@@ -1,0 +1,676 @@
+{
+  "stations": [
+    {
+      "code": "852TB2003",
+      "name": "OK便利店(2003)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港薄扶林置富南區廣場5樓503號舖7-8號檔",
+      "type": "partner"
+    },
+    {
+      "code": "852P2004",
+      "name": "OK便利店(2004)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港北角電器道233號城市花園1,2及3座平臺地下5號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852P2006",
+      "name": "OK便利店(2006)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港北角堡壘街22號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852P2010",
+      "name": "OK便利店(2010)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港北角七姊妹道健康村1期地下1樓A號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PB2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港柴灣興華村和興樓209至210號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PB2009",
+      "name": "OK便利店(2009)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港柴灣泰民街16號康翠臺商場L5樓3A&3B號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2011",
+      "name": "OK便利店(2011)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港海洋公園港鐵站OCP 5 號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MC2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港堅尼地城吉席街2號海怡花園2期3座地下2C鋪",
+      "type": "partner"
+    },
+    {
+      "code": "852MA2010",
+      "name": "OK便利店(2010)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港卑路乍街39號及山市街18號山市樓地下6號鋪",
+      "type": "partner"
+    },
+    {
+      "code": "852MA2013",
+      "name": "OK便利店(2013)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港爹核士街7 & 7A號，卑路乍街136、136A、138、140及142號，聯威新樓",
+      "type": "partner"
+    },
+    {
+      "code": "852TA2005",
+      "name": "OK便利店(2005)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港中環金鐘道95號統一中心1樓1002B號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TA2008",
+      "name": "OK便利店(2008)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港金鐘道93號金鐘廊1樓LabConceptF01-02號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852T2002",
+      "name": "OK便利店(2002)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852P2011",
+      "name": "OK便利店(2011)",
+      "district": "香港島",
+      "area": "",
+      "address": "北角七姊妹道2,4,6,8及8A,昌苑大廈地下4號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852P2014",
+      "name": "OK便利店(2014)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港北角電氣道108號冠貿商業大廈地下",
+      "type": "partner"
+    },
+    {
+      "code": "852P2013",
+      "name": "OK便利店(2013)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港英皇道193-209號英皇中心地下25-27號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852P2012",
+      "name": "OK便利店(2012)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港英皇道484號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852P2015",
+      "name": "OK便利店(2015)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港威非路道2-10B號金都洋樓9及9A號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852P2016",
+      "name": "OK便利店(2016)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港英皇道321-333號及北角道1、3、5、7、7A、9及9A號皇冠大廈地下19號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MA2006",
+      "name": "OK便利店(2006)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港上環修打蘭街21-27號海景大廈地下D及H號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MD2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港皇後大道西2-12號聯發商業中心地下A1舖連店舖外牆",
+      "type": "partner"
+    },
+    {
+      "code": "852PA2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港筲萁灣愛東商場地下14號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PA2008",
+      "name": "OK便利店(2008)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港筲箕灣東大街51號東灣閣地下B號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PC2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港筲箕灣道388-414號逢源大廈地下H1號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PA2004",
+      "name": "OK便利店(2004)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港太古康山花園第一座地下H1-H2號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852P2008",
+      "name": "OK便利店(2008)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港天後英皇道14號僑興大廈地下1H號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852T2006",
+      "name": "OK便利店(2006)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港東角道26號怡安大廈怡東商場地下9-12號舖及1樓9-11號單位",
+      "type": "partner"
+    },
+    {
+      "code": "852T2005",
+      "name": "OK便利店(2005)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港銅鑼灣堅拿道東5號地下及閣樓",
+      "type": "partner"
+    },
+    {
+      "code": "852T2004",
+      "name": "OK便利店(2004)",
+      "district": "香港島",
+      "area": "",
+      "address": "銅鑼灣利園山道49號地下k舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2014",
+      "name": "OK便利店(2014)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港恩平道50號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852T2007",
+      "name": "OK便利店(2007)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港波斯富街24-30號寶漢大廈地下B號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TA2004",
+      "name": "OK便利店(2004)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港莊士敦道112號地下1號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TC2003",
+      "name": "OK便利店(2003)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港灣仔柯布連道7A至7B號及軒尼詩道156、160至162號利榮大樓地下E號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TA2003",
+      "name": "OK便利店(2003)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港灣仔灣仔道89號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852TA2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港灣仔軒尼詩道38號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852TC2006",
+      "name": "OK便利店(2006)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港駱克道146號地下A號",
+      "type": "partner"
+    },
+    {
+      "code": "852TC2007",
+      "name": "OK便利店(2007)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港軒尼詩道91號華寧大廈地下",
+      "type": "partner"
+    },
+    {
+      "code": "852T2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港駱克道414, 418-430號徫德大廈地下2號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852M2015",
+      "name": "OK便利店(2015)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港西環正街64號地下A號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MA2002",
+      "name": "OK便利店(2002)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港西環德輔道西333及335號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852MA2012",
+      "name": "OK便利店(2012)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港德輔道西232號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852MC2002",
+      "name": "OK便利店(2002)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港西摩道1號輝煌臺地下1及2號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852M2016",
+      "name": "OK便利店(2016)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港般鹹道13-15號金寧大廈地下A號舖連低層地下",
+      "type": "partner"
+    },
+    {
+      "code": "852MA2009",
+      "name": "OK便利店(2009)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港德輔道西202號202中心地下",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔華富中心7及8號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2004",
+      "name": "OK便利店(2004)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔石排灣道81號兆輝大廈地下3及4號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2002",
+      "name": "OK便利店(2002)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔香港仔中心第五期地下7號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2010",
+      "name": "OK便利店(2010)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔華富(二)村華富(二)商場30號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2009",
+      "name": "OK便利店(2009)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔東勝道23號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2007",
+      "name": "OK便利店(2007)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔石排灣商場7號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PB2006",
+      "name": "OK便利店(2006)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港小西灣小西灣商場地下6A號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PB2007",
+      "name": "OK便利店(2007)",
+      "district": "香港島",
+      "area": "",
+      "address": "柴灣小西灣邨小西灣商場四樓401號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PB2008",
+      "name": "OK便利店(2008)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港小西灣道28號藍灣半島地下18號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PB2005",
+      "name": "OK便利店(2005)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港杏花村港鐵站HFC5及6號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2016",
+      "name": "OK便利店(2016)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港鴨脷洲大街85號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852TB2015",
+      "name": "OK便利店(2015)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港鴨脷洲海怡路18A號海怡廣場(東翼)地下G02號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PA2009",
+      "name": "OK便利店(2009)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港海光街13-15號海光苑地下16號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852M2002",
+      "name": "OK便利店(2002)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港中環閣麟街10-16號致發大廈地下1號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MB2001",
+      "name": "OK便利店(2001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港德己立街 2, 4, 6, 8 及 10號，業豐大廈地下E舖",
+      "type": "partner"
+    },
+    {
+      "code": "852TE3002",
+      "name": "自提點(3002)",
+      "district": "香港島",
+      "area": "",
+      "address": "置富南區商場5樓519號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852P3005",
+      "name": "自提點(3005)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港北角春秧街107號仁德大廈地下",
+      "type": "partner"
+    },
+    {
+      "code": "852P3006",
+      "name": "自提點(3006)",
+      "district": "香港島",
+      "area": "",
+      "address": "北角和富道20-36號明暉商場地下20號鋪",
+      "type": "partner"
+    },
+    {
+      "code": "852PB3004",
+      "name": "自提點(3004)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港柴灣宏德居商場B座地下81, 82號",
+      "type": "partner"
+    },
+    {
+      "code": "852PB3005",
+      "name": "自提點(3005)",
+      "district": "香港島",
+      "area": "",
+      "address": "柴灣祥利街18號祥達中心地下4a鋪",
+      "type": "partner"
+    },
+    {
+      "code": "852PB3007",
+      "name": "自提點(3007)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港柴灣宏德居B商場1/F，E鋪",
+      "type": "partner"
+    },
+    {
+      "code": "852PB3008",
+      "name": "自提點(3008)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港柴灣道111號高威閣東港城商場G樓139鋪",
+      "type": "partner"
+    },
+    {
+      "code": "852TE3006",
+      "name": "自提點(3006)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔興和街11號田灣街市1MN82號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MA3007",
+      "name": "自提點(3007)",
+      "district": "香港島",
+      "area": "",
+      "address": "堅尼地城北街7號地舖&",
+      "type": "partner"
+    },
+    {
+      "code": "852MA3010",
+      "name": "自提點(3010)",
+      "district": "香港島",
+      "area": "",
+      "address": "堅尼地城卑路乍街144-148號金豪閣2J鋪",
+      "type": "partner"
+    },
+    {
+      "code": "852MA3011",
+      "name": "自提點(3011)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港堅尼地城吉席街30號吉豐大廈地下A舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MA3013",
+      "name": "自提點(3013)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港堅尼地城士美菲路47號聯興新樓地下H鋪(近地鐵站C出口) 取件",
+      "type": "partner"
+    },
+    {
+      "code": "852TA3003",
+      "name": "自提點(3003)",
+      "district": "香港島",
+      "area": "",
+      "address": "金鐘金鐘道95號統一中心2樓2041舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MD3001",
+      "name": "自提點(3001)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港上環皇后大道西2 -12號百匯電腦城廣場(聯發商業中心)1",
+      "type": "partner"
+    },
+    {
+      "code": "852PC3004",
+      "name": "自提點(3004)",
+      "district": "香港島",
+      "area": "",
+      "address": "筲箕湾愛禮街2號愛蝶灣25號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852PC3003",
+      "name": "自提點(3003)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港筲箕灣東大街54-60號東強大廈5-6號地舖地下",
+      "type": "partner"
+    },
+    {
+      "code": "852T3005",
+      "name": "自提點(3005)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港 島銅鑼灣霎東街51號2樓全層",
+      "type": "partner"
+    },
+    {
+      "code": "852T3003",
+      "name": "自提點(3003)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港灣仔灣仔道177-179地下4號舖",
+      "type": "partner"
+    },
+    {
+      "code": "852PA3006",
+      "name": "自提點(3006)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港西灣河大石街20號地舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MA3017",
+      "name": "自提點(3017)",
+      "district": "香港島",
+      "area": "",
+      "address": "石塘咀皇后大道西425Z永華大廈後座地舖",
+      "type": "partner"
+    },
+    {
+      "code": "852MA3009",
+      "name": "自提點(3009)",
+      "district": "香港島",
+      "area": "",
+      "address": "西營盤正街18號啟正中心20樓05室",
+      "type": "partner"
+    },
+    {
+      "code": "852MA3015",
+      "name": "自提點(3015)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港西營盤第一街77B號地下",
+      "type": "partner"
+    },
+    {
+      "code": "852TE3005",
+      "name": "自提點(3005)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港香港仔中心利群商場1樓32號",
+      "type": "partner"
+    },
+    {
+      "code": "852TB3004",
+      "name": "自提點(3004)",
+      "district": "香港島",
+      "area": "",
+      "address": "鴨脷洲西村利澤樓16B號舖羽毛球場",
+      "type": "partner"
+    },
+    {
+      "code": "852PA3012",
+      "name": "自提點(3012)",
+      "district": "香港島",
+      "area": "",
+      "address": "香港鰂魚涌海光商場2A3號舖",
+      "type": "partner"
+    }
+  ]
+}
