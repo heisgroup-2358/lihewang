@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ payment_url: paymentUrl });
-  } catch (e: any) {
-    return NextResponse.json({ error: e.message || "Payment failed" }, { status: 500 });
+  } catch (e: unknown) {
+    return NextResponse.json({ error: e instanceof Error ? e.message : "Payment failed" }, { status: 500 });
   }
 }

@@ -1,26 +1,25 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Plus, Pencil, Trash2, Tag, MapPin, FolderTree } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import type { ComponentType } from "react";
+import { Plus, Pencil, Trash2, Tag, FolderTree } from "lucide-react";
 
 type Tab = "categories" | "brands" | "origins";
 
-type Category = { id: string; name: string; slug: string };
-type Brand = { id: string; name: string; slug: string; code: string; };
-type Origin = { id: string; name: string; slug: string };
+type TabConfig = { key: Tab; label: string; icon: ComponentType<{ className?: string }> };
 
-const TABS: { key: Tab; label: string; icon: any }[] = [
+const TABS: TabConfig[] = [
   { key: "categories", label: "分類", icon: FolderTree },
   { key: "brands", label: "品牌", icon: Tag },
-  { key: "origins", label: "產地", icon: MapPin },
+  { key: "origins", label: "產地", icon: FolderTree },
 ];
 
-function ItemRow({ item, apiPath, fields, onUpdate, onDelete }: {
-  item: any; apiPath: string; fields: { key: string; label: string }[];
-  onUpdate: (id: string, data: any) => Promise<boolean>; onDelete: (id: string) => void;
+function ItemRow({ item, fields, onUpdate, onDelete }: {
+  item: Record<string, string>; fields: { key: string; label: string }[];
+  onUpdate: (id: string, data: Record<string, string>) => Promise<boolean>; onDelete: (id: string) => void;
 }) {
   const [editing, setEditing] = useState(false);
-  const [form, setForm] = useState<any>({});
+  const [form, setForm] = useState<Record<string, string>>({});
 
   const save = async () => {
     if (await onUpdate(item.id, form)) setEditing(false);
@@ -61,16 +60,15 @@ function ItemRow({ item, apiPath, fields, onUpdate, onDelete }: {
   );
 }
 
-function DataSection({ apiPath, title, fields, newForm }: {
-  apiPath: string; title: string; fields: { key: string; label: string; placeholder: string }[];
-  newForm: () => any;
+function DataSection({ apiPath, fields, newForm }: {
+  apiPath: string; fields: { key: string; label: string; placeholder: string }[];
+  newForm: () => Record<string, string>;
 }) {
-  const [items, setItems] = useState<any[]>([]);
+  const [items, setItems] = useState<Record<string, string>[]>([]);
   const [loading, setLoading] = useState(true);
-  const [newItem, setNewItem] = useState<any>({});
-
-  const load = () => fetch(apiPath).then((r) => r.json()).then((d) => { setItems(d); setLoading(false); });
-  useEffect(() => { load(); }, [apiPath]);
+  const [newItem, setNewItem] = useState<Record<string, string>>({});
+  const load = useCallback(() => fetch(apiPath).then((r) => r.json()).then((d) => { setItems(d); setLoading(false); }), [apiPath]);
+  useEffect(() => { load(); }, [load]);
 
   const add = async () => {
     const data = newForm();
@@ -79,16 +77,15 @@ function DataSection({ apiPath, title, fields, newForm }: {
     if (res.ok) { setNewItem({}); load(); }
   };
 
-  const update = async (id: string, data: any): Promise<boolean> => {
+  const update = async (id: string, data: Record<string, string>): Promise<boolean> => {
     const res = await fetch(`${apiPath}/${id}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
     if (res.ok) { load(); return true; }
     return false;
   };
 
-  const remove = async (id: string) => {
+  const remove = (id: string) => {
     if (!confirm("確定刪除？")) return;
-    const res = await fetch(`${apiPath}/${id}`, { method: "DELETE" });
-    if (res.ok) load();
+    fetch(`${apiPath}/${id}`, { method: "DELETE" }).then(() => load());
   };
 
   return (
@@ -116,7 +113,7 @@ function DataSection({ apiPath, title, fields, newForm }: {
             </thead>
             <tbody className="divide-y divide-border/60">
               {items.map((item) => (
-                <ItemRow key={item.id} item={item} apiPath={apiPath} fields={fields} onUpdate={update} onDelete={remove} />
+                <ItemRow key={item.id} item={item} fields={fields} onUpdate={update} onDelete={remove} />
               ))}
             </tbody>
           </table>
@@ -145,11 +142,11 @@ export default function AdminCategoriesPage() {
       </div>
 
       {tab === "categories" && (
-        <DataSection apiPath="/api/categories" title="分類" fields={[{ key: "name", label: "分類名稱", placeholder: "分類名稱 e.g. 禮盒" }]}
+        <DataSection apiPath="/api/categories" fields={[{ key: "name", label: "分類名稱", placeholder: "分類名稱 e.g. 禮盒" }]}
           newForm={() => ({ name: "" })} />
       )}
       {tab === "brands" && (
-        <DataSection apiPath="/api/brands" title="品牌"
+        <DataSection apiPath="/api/brands"
           fields={[
             { key: "name", label: "品牌名稱", placeholder: "品牌名稱 e.g. 石屋製菓" },
             { key: "code", label: "品牌代號", placeholder: "代號 e.g. ISH (用於貨號 ISH-0001)" },
@@ -157,7 +154,7 @@ export default function AdminCategoriesPage() {
           newForm={() => ({ name: "", code: "" })} />
       )}
       {tab === "origins" && (
-        <DataSection apiPath="/api/origins" title="產地" fields={[{ key: "name", label: "產地名稱", placeholder: "產地 e.g. 北海道" }]}
+        <DataSection apiPath="/api/origins" fields={[{ key: "name", label: "產地名稱", placeholder: "產地 e.g. 北海道" }]}
           newForm={() => ({ name: "" })} />
       )}
 

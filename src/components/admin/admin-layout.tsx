@@ -9,8 +9,6 @@ import {
   Users,
   DollarSign,
   Wallet,
-  Tags,
-  MapPin,
   FolderTree,
   ChevronLeft,
 } from "lucide-react";

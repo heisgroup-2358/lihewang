@@ -95,7 +95,7 @@ export function ProductsTable({ products }: { products: Product[] }) {
           <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="搜尋商品名稱、SKU、品牌..."
             className="w-full rounded-full border border-border h-10 pl-9 pr-4 text-sm" />
         </div>
-        <select value={filter} onChange={(e) => setFilter(e.target.value as any)}
+        <select value={filter} onChange={(e) => setFilter(e.target.value as "all" | "active" | "inactive")}
           className="rounded-full border border-border h-10 px-4 text-sm bg-background">
           <option value="all">全部</option>
           <option value="active">已上架</option>
