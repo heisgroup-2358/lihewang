@@ -55,7 +55,7 @@ export async function POST(req: Request) {
       const otpToken = await createOtpToken(email, code);
 
       await resend.emails.send({
-        from: process.env.RESEND_FROM_EMAIL || "noreply@lihewang.com",
+        from: process.env.RESEND_FROM_EMAIL || "noreply@kyowagroup.com.hk",
         to: email,
         subject: "您的驗證碼",
         html: `<div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;">
