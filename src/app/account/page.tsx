@@ -44,7 +44,7 @@ export default function AccountPage() {
           { icon: Package, label: "訂單記錄", value: "12", href: "/account/orders" },
           { icon: Wallet, label: "佣金錢包", value: "$2,340", href: "/account/commission" },
           { icon: Users, label: "下線客戶", value: "4", href: "/account/downline" },
-          { icon: User, label: "個人資料", value: "管理", href: "#" },
+          { icon: User, label: "個人資料", value: "管理", href: "/account/profile" },
         ].map((item) => (
           <Link
             key={item.label}
