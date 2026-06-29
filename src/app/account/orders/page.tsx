@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Package, MapPin, Truck, ChevronDown, ChevronUp, ExternalLink, CreditCard } from "lucide-react";
+import { ArrowLeft, Package, MapPin, Truck, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 
 const ORDERS = [
   {
@@ -68,6 +68,7 @@ function OrderCard({ order }: { order: typeof ORDERS[0] }) {
             </div>
           </div>
           <div className="text-right">
+            <p className="text-xs text-muted-foreground">{PAYMENT_METHOD_LABELS[order.paymentMethod] || order.paymentMethod}</p>
             <p className="font-heading text-lg font-bold">${order.total.toLocaleString()}</p>
             <span className={`inline-block mt-1 rounded-full px-3 py-0.5 text-xs font-medium ${status.color}`}>
               {status.label}
@@ -86,14 +87,20 @@ function OrderCard({ order }: { order: typeof ORDERS[0] }) {
 
         {/* Tracking number in collapsed view (if shipped) */}
         {isShipped && order.trackingNumber && (
-          <div className="mt-2 flex items-center gap-2 text-xs text-primary">
-            <Truck className="h-3 w-3" />
-            <span>運單：{order.trackingNumber}</span>
+          <div className="flex items-center justify-between mt-3">
+            <span />
+            <a href={`https://htm.sf-express.com/hk/tc/dynamic_function/waybill/?wbNo=${order.trackingNumber}`}
+              target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1.5 text-xs text-primary hover:underline">
+              <Truck className="h-3 w-3" />
+              運單：{order.trackingNumber}
+              <ExternalLink className="h-3 w-3" />
+            </a>
           </div>
         )}
 
         {/* Expand indicator */}
-        <div className="flex items-center justify-center mt-3 text-xs text-muted-foreground">
+        <div className="flex items-center justify-center mt-2 text-xs text-muted-foreground">
           {expanded ? <><ChevronUp className="h-3 w-3 mr-1" /> 收起詳情</> : <><ChevronDown className="h-3 w-3 mr-1" /> 查看詳情</>}
         </div>
       </button>
@@ -120,14 +127,6 @@ function OrderCard({ order }: { order: typeof ORDERS[0] }) {
                 <span className="font-heading font-bold">${order.total.toLocaleString()}</span>
               </div>
             </div>
-          </div>
-
-          {/* Payment method */}
-          <div className="px-5 py-4">
-            <p className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">
-              <CreditCard className="h-3 w-3" /> 付款方式
-            </p>
-            <p className="text-sm">{PAYMENT_METHOD_LABELS[order.paymentMethod] || order.paymentMethod}</p>
           </div>
 
           {/* Shipping address */}
