@@ -16,7 +16,7 @@ export function SfStationPicker({ onSelect }: { onSelect: (station: Station) => 
   const [results, setResults] = useState<Station[]>([]);
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
