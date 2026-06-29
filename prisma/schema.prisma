@@ -34,6 +34,11 @@ model User {
   email                String?                   @unique
   phone                String                    @unique
   name                 String?
+  lastName             String?
+  firstName            String?
+  birthday             DateTime?
+  phoneVerified        Boolean                   @default(false)
+  emailVerified        Boolean                   @default(false)
   role                 String                    @default("member")
   uplineId             String?
   referralCode         String                    @unique
@@ -42,10 +47,26 @@ model User {
   upline               User?                     @relation("UserReferral", fields: [uplineId], references: [id])
   downlines            User[]                    @relation("UserReferral")
   orders               Order[]
+  addresses            Address[]
   wholesaleApplications WholesaleApplication[]
   commissionTransactionsAsUpline   CommissionTransaction[] @relation("CommissionUpline")
   commissionTransactionsAsDownline CommissionTransaction[] @relation("CommissionDownline")
   withdrawalRequests   WithdrawalRequest[]
+}
+
+model Address {
+  id        String   @id @default(cuid())
+  userId    String
+  label     String
+  name      String
+  phone     String
+  district  String
+  detail    String
+  sfCode    String?
+  sfName    String?
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
 }
 
 model Product {
