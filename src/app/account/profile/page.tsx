@@ -97,7 +97,7 @@ export default function ProfilePage() {
     setOtpToken("");
   };
 
-  if (loading) return <div className="p-10 text-center text-muted-foreground">載入中...</div>;
+  if (loading || !profile) return <div className="p-10 text-center text-muted-foreground">載入中...</div>;
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
