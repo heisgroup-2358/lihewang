@@ -41,12 +41,15 @@ export async function verifyOtpToken(token: string, target: string, code: string
   }
 }
 
-export async function createSession(userId: string, phone: string, role: string) {
-  const token = await new SignJWT({ userId, phone, role })
+export async function createSessionToken(userId: string, phone: string, role: string): Promise<string> {
+  return await new SignJWT({ userId, phone, role })
     .setProtectedHeader({ alg: "HS256" })
     .setExpirationTime("30d")
     .sign(getJwtSecret());
+}
 
+export async function createSession(userId: string, phone: string, role: string) {
+  const token = await createSessionToken(userId, phone, role);
   const cookieStore = await cookies();
   cookieStore.set(COOKIE_NAME, token, {
     httpOnly: true,

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getTwilioClient, createSession, verifyOtpToken } from "@/lib/auth";
+import { cookies } from "next/headers";
+import { getTwilioClient, createSessionToken, verifyOtpToken } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
@@ -51,8 +52,13 @@ export async function POST(req: Request) {
         }
       }
 
-      await createSession(user.id, user.phone, user.role);
-      return NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
+      const token = await createSessionToken(user.id, user.phone, user.role);
+      const res = NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
+      res.cookies.set("session", token, {
+        httpOnly: true, secure: process.env.NODE_ENV === "production",
+        sameSite: "lax", path: "/", maxAge: 60 * 60 * 24 * 30,
+      });
+      return res;
     }
 
     if (channel === "email") {
@@ -87,8 +93,13 @@ export async function POST(req: Request) {
         }
       }
 
-      await createSession(user.id, user.phone, user.role);
-      return NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
+      const token = await createSessionToken(user.id, user.phone, user.role);
+      const res = NextResponse.json({ success: true, user: { id: user.id, name: user.name, role: user.role } });
+      res.cookies.set("session", token, {
+        httpOnly: true, secure: process.env.NODE_ENV === "production",
+        sameSite: "lax", path: "/", maxAge: 60 * 60 * 24 * 30,
+      });
+      return res;
     }
 
     return NextResponse.json({ error: "Invalid channel" }, { status: 400 });
