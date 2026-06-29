@@ -6,11 +6,6 @@ export async function POST(req: Request) {
   try {
     const { channel, phone, email, code, name, referralCode, otpToken } = await req.json();
 
-    // Debug: check DB URL
-    const dbUrl = process.env.DATABASE_URL || "not set";
-    if (dbUrl.includes("localhost")) {
-      return NextResponse.json({ error: "DATABASE_URL is still localhost: " + dbUrl.slice(0, 50) }, { status: 500 });
-    }
     if (!code) {
       return NextResponse.json({ error: "Verification code required" }, { status: 400 });
     }

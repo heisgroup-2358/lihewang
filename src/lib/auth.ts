@@ -3,8 +3,13 @@ import { cookies } from "next/headers";
 import twilio from "twilio";
 import { prisma } from "./prisma";
 
-const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "fallback-dev-secret-do-not-use-in-prod");
 const COOKIE_NAME = "session";
+
+function getJwtSecret(): Uint8Array {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) throw new Error("JWT_SECRET environment variable is required");
+  return new TextEncoder().encode(secret);
+}
 
 export type SessionPayload = {
   userId: string;
@@ -12,7 +17,7 @@ export type SessionPayload = {
   role: string;
 };
 
-const OTP_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "fallback-dev-secret-do-not-use-in-prod");
+const OTP_SECRET = getJwtSecret();
 
 export type OtpPayload = {
   target: string;
@@ -40,7 +45,7 @@ export async function createSession(userId: string, phone: string, role: string)
   const token = await new SignJWT({ userId, phone, role })
     .setProtectedHeader({ alg: "HS256" })
     .setExpirationTime("7d")
-    .sign(JWT_SECRET);
+    .sign(getJwtSecret());
 
   const cookieStore = await cookies();
   cookieStore.set(COOKIE_NAME, token, {
@@ -57,7 +62,7 @@ export async function getSession(): Promise<SessionPayload | null> {
     const cookieStore = await cookies();
     const token = cookieStore.get(COOKIE_NAME)?.value;
     if (!token) return null;
-    const { payload } = await jwtVerify(token, JWT_SECRET);
+    const { payload } = await jwtVerify(token, getJwtSecret());
     return payload as unknown as SessionPayload;
   } catch {
     return null;
