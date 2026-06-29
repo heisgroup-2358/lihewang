@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getSession, createOtpToken, verifyOtpToken } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { Resend } from "resend";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
@@ -14,11 +15,17 @@ export async function POST(req: Request) {
 
     const { email, code, otpToken } = await req.json();
 
-    // Step 1: Send OTP
     if (!code) {
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         return NextResponse.json({ error: "Invalid email" }, { status: 400 });
       }
+
+      const ip = req.headers.get("x-forwarded-for") || "unknown";
+      if (!checkRateLimit(`otp-send:${session.userId}`, 3, 60000) ||
+          !checkRateLimit(`otp-send-ip:${ip}`, 10, 60000)) {
+        return NextResponse.json({ error: "Too many requests. Please wait." }, { status: 429 });
+      }
+
       const otpCode = Math.floor(100000 + Math.random() * 900000).toString();
       const token = await createOtpToken(email, otpCode);
 
@@ -37,7 +44,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true, otpToken: token });
     }
 
-    // Step 2: Verify code
+    const ip = req.headers.get("x-forwarded-for") || "unknown";
+    if (!checkRateLimit(`otp-verify:${session.userId}`, 5, 60000) ||
+        !checkRateLimit(`otp-verify-ip:${ip}`, 20, 60000)) {
+      return NextResponse.json({ error: "Too many attempts. Please wait." }, { status: 429 });
+    }
+
     if (!otpToken || !(await verifyOtpToken(otpToken, email, code))) {
       return NextResponse.json({ error: "Invalid code" }, { status: 400 });
     }
