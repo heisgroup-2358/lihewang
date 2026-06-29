@@ -79,7 +79,7 @@ export async function POST(req: Request) {
         user = await prisma.user.create({
           data: {
             email,
-            phone: phone ?? "",
+            phone: phone || `nophone-${Math.random().toString(36).slice(2, 12)}`,
             name: name ?? "User",
             referralCode: `REF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
           },
