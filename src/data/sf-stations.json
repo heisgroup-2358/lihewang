@@ -6,7 +6,8 @@
       "district": "香港島",
       "area": "香港仔",
       "address": "香港仔大道234號富嘉工業大廈9樓6室",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop No. 6, G/F, Block 1, Verbena Heights, 8 Mau Tai Road, Tseung Kwan O, Sai Kung District, New Territories"
     },
     {
       "code": "852ABL",
@@ -14,7 +15,8 @@
       "district": "香港島",
       "area": "香港仔",
       "address": "香港仔中心4期1樓10A號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop Nos. S21 & S21A on The First Floor of Commercial Centre, Bauhinia Garden, 11 Tong Chun Street, Tseung Kwan O, Sai Kung District, New Territories"
     },
     {
       "code": "852ACL",
@@ -22,7 +24,8 @@
       "district": "香港島",
       "area": "香港仔",
       "address": "華貴邨華貴商場地下8號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 4A20-22, 3/F , Sceneway Plaza, 8 Sceneway Road, Lam Tin, Kwun Tong District, Kowloon"
     },
     {
       "code": "852ADL",
@@ -30,7 +33,8 @@
       "district": "香港島",
       "area": "鴨脷洲",
       "address": "海怡半島海怡廣場西翼地下G51號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G51 No. Shop"
     },
     {
       "code": "852AEL",
@@ -38,7 +42,8 @@
       "district": "香港島",
       "area": "鴨脷洲",
       "address": "利東邨利東商場2樓206號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Estate Shopping Centre 2/F 206 No. Shop"
     },
     {
       "code": "852AFL",
@@ -46,7 +51,8 @@
       "district": "香港島",
       "area": "香港仔",
       "address": "黃竹坑道42號南匯廣場地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Wong Chuk Hang Road 42 No. Plaza G/F"
     },
     {
       "code": "852BAL",
@@ -54,7 +60,8 @@
       "district": "香港島",
       "area": "薄扶林",
       "address": "置富花園置富南區廣場地下7號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 38, G/F, Charming Garden Phase 2, Hoi Wang Road, Mong Kok, Yau Tsim Mong District, Kowloon"
     },
     {
       "code": "852BBL",
@@ -62,7 +69,8 @@
       "district": "香港島",
       "area": "薄扶林",
       "address": "華富邨華富商場1樓15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Estate Shopping Centre 1/F 15 No. Shop"
     },
     {
       "code": "852BCL",
@@ -70,7 +78,8 @@
       "district": "香港島",
       "area": "西環",
       "address": "卑路乍街8號西寶城地下G28號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road Street 8 No.G/F G28 No. Shop"
     },
     {
       "code": "852BDL",
@@ -78,7 +87,8 @@
       "district": "香港島",
       "area": "西環",
       "address": "科士街40號地下D舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop A, G/F, No. 24, 24A & 26 Tai Nan Street, Prince Edward, Yau Tsim Mong District, Kowloon"
     },
     {
       "code": "852BEL",
@@ -86,7 +96,8 @@
       "district": "香港島",
       "area": "西環",
       "address": "德輔道西343號均益大廈地下11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 343 No. Building G/F 11 No. Shop"
     },
     {
       "code": "852BFL",
@@ -94,7 +105,8 @@
       "district": "香港島",
       "area": "上環",
       "address": "文咸東街22號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 12, G/F, Chung Ying Building, 3 Wai On Street, Tai Kok Tsui, Yau Tsim Mong District, Kowloon"
     },
     {
       "code": "852BGL",
@@ -102,7 +114,8 @@
       "district": "香港島",
       "area": "上環",
       "address": "永樂街153號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 153 No.G/F"
     },
     {
       "code": "852BHL",
@@ -110,7 +123,8 @@
       "district": "香港島",
       "area": "中環",
       "address": "夏愨道10號和記大廈地下G04號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 10 No. Building G/F G04 No. Shop"
     },
     {
       "code": "852BIL",
@@ -118,7 +132,8 @@
       "district": "香港島",
       "area": "中環",
       "address": "德輔道中68號萬宜大廈地下A舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 68 No. Building G/F A Shop"
     },
     {
       "code": "852BJL",
@@ -126,7 +141,8 @@
       "district": "香港島",
       "area": "中環",
       "address": "夏愨道16號遠東金融中心地下G5號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 16 No. Centre G/F G5 No. Shop"
     },
     {
       "code": "852BKL",
@@ -134,7 +150,8 @@
       "district": "香港島",
       "area": "灣仔",
       "address": "軒尼詩道397號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 397 No.G/F"
     },
     {
       "code": "852BLL",
@@ -142,7 +159,8 @@
       "district": "香港島",
       "area": "灣仔",
       "address": "軒尼詩道302號集成中心地下G05號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 302 No. Centre G/F G05 No. Shop"
     },
     {
       "code": "852CAC",
@@ -150,7 +168,8 @@
       "district": "香港島",
       "area": "中環",
       "address": "中環",
-      "type": "store"
+      "type": "store",
+      "addressEn": "G/F , Union Building, No. 112 How Ming Street, Kwun Tong, Kwun Tong District, Kowloon"
     },
     {
       "code": "852CAL",
@@ -158,7 +177,8 @@
       "district": "香港島",
       "area": "灣仔",
       "address": "駱克道405號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 405 No.G/F"
     },
     {
       "code": "852CBL",
@@ -166,7 +186,8 @@
       "district": "香港島",
       "area": "銅鑼灣",
       "address": "銅鑼灣廣場一期地下G16號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Causeway Bay Plaza G/F G16 No. Shop"
     },
     {
       "code": "852CC1007",
@@ -174,7 +195,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "將軍澳景林邨景林商場第2號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Tseung Kwan O Estate Shopping Centre 2 No. Shop"
     },
     {
       "code": "852CC1033",
@@ -182,7 +204,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "將軍澳毓雅里7號富麗花園地下2號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Tseung Kwan O Lane 7 No. Garden G/F 2 No. Shop"
     },
     {
       "code": "852CCL",
@@ -190,7 +213,8 @@
       "district": "香港島",
       "area": "銅鑼灣",
       "address": "勿地臣街1號時代廣場地庫B227號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 1 No. Plaza B227 No. Shop"
     },
     {
       "code": "852CDL",
@@ -198,7 +222,8 @@
       "district": "香港島",
       "area": "銅鑼灣",
       "address": "利園山道36號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Hill Road 36 No.G/F"
     },
     {
       "code": "852CEL",
@@ -206,7 +231,8 @@
       "district": "香港島",
       "area": "銅鑼灣",
       "address": "電氣道54號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 54 No.G/F"
     },
     {
       "code": "852CFL",
@@ -214,7 +240,8 @@
       "district": "香港島",
       "area": "北角",
       "address": "英皇道560號健威坊地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 560 No. Square G/F G12 No. Shop"
     },
     {
       "code": "852CGL",
@@ -222,7 +249,8 @@
       "district": "香港島",
       "area": "北角",
       "address": "北角匯二期地下G03號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "No rth Point G/F G03 No. Shop"
     },
     {
       "code": "852CHL",
@@ -230,7 +258,8 @@
       "district": "香港島",
       "area": "北角",
       "address": "城市花園道9號城市花園商場地下6號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Garden Road 9 No. Garden Shopping Centre G/F 6 No. Shop"
     },
     {
       "code": "852CIL",
@@ -238,7 +267,8 @@
       "district": "香港島",
       "area": "北角",
       "address": "英皇道979號太古坊地下G4號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 979 No. Square G/F G4 No. Shop"
     },
     {
       "code": "852CJL",
@@ -246,7 +276,8 @@
       "district": "香港島",
       "area": "西灣河",
       "address": "太康街38號嘉亨灣地下G02號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 38 No.G/F G02 No. Shop"
     },
     {
       "code": "852CKL",
@@ -254,7 +285,8 @@
       "district": "香港島",
       "area": "西灣河",
       "address": "鯉景灣地下9號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 105, 1/F, Kwong Tin Shopping Centre, Kwong Tin Estate, Pik Wan Road, Lam Tin, Kwun Tong District, Kowloon"
     },
     {
       "code": "852CLL",
@@ -262,7 +294,8 @@
       "district": "香港島",
       "area": "筲箕灣",
       "address": "愛禮街2號愛蝶灣地下G09號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 215, 2/F, Sheung Tak Plaza, Sheung Tak Estate, 2 Tong Ming Street, Tseung Kwan O, Sai Kung District, New Territories"
     },
     {
       "code": "852CUL",
@@ -270,7 +303,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "將軍澳常寧道10號安寧花園1座地下14號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop No. 14, G/F, Block 1, On Ning Garden, 10 Sheung Ning Road, Tseung Kwan O, Sai Kung District, New Territories"
     },
     {
       "code": "852DAL",
@@ -278,7 +312,8 @@
       "district": "香港島",
       "area": "筲箕灣",
       "address": "東大街42號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 42 No.G/F"
     },
     {
       "code": "852DBL",
@@ -286,7 +321,8 @@
       "district": "香港島",
       "area": "柴灣",
       "address": "柴灣道333號永利中心地下G17號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Chai Wan Road 333 No. Centre G/F G17 No. Shop"
     },
     {
       "code": "852DCL",
@@ -294,7 +330,8 @@
       "district": "香港島",
       "area": "柴灣",
       "address": "柴灣道233號新翠商場地下G06號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 2A, G/F, Banyan Mall, Banyan Garden, 863 Lai Chi Kok Road, Lai Chi Kok, Sham Shui Po District, Kowloon"
     },
     {
       "code": "852DDL",
@@ -302,7 +339,8 @@
       "district": "香港島",
       "area": "柴灣",
       "address": "盛泰道100號杏花新城地下G18號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "No.143 Castle Peak Road, Sham Shui Po, Sham Shui Po District, Kowloon"
     },
     {
       "code": "852EAL",
@@ -310,7 +348,8 @@
       "district": "九龍",
       "area": "旺角",
       "address": "海泓道富榮花園2期地下38號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road Garden 2G/F 38 No. Shop"
     },
     {
       "code": "852EBL",
@@ -318,7 +357,8 @@
       "district": "九龍",
       "area": "旺角",
       "address": "登打士街56號家樂坊16樓1626室",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 56 No. Square 16/F 1626 Room"
     },
     {
       "code": "852ECL",
@@ -326,7 +366,8 @@
       "district": "九龍",
       "area": "旺角",
       "address": "亞皆老街65號新之城地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 65 No.G/F G12 No. Shop"
     },
     {
       "code": "852EDL",
@@ -334,7 +375,8 @@
       "district": "九龍",
       "area": "旺角",
       "address": "弼街43號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 43 No.G/F"
     },
     {
       "code": "852EEL",
@@ -342,7 +384,8 @@
       "district": "九龍",
       "area": "太子",
       "address": "彌敦道760號聯合廣場地下G18號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 760 No. Plaza G/F G18 No. Shop"
     },
     {
       "code": "852EFL",
@@ -350,7 +393,8 @@
       "district": "九龍",
       "area": "太子",
       "address": "彌敦道750號始創中心地下G05號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 750 No. Centre G/F G05 No. Shop"
     },
     {
       "code": "852EGL",
@@ -358,7 +402,8 @@
       "district": "九龍",
       "area": "油麻地",
       "address": "彌敦道530號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 530 No.G/F"
     },
     {
       "code": "852EHL",
@@ -366,7 +411,8 @@
       "district": "九龍",
       "area": "油麻地",
       "address": "砵蘭街70號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 70 No.G/F"
     },
     {
       "code": "852EIL",
@@ -374,7 +420,8 @@
       "district": "九龍",
       "area": "佐敦",
       "address": "彌敦道222號恒豐中心地下G03號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 222 No. Centre G/F G03 No. Shop"
     },
     {
       "code": "852EJL",
@@ -382,7 +429,8 @@
       "district": "九龍",
       "area": "佐敦",
       "address": "佐敦道35號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Jordan Road 35 No.G/F"
     },
     {
       "code": "852EKL",
@@ -390,7 +438,8 @@
       "district": "九龍",
       "area": "尖沙咀",
       "address": "彌敦道132號美麗華廣場地下G11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 132 No. Plaza G/F G11 No. Shop"
     },
     {
       "code": "852ELL",
@@ -398,7 +447,8 @@
       "district": "九龍",
       "area": "尖沙咀",
       "address": "河內道18號K11地下G07號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 18 No.K11G/F G07 No. Shop"
     },
     {
       "code": "852FAL",
@@ -406,7 +456,8 @@
       "district": "九龍",
       "area": "尖沙咀",
       "address": "廣東道3號海港城地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 36, G/F, Waldorf Garden, 1 Tuen Lee Street, Tuen Mun, Tuen Mun District, New Territories"
     },
     {
       "code": "852FBL",
@@ -414,7 +465,8 @@
       "district": "九龍",
       "area": "紅磡",
       "address": "黃埔天地地下G32號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop Nos. 24 & 25, G/F, Tin Shui Shopping Centre, Tin Shui Estate, Tin Shui Wai, New Territories"
     },
     {
       "code": "852FCL",
@@ -422,7 +474,8 @@
       "district": "九龍",
       "area": "紅磡",
       "address": "海逸道8號海逸坊地下G09號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop A5, G/F, Fortune Plaza, 4 On Chee Road, Tai Po, Tai Po District, New Territories"
     },
     {
       "code": "852FDL",
@@ -430,7 +483,8 @@
       "district": "九龍",
       "area": "土瓜灣",
       "address": "土瓜灣道246號翔龍灣廣場地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop No. G-3/68B, G/F, MOSTown Street, Ma On Shan, Sha Tin District, New Territories"
     },
     {
       "code": "852FEL",
@@ -438,7 +492,8 @@
       "district": "九龍",
       "area": "土瓜灣",
       "address": "美景街88號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop Nos. 16A & 17 on Ground Floor, Holford Gardens, Nos. 2-8 Chik Wan Street, Tai Wai, Sha Tin District, New Territories"
     },
     {
       "code": "852FFL",
@@ -446,7 +501,8 @@
       "district": "九龍",
       "area": "九龍城",
       "address": "九龍城廣場地下G03號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop A13 on G/F, Goodrich Garden, No.9 Leung Tak Street, Tuen Mun, Tuen Mun District, New Territories"
     },
     {
       "code": "852FGL",
@@ -454,7 +510,8 @@
       "district": "九龍",
       "area": "九龍城",
       "address": "衙前圍道112號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 7 on G/F, Tai Fook G & S Building, Nos. 57 Kin Tak Street, Yuen Long, Yuen Long District, New Territories"
     },
     {
       "code": "852FHL",
@@ -462,7 +519,8 @@
       "district": "九龍",
       "area": "新蒲崗",
       "address": "太子道東638號Mikiki地下G18號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 111 & 112, G/F, Cheung Chung House, Cheung Wah Estate, 38 San Wan Road, Fanling, North District, New Territories"
     },
     {
       "code": "852FIL",
@@ -470,7 +528,8 @@
       "district": "九龍",
       "area": "新蒲崗",
       "address": "大有街36號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 36 No.G/F"
     },
     {
       "code": "852FJL",
@@ -478,7 +537,8 @@
       "district": "九龍",
       "area": "彩虹",
       "address": "彩虹邨匯八坊地下G06號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Choi Hung Estate Square G/F G06 No. Shop"
     },
     {
       "code": "852FKL",
@@ -486,7 +546,8 @@
       "district": "九龍",
       "area": "鑽石山",
       "address": "荷里活廣場地下G11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop Nos. 226 on the Second Floor of Phase 1, Fortune Kingswood, 12-18 Tin Yan Road, Tin Shui Wai, New Territories"
     },
     {
       "code": "852FLL",
@@ -494,7 +555,8 @@
       "district": "九龍",
       "area": "慈雲山",
       "address": "慈雲山中心地下G22號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop F,Ground Floor, Tung Fat Building, No.9 Ping Wui Street, Yuen Long, Yuen Long District, New Territories"
     },
     {
       "code": "852FXL",
@@ -502,7 +564,8 @@
       "district": "新界",
       "area": "西貢",
       "address": "西貢翠塘路1號翠塘花園地下1號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Sai Kung Road 1 No. Garden G/F 1 No. Shop"
     },
     {
       "code": "852FYL",
@@ -510,7 +573,8 @@
       "district": "新界",
       "area": "西貢",
       "address": "西貢福民路22-40號西貢苑地下10號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Sai Kung Road 22-40 No.Sai Kung Garden G/F 10 No. Shop"
     },
     {
       "code": "852GAL",
@@ -518,7 +582,8 @@
       "district": "九龍",
       "area": "黃大仙",
       "address": "黃大仙中心地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Wong Tai Sin Centre G/F G15 No. Shop"
     },
     {
       "code": "852GBL",
@@ -526,7 +591,8 @@
       "district": "九龍",
       "area": "黃大仙",
       "address": "鳳舞街38號現崇山地下G01號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop No. 201, 2/F., Commercial Centre 1 (also known as Yat Tung Shopping Centre) (forming part of Commercial Blocks), Yat Tung Estate, 8 Yat Tung Street, Tung Chung, Islands District, New Territories"
     },
     {
       "code": "852GCL",
@@ -534,7 +600,8 @@
       "district": "九龍",
       "area": "黃大仙",
       "address": "樂富廣場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Lok Fu Plaza G/F G08 No. Shop"
     },
     {
       "code": "852GDL",
@@ -542,7 +609,8 @@
       "district": "九龍",
       "area": "觀塘",
       "address": "觀塘道418號APM地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Unit Nos. 638 & 639 on 6/F of Nan Fung Centre,264-298 Castle Peak Road, Tsuen Wan"
     },
     {
       "code": "852GEL",
@@ -550,7 +618,8 @@
       "district": "九龍",
       "area": "觀塘",
       "address": "裕民坊16號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Square 16 No.G/F"
     },
     {
       "code": "852GFL",
@@ -558,7 +627,8 @@
       "district": "九龍",
       "area": "牛頭角",
       "address": "牛頭角道3號得寶花園地下G11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Ngau Tau Kok Road 3 No. Garden G/F G11 No. Shop"
     },
     {
       "code": "852GGL",
@@ -566,7 +636,8 @@
       "district": "九龍",
       "area": "九龍灣",
       "address": "德福廣場地下G22號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G22 No. Shop"
     },
     {
       "code": "852GHL",
@@ -574,7 +645,8 @@
       "district": "九龍",
       "area": "九龍灣",
       "address": "MegaBox地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "MegaBoxG/F G08 No. Shop"
     },
     {
       "code": "852GIL",
@@ -582,7 +654,8 @@
       "district": "九龍",
       "area": "藍田",
       "address": "啟田商場地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G12 No. Shop"
     },
     {
       "code": "852GJL",
@@ -590,7 +663,8 @@
       "district": "九龍",
       "area": "藍田",
       "address": "匯景廣場地下G05號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G05 No. Shop"
     },
     {
       "code": "852GKL",
@@ -598,7 +672,8 @@
       "district": "九龍",
       "area": "油塘",
       "address": "油塘高超道38號大本型地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Yau Tong Road 38 No.G/F G08 No. Shop"
     },
     {
       "code": "852GLL",
@@ -606,7 +681,8 @@
       "district": "九龍",
       "area": "長沙灣",
       "address": "長沙灣廣場地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Cheung Sha Wan Plaza G/F G15 No. Shop"
     },
     {
       "code": "852HAL",
@@ -614,7 +690,8 @@
       "district": "九龍",
       "area": "長沙灣",
       "address": "麗閣邨麗閣商場地下G03號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 29A, G/F, Tropicana Gardens, 110 Lung Cheung Road, Wong Tai Sin, Wong Tai Sin District, Kowloon"
     },
     {
       "code": "852HBL",
@@ -622,7 +699,8 @@
       "district": "九龍",
       "area": "荔枝角",
       "address": "泓景匯地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 209, 1/F, Tak Bo Mall, 3 Ngau Tau Kok Road, Kowloon Bay, Kwun Tong District, Kowloon"
     },
     {
       "code": "852HCL",
@@ -630,7 +708,8 @@
       "district": "九龍",
       "area": "荔枝角",
       "address": "宇晴滙地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop S215A, 2/F, Chuk Yuen Plaza, Chuk Yuen South Estate, 15 Chuk Yuen Road, Wong Tai Sin, Wong Tai Sin District, Kowloon"
     },
     {
       "code": "852HDL",
@@ -638,7 +717,8 @@
       "district": "九龍",
       "area": "深水埗",
       "address": "福華街146-152號黃金電腦商場地下G01號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 2, LG/F, Wah Lai House, 153-155, Po Kong Village Road, Tsz Wan Shan, Wong Tai Sin District, Kowloon"
     },
     {
       "code": "852HDSM",
@@ -646,7 +726,8 @@
       "district": "新界",
       "area": "屯門",
       "address": "屯門HANDS",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop Nos. A135 - A138, G/F, Zone A, H.A.N.D.S, On Ting Estate, Tuen Mun, Tuen Mun District, New Territories"
     },
     {
       "code": "852HEL",
@@ -654,7 +735,8 @@
       "district": "九龍",
       "area": "深水埗",
       "address": "欽州街37號西九龍中心地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Street 37 No.Kowloon Centre G/F G08 No. Shop"
     },
     {
       "code": "852HFL",
@@ -662,7 +744,8 @@
       "district": "九龍",
       "area": "大角咀",
       "address": "奧海城一期地下G06號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Unit 129, 1/F, Richland Gardens, 80 Wang Kwong Road, Kowloon Bay, Kwun Tong District, Kowloon"
     },
     {
       "code": "852HGL",
@@ -670,7 +753,8 @@
       "district": "九龍",
       "area": "大角咀",
       "address": "港湾豪庭廣場地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 131A, 1/F, On Kay Commercial Center, 20 Chun Wah Road, Ngau Tau Kok, Kwun Tong District, Kowloon"
     },
     {
       "code": "852HHL",
@@ -678,7 +762,8 @@
       "district": "新界",
       "area": "荃灣",
       "address": "西樓角路64-98號南豐中心638-639室",
-      "type": "store"
+      "type": "store",
+      "addressEn": "/F Road 64-98 No. Centre 638-639 Room"
     },
     {
       "code": "852HHUM",
@@ -686,7 +771,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "將軍澳培成路8號南豐廣場1樓B28-B31舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop B28-B31, 1/F Nan Fung Plaza, 8 Pui Shing Road, Tseung Kwan O, Sai Kung District, New Territories"
     },
     {
       "code": "852HIL",
@@ -694,7 +780,8 @@
       "district": "新界",
       "area": "荃灣",
       "address": "荃新天地地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "G/F G12 No. Shop"
     },
     {
       "code": "852HJL",
@@ -702,7 +789,8 @@
       "district": "新界",
       "area": "荃灣",
       "address": "荃灣廣場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Tsuen Wan Plaza G/F G08 No. Shop"
     },
     {
       "code": "852HKL",
@@ -710,7 +798,8 @@
       "district": "新界",
       "area": "荃灣",
       "address": "綠楊坊地下G16號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Square G/F G16 No. Shop"
     },
     {
       "code": "852HLL",
@@ -718,7 +807,8 @@
       "district": "新界",
       "area": "葵涌",
       "address": "葵涌廣場地下G11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Kwai Chung Plaza G/F G11 No. Shop"
     },
     {
       "code": "852IAL",
@@ -726,7 +816,8 @@
       "district": "新界",
       "area": "葵涌",
       "address": "新都會廣場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G08 No. Shop"
     },
     {
       "code": "852IBL",
@@ -734,7 +825,8 @@
       "district": "新界",
       "area": "葵涌",
       "address": "石籬商場地下G03號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G03 No. Shop"
     },
     {
       "code": "852ICL",
@@ -742,7 +834,8 @@
       "district": "新界",
       "area": "青衣",
       "address": "長發廣場地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G15 No. Shop"
     },
     {
       "code": "852IDL",
@@ -750,7 +843,8 @@
       "district": "新界",
       "area": "青衣",
       "address": "青衣城地下G22號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Tsing Yi G/F G22 No. Shop"
     },
     {
       "code": "852IEL",
@@ -758,7 +852,8 @@
       "district": "新界",
       "area": "屯門",
       "address": "屯門市廣場地下G18號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Tuen Mun Plaza G/F G18 No. Shop"
     },
     {
       "code": "852IFL",
@@ -766,7 +861,8 @@
       "district": "新界",
       "area": "屯門",
       "address": "V City地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "V CityG/F G08 No. Shop"
     },
     {
       "code": "852IGL",
@@ -774,7 +870,8 @@
       "district": "新界",
       "area": "屯門",
       "address": "蝴蝶邨蝴蝶廣場地下G06號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Estate Plaza G/F G06 No. Shop"
     },
     {
       "code": "852IHL",
@@ -782,7 +879,8 @@
       "district": "新界",
       "area": "屯門",
       "address": "良景邨良景商場地下G09號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Estate Shopping Centre G/F G09 No. Shop"
     },
     {
       "code": "852IIL",
@@ -790,7 +888,8 @@
       "district": "新界",
       "area": "元朗",
       "address": "元朗廣場地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Yuen Long Plaza G/F G12 No. Shop"
     },
     {
       "code": "852IJL",
@@ -798,7 +897,8 @@
       "district": "新界",
       "area": "元朗",
       "address": "YOHO Mall地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "YOHO MallG/F G08 No. Shop"
     },
     {
       "code": "852IKL",
@@ -806,7 +906,8 @@
       "district": "新界",
       "area": "元朗",
       "address": "教育路36號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Road 36 No.G/F"
     },
     {
       "code": "852ILL",
@@ -814,7 +915,8 @@
       "district": "新界",
       "area": "天水圍",
       "address": "天耀廣場地下G11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G11 No. Shop"
     },
     {
       "code": "852JAL",
@@ -822,7 +924,8 @@
       "district": "新界",
       "area": "天水圍",
       "address": "頌富商場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G08 No. Shop"
     },
     {
       "code": "852JBL",
@@ -830,7 +933,8 @@
       "district": "新界",
       "area": "天水圍",
       "address": "天澤邨天澤商場地下G05號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Estate Shopping Centre G/F G05 No. Shop"
     },
     {
       "code": "852JCL",
@@ -838,7 +942,8 @@
       "district": "新界",
       "area": "粉嶺",
       "address": "粉嶺名都商場地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Fanling Shopping Centre G/F G12 No. Shop"
     },
     {
       "code": "852JDL",
@@ -846,7 +951,8 @@
       "district": "新界",
       "area": "粉嶺",
       "address": "聯和墟聯和商場地下G06號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G06 No. Shop"
     },
     {
       "code": "852JEL",
@@ -854,7 +960,8 @@
       "district": "新界",
       "area": "上水",
       "address": "上水廣場地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Sheung Shui Plaza G/F G15 No. Shop"
     },
     {
       "code": "852JFL",
@@ -862,7 +969,8 @@
       "district": "新界",
       "area": "上水",
       "address": "石湖墟商場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G08 No. Shop"
     },
     {
       "code": "852JGL",
@@ -870,7 +978,8 @@
       "district": "新界",
       "area": "沙田",
       "address": "新城市廣場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G08 No. Shop"
     },
     {
       "code": "852JHL",
@@ -878,7 +987,8 @@
       "district": "新界",
       "area": "沙田",
       "address": "好運中心地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Centre G/F G15 No. Shop"
     },
     {
       "code": "852JIL",
@@ -886,7 +996,8 @@
       "district": "新界",
       "area": "沙田",
       "address": "第一城商場地下G11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G11 No. Shop"
     },
     {
       "code": "852JKL",
@@ -894,7 +1005,8 @@
       "district": "新界",
       "area": "大圍",
       "address": "圍方地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Circuit G/F G08 No. Shop"
     },
     {
       "code": "852JLL",
@@ -902,7 +1014,8 @@
       "district": "新界",
       "area": "大圍",
       "address": "美林商場地下G06號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G06 No. Shop"
     },
     {
       "code": "852KAL",
@@ -910,7 +1023,8 @@
       "district": "新界",
       "area": "馬鞍山",
       "address": "新港城中心大街地下G-3/68B號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Centre Street G/F G-3/68B No. Shop"
     },
     {
       "code": "852KBL",
@@ -918,7 +1032,8 @@
       "district": "新界",
       "area": "馬鞍山",
       "address": "馬鞍山廣場地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop No.5, G/F, Hong Man House (Block C), Upper Oi Man Estate, No.60 Chung Hau Street, Ho Man Tin, Kowloon City District, Kowloon"
     },
     {
       "code": "852KCL",
@@ -926,7 +1041,8 @@
       "district": "新界",
       "area": "大埔",
       "address": "大埔超級城地下G15號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "G/F , No.414 Prince Edward Road West, Kowloon City, Kowloon City District, Kowloon"
     },
     {
       "code": "852KDL",
@@ -934,7 +1050,8 @@
       "district": "新界",
       "area": "大埔",
       "address": "大埔廣場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop B, G/F, Kingsgate, 178 Pau Chung Street, To Kwa Wan, Kowloon City District, Kowloon"
     },
     {
       "code": "852KEL",
@@ -942,7 +1059,8 @@
       "district": "新界",
       "area": "大埔",
       "address": "太和邨太和商場地下G06號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop Nos. 9A and 9B in the 1st Basement, Site 12, Whampoa Garden, Hunghom, Kowloon City District, Kowloon"
     },
     {
       "code": "852KFL",
@@ -950,7 +1068,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "東港城地下G12號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 126, G/F, Block G, Lok Man Sun Chuen, To Kwa Wan, Kowloon City District, Kowloon"
     },
     {
       "code": "852KGL",
@@ -958,7 +1077,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "PopCorn地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "PopCornG/F G08 No. Shop"
     },
     {
       "code": "852KHL",
@@ -966,7 +1086,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "新都城中心地下G22號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Centre G/F G22 No. Shop"
     },
     {
       "code": "852KIIM",
@@ -974,7 +1095,8 @@
       "district": "九龍",
       "area": "尖沙咀",
       "address": "尖沙咀K11 MUSEA",
-      "type": "store"
+      "type": "store",
+      "addressEn": "The parking area for the Cross-border Coach, B1/F, K11 MUSEA, 18 Salisbury Road, Tsim Sha Tsui, Yau Tsim Mong District, Kowloon"
     },
     {
       "code": "852KIL",
@@ -982,7 +1104,8 @@
       "district": "新界",
       "area": "坑口",
       "address": "東港城地下G16號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "G/F G16 No. Shop"
     },
     {
       "code": "852KJL",
@@ -990,7 +1113,8 @@
       "district": "新界",
       "area": "坑口",
       "address": "南豐廣場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G08 No. Shop"
     },
     {
       "code": "852KKL",
@@ -998,7 +1122,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "都會駅地下G11號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "G/F G11 No. Shop"
     },
     {
       "code": "852LAL",
@@ -1006,7 +1131,8 @@
       "district": "離島",
       "area": "東涌",
       "address": "東薈城地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop G16, G/F, Hang King Garden, 9 Wing Fong Road, Kwai Chung, Kwai Tsing District, New Territories"
     },
     {
       "code": "852LBL",
@@ -1014,7 +1140,8 @@
       "district": "離島",
       "area": "東涌",
       "address": "映灣園商場地下G03號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 7, G/F, Kwai Do Building, 129-151 Tai Loong Street, Kwai Chung, Kwai Tsing District, New Territories"
     },
     {
       "code": "852LCL",
@@ -1022,7 +1149,8 @@
       "district": "離島",
       "area": "東涌",
       "address": "昇薈商場地下G05號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shopping Centre G/F G05 No. Shop"
     },
     {
       "code": "852LDL",
@@ -1030,7 +1158,8 @@
       "district": "離島",
       "area": "長洲",
       "address": "長洲大新街25號地下",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Cheung Chau Street 25 No.G/F"
     },
     {
       "code": "852LEL",
@@ -1038,7 +1167,8 @@
       "district": "離島",
       "area": "東涌",
       "address": "愉景灣廣場地下G08號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Plaza G/F G08 No. Shop"
     },
     {
       "code": "852SKL",
@@ -1046,7 +1176,8 @@
       "district": "新界",
       "area": "西貢",
       "address": "西貢宜春街66號地下10號舖",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Sai Kung Shop 10, G/F, 66 Yi Chun Street, Sai Kung, Sai Kung District, New Territories"
     },
     {
       "code": "852TCSM",
@@ -1054,7 +1185,8 @@
       "district": "新界",
       "area": "屯門",
       "address": "屯門仁愛大廈",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop No. 9, G/F, Yan Oi Building, No. 11 Tseng Choi Street, Tuen Mun, Tuen Mun District, New Territories"
     },
     {
       "code": "852WCLM",
@@ -1062,7 +1194,8 @@
       "district": "九龍",
       "area": "石硤尾",
       "address": "石硤尾金玉樓",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 222, G/F, Kam Yuck Building, 2 Wai Chi Lane, Shek Kip Mei, Sham Shui Po District, Kowloon"
     },
     {
       "code": "852YMCM",
@@ -1070,7 +1203,8 @@
       "district": "九龍",
       "area": "牛頭角",
       "address": "牛頭角裕民中心",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop No. 53 on Ground Floor., Yue Man Centre, Nos. 300 & 302 Ngau Tau Kok Road, Ngau Tau Kok, Kwun Tong District, Kowloon"
     },
     {
       "code": "852Z101",
@@ -1078,7 +1212,8 @@
       "district": "新界",
       "area": "將軍澳",
       "address": "將軍澳康城",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 340, Level 3, The Lohas, No.1 Lohas Park Road, Tseung Kwan O, N.T. Hong Kong"
     },
     {
       "code": "852Z151",
@@ -1086,7 +1221,8 @@
       "district": "九龍",
       "area": "觀塘",
       "address": "觀塘興業街",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Unit 708, 7/F, Prosperity Place, No. 6 Shing Yip Street, Kwun Tong, Kwun Tong District, Kowloon"
     },
     {
       "code": "852Z201",
@@ -1094,7 +1230,8 @@
       "district": "九龍",
       "area": "深水埗",
       "address": "深水埗南昌站",
-      "type": "store"
+      "type": "store",
+      "addressEn": "MTR Station Shop NAC 22-23 at Nam Cheong Station, Sham Shui Po District, Kowloon, Hong Kong (Unpaid Area)"
     },
     {
       "code": "852Z251",
@@ -1102,7 +1239,8 @@
       "district": "九龍",
       "area": "尖沙咀",
       "address": "尖沙咀海港城",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Gateway Arcade Level 4 (near Shop GW4002), Harbour City, 3-27 Canton Road, Tsim Sha Tsui, Yau Tsim Mong District, Kowloon"
     },
     {
       "code": "852Z352",
@@ -1110,7 +1248,8 @@
       "district": "新界",
       "area": "東涌",
       "address": "東涌東薈城2期",
-      "type": "store"
+      "type": "store",
+      "addressEn": "TSY 14-15, U2 Airport Express Platform, Tsing Yi Station, Tsing Yi, Kwai Tsing District, New Territories"
     },
     {
       "code": "852Z353",
@@ -1118,7 +1257,8 @@
       "district": "新界",
       "area": "馬灣",
       "address": "馬灣田寮新村",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Ground Floor, No.65 Tin Liu New Village, Ma Wan, Lantau Island District, New Territories"
     },
     {
       "code": "852Z551",
@@ -1126,7 +1266,8 @@
       "district": "香港島",
       "area": "天后",
       "address": "天后永興街",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop D on Ground Floor, Mayson Garden Building, Nos. 2A-2E Wing Hing Street, Eastern District, Hong Kong Island, Hong Kong (SF Redeem)"
     },
     {
       "code": "852Z552",
@@ -1134,7 +1275,8 @@
       "district": "香港島",
       "area": "小西灣",
       "address": "小西灣藍灣廣場",
-      "type": "store"
+      "type": "store",
+      "addressEn": "Shop 1, G/F, Island Resort Mall, 28 Siu Sai Wan Road, Siu Sai Wan, Eastern District, Hong Kong Island"
     },
     {
       "code": "852Z601",
@@ -1142,7 +1284,8 @@
       "district": "香港島",
       "area": "薄扶林",
       "address": "薄扶林數碼港",
-      "type": "store"
+      "type": "store",
+      "addressEn": "209D, 2/F, Marina Square West Centre, 12A South Horizon Drive, Ap Lei Chau, Southern District, Hong Kong Island"
     }
   ]
 }

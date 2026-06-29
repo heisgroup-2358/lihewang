@@ -6,7 +6,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港薄扶林置富南區廣場5樓503號舖7-8號檔",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Pok Fu Lam Southern Plaza 5/F 503 No. Shop 7-8 No."
     },
     {
       "code": "852P2004",
@@ -14,7 +15,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港北角電器道233號城市花園1,2及3座平臺地下5號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "No rth Point Road 233 No. Garden 1,23G/F 5 No. Shop"
     },
     {
       "code": "852P2006",
@@ -22,7 +24,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港北角堡壘街22號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "No rth Point Street 22 No.G/F"
     },
     {
       "code": "852P2010",
@@ -30,7 +33,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港北角七姊妹道健康村1期地下1樓A號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "No rth Point Road Village 1G/F 1/F A No. Shop"
     },
     {
       "code": "852PB2001",
@@ -38,7 +42,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港柴灣興華村和興樓209至210號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Chai Wan Village /F 209210 No. Shop"
     },
     {
       "code": "852PB2009",
@@ -46,7 +51,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港柴灣泰民街16號康翠臺商場L5樓3A&3B號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Chai Wan Street 16 No. Shopping Centre L5/F 3A&3B No. Shop"
     },
     {
       "code": "852TB2011",
@@ -54,7 +60,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港海洋公園港鐵站OCP 5 號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Park OCP 5 No. Shop"
     },
     {
       "code": "852MC2001",
@@ -62,7 +69,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港堅尼地城吉席街2號海怡花園2期3座地下2C鋪",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Kennedy Town Street 2 No. Garden 23G/F 2C"
     },
     {
       "code": "852MA2010",
@@ -70,7 +78,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港卑路乍街39號及山市街18號山市樓地下6號鋪",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road Street 39 No. Hill Street 18 No. Hill /F G/F 6 No."
     },
     {
       "code": "852MA2013",
@@ -78,7 +87,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港爹核士街7 & 7A號，卑路乍街136、136A、138、140及142號，聯威新樓",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Street 7 & 7A No.， Road Street 136、136A、138、140142 No.，/F"
     },
     {
       "code": "852TA2005",
@@ -86,7 +96,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港中環金鐘道95號統一中心1樓1002B號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Central Road 95 No. Centre 1/F 1002B No. Shop"
     },
     {
       "code": "852TA2008",
@@ -94,7 +105,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港金鐘道93號金鐘廊1樓LabConceptF01-02號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 93 No.1/F LabConceptF01-02 No. Shop"
     },
     {
       "code": "852T2002",
@@ -102,7 +114,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Happy Valley Road 21-23 No. Building G/F B No. Shop"
     },
     {
       "code": "852P2011",
@@ -110,7 +123,8 @@
       "district": "香港島",
       "area": "",
       "address": "北角七姊妹道2,4,6,8及8A,昌苑大廈地下4號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "No rth Point Road 2,4,6,88A, Garden Building G/F 4 No. Shop"
     },
     {
       "code": "852P2014",
@@ -118,7 +132,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港北角電氣道108號冠貿商業大廈地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "No rth Point Road 108 No. Building G/F"
     },
     {
       "code": "852P2013",
@@ -126,7 +141,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港英皇道193-209號英皇中心地下25-27號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 193-209 No. Centre G/F 25-27 No. Shop"
     },
     {
       "code": "852P2012",
@@ -134,7 +150,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港英皇道484號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 484 No.G/F"
     },
     {
       "code": "852P2015",
@@ -142,7 +159,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港威非路道2-10B號金都洋樓9及9A號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road Road 2-10B No./F 99A No. Shop"
     },
     {
       "code": "852P2016",
@@ -150,7 +168,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港英皇道321-333號及北角道1、3、5、7、7A、9及9A號皇冠大廈地下19號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 321-333 No.No rth Point Road 1、3、5、7、7A、99A No. Building G/F 19 No. Shop"
     },
     {
       "code": "852MA2006",
@@ -158,7 +177,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港上環修打蘭街21-27號海景大廈地下D及H號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Sheung Wan Street 21-27 No. Building G/F DH No. Shop"
     },
     {
       "code": "852MD2001",
@@ -166,7 +186,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港皇後大道西2-12號聯發商業中心地下A1舖連店舖外牆",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 2-12 No. Centre G/F A1 Shop Shop"
     },
     {
       "code": "852PA2001",
@@ -174,7 +195,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港筲萁灣愛東商場地下14號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Shopping Centre G/F 14 No. Shop"
     },
     {
       "code": "852PA2008",
@@ -182,7 +204,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港筲箕灣東大街51號東灣閣地下B號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Shau Kei Wan Street 51 No.G/F B No. Shop"
     },
     {
       "code": "852PC2001",
@@ -190,7 +213,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港筲箕灣道388-414號逢源大廈地下H1號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Shau Kei Wan Road 388-414 No. Building G/F H1 No. Shop"
     },
     {
       "code": "852PA2004",
@@ -198,7 +222,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港太古康山花園第一座地下H1-H2號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Hill Garden G/F H1-H2 No. Shop"
     },
     {
       "code": "852P2008",
@@ -206,7 +231,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港天後英皇道14號僑興大廈地下1H號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 14 No. Building G/F 1H No. Shop"
     },
     {
       "code": "852T2006",
@@ -214,7 +240,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港東角道26號怡安大廈怡東商場地下9-12號舖及1樓9-11號單位",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 26 No. Building Shopping Centre G/F 9-12 No. Shop 1/F 9-11 No. Unit"
     },
     {
       "code": "852T2005",
@@ -222,7 +249,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港銅鑼灣堅拿道東5號地下及閣樓",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Causeway Bay Road 5 No.G/F /F"
     },
     {
       "code": "852T2004",
@@ -230,7 +258,8 @@
       "district": "香港島",
       "area": "",
       "address": "銅鑼灣利園山道49號地下k舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Causeway Bay Hill Road 49 No.G/F k Shop"
     },
     {
       "code": "852TB2014",
@@ -238,7 +267,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港恩平道50號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 50 No.G/F"
     },
     {
       "code": "852T2007",
@@ -246,7 +276,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港波斯富街24-30號寶漢大廈地下B號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Street 24-30 No. Building G/F B No. Shop"
     },
     {
       "code": "852TA2004",
@@ -254,7 +285,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港莊士敦道112號地下1號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 112 No.G/F 1 No. Shop"
     },
     {
       "code": "852TC2003",
@@ -262,7 +294,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港灣仔柯布連道7A至7B號及軒尼詩道156、160至162號利榮大樓地下E號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Wan Chai Road 7A7B No. Road 156、160162 No./F G/F E No. Shop"
     },
     {
       "code": "852TA2003",
@@ -270,7 +303,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港灣仔灣仔道89號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Wan Chai Wan Chai Road 89 No.G/F"
     },
     {
       "code": "852TA2001",
@@ -278,7 +312,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港灣仔軒尼詩道38號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Wan Chai Road 38 No.G/F"
     },
     {
       "code": "852TC2006",
@@ -286,7 +321,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港駱克道146號地下A號",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 146 No.G/F A No."
     },
     {
       "code": "852TC2007",
@@ -294,7 +330,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港軒尼詩道91號華寧大廈地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 91 No. Building G/F"
     },
     {
       "code": "852T2001",
@@ -302,7 +339,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港駱克道414, 418-430號徫德大廈地下2號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 414, 418-430 No. Building G/F 2 No. Shop"
     },
     {
       "code": "852M2015",
@@ -310,7 +348,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港西環正街64號地下A號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Sai Wan Street 64 No.G/F A No. Shop"
     },
     {
       "code": "852MA2002",
@@ -318,7 +357,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港西環德輔道西333及335號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Sai Wan Road 333335 No.G/F"
     },
     {
       "code": "852MA2012",
@@ -326,7 +366,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港德輔道西232號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 232 No.G/F"
     },
     {
       "code": "852MC2002",
@@ -334,7 +375,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港西摩道1號輝煌臺地下1及2號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 1 No.G/F 12 No. Shop"
     },
     {
       "code": "852M2016",
@@ -342,7 +384,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港般鹹道13-15號金寧大廈地下A號舖連低層地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 13-15 No. Building G/F A No. Shop G/F"
     },
     {
       "code": "852MA2009",
@@ -350,7 +393,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港德輔道西202號202中心地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 202 No.202 Centre G/F"
     },
     {
       "code": "852TB2001",
@@ -358,7 +402,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔華富中心7及8號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen Centre 78 No. Shop"
     },
     {
       "code": "852TB2004",
@@ -366,7 +411,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔石排灣道81號兆輝大廈地下3及4號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen Road 81 No. Building G/F 34 No. Shop"
     },
     {
       "code": "852TB2002",
@@ -374,7 +420,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔香港仔中心第五期地下7號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen Aberdeen Centre G/F 7 No. Shop"
     },
     {
       "code": "852TB2010",
@@ -382,7 +429,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔華富(二)村華富(二)商場30號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen () Village () Shopping Centre 30 No. Shop"
     },
     {
       "code": "852TB2009",
@@ -390,7 +438,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔東勝道23號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen Road 23 No.G/F"
     },
     {
       "code": "852TB2007",
@@ -398,7 +447,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔石排灣商場7號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen Shopping Centre 7 No. Shop"
     },
     {
       "code": "852PB2006",
@@ -406,7 +456,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港小西灣小西灣商場地下6A號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Siu Sai Wan Siu Sai Wan Shopping Centre G/F 6A No. Shop"
     },
     {
       "code": "852PB2007",
@@ -414,7 +465,8 @@
       "district": "香港島",
       "area": "",
       "address": "柴灣小西灣邨小西灣商場四樓401號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Chai Wan Siu Sai Wan Estate Siu Sai Wan Shopping Centre /F 401 No. Shop"
     },
     {
       "code": "852PB2008",
@@ -422,7 +474,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港小西灣道28號藍灣半島地下18號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Siu Sai Wan Road 28 No.G/F 18 No. Shop"
     },
     {
       "code": "852PB2005",
@@ -430,7 +483,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港杏花村港鐵站HFC5及6號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Village HFC56 No. Shop"
     },
     {
       "code": "852TB2016",
@@ -438,7 +492,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港鴨脷洲大街85號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Ap Lei Chau Street 85 No.G/F"
     },
     {
       "code": "852TB2015",
@@ -446,7 +501,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港鴨脷洲海怡路18A號海怡廣場(東翼)地下G02號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Ap Lei Chau Road 18A No. Plaza ()G/F G02 No. Shop"
     },
     {
       "code": "852PA2009",
@@ -454,7 +510,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港海光街13-15號海光苑地下16號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Street 13-15 No. Garden G/F 16 No. Shop"
     },
     {
       "code": "852M2002",
@@ -462,7 +519,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港中環閣麟街10-16號致發大廈地下1號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Central Street 10-16 No. Building G/F 1 No. Shop"
     },
     {
       "code": "852MB2001",
@@ -470,7 +528,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港德己立街 2, 4, 6, 8 及 10號，業豐大廈地下E舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Street 2, 4, 6, 8 10 No.， Building G/F E Shop"
     },
     {
       "code": "852TE3002",
@@ -478,7 +537,8 @@
       "district": "香港島",
       "area": "",
       "address": "置富南區商場5樓519號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Southern Shopping Centre 5/F 519 No. Shop"
     },
     {
       "code": "852P3005",
@@ -486,7 +546,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港北角春秧街107號仁德大廈地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "No rth Point Street 107 No. Building G/F"
     },
     {
       "code": "852P3006",
@@ -494,7 +555,8 @@
       "district": "香港島",
       "area": "",
       "address": "北角和富道20-36號明暉商場地下20號鋪",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "No rth Point Road 20-36 No. Shopping Centre G/F 20 No."
     },
     {
       "code": "852PB3004",
@@ -502,7 +564,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港柴灣宏德居商場B座地下81, 82號",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Chai Wan Shopping Centre BG/F 81, 82 No."
     },
     {
       "code": "852PB3005",
@@ -510,7 +573,8 @@
       "district": "香港島",
       "area": "",
       "address": "柴灣祥利街18號祥達中心地下4a鋪",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Chai Wan Street 18 No. Centre G/F 4a"
     },
     {
       "code": "852PB3007",
@@ -518,7 +582,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港柴灣宏德居B商場1/F，E鋪",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Chai Wan B Shopping Centre 1/F，E"
     },
     {
       "code": "852PB3008",
@@ -526,7 +591,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港柴灣道111號高威閣東港城商場G樓139鋪",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Chai Wan Road 111 No. Shopping Centre G/F 139"
     },
     {
       "code": "852TE3006",
@@ -534,7 +600,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔興和街11號田灣街市1MN82號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen Street 11 No. Street 1MN82 No. Shop"
     },
     {
       "code": "852MA3007",
@@ -542,7 +609,8 @@
       "district": "香港島",
       "area": "",
       "address": "堅尼地城北街7號地舖&",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Kennedy Town Street 7 No. Shop &"
     },
     {
       "code": "852MA3010",
@@ -550,7 +618,8 @@
       "district": "香港島",
       "area": "",
       "address": "堅尼地城卑路乍街144-148號金豪閣2J鋪",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Kennedy Town Road Street 144-148 No.2J"
     },
     {
       "code": "852MA3011",
@@ -558,7 +627,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港堅尼地城吉席街30號吉豐大廈地下A舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Kennedy Town Street 30 No. Building G/F A Shop"
     },
     {
       "code": "852MA3013",
@@ -566,7 +636,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港堅尼地城士美菲路47號聯興新樓地下H鋪(近地鐵站C出口) 取件",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Kennedy Town Road 47 No./F G/F H(C)"
     },
     {
       "code": "852TA3003",
@@ -574,7 +645,8 @@
       "district": "香港島",
       "area": "",
       "address": "金鐘金鐘道95號統一中心2樓2041舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 95 No. Centre 2/F 2041 Shop"
     },
     {
       "code": "852MD3001",
@@ -582,7 +654,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港上環皇后大道西2 -12號百匯電腦城廣場(聯發商業中心)1",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Sheung Wan Road 2 -12 No. Plaza ( Centre )1"
     },
     {
       "code": "852PC3004",
@@ -590,7 +663,8 @@
       "district": "香港島",
       "area": "",
       "address": "筲箕湾愛禮街2號愛蝶灣25號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Street 2 No.25 No.G/F"
     },
     {
       "code": "852PC3003",
@@ -598,7 +672,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港筲箕灣東大街54-60號東強大廈5-6號地舖地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Shau Kei Wan Street 54-60 No. Building 5-6 No. Shop G/F"
     },
     {
       "code": "852T3005",
@@ -606,7 +681,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港 島銅鑼灣霎東街51號2樓全層",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Causeway Bay Street 51 No.2/F"
     },
     {
       "code": "852T3003",
@@ -614,7 +690,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港灣仔灣仔道177-179地下4號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Wan Chai Wan Chai Road 177-179G/F 4 No. Shop"
     },
     {
       "code": "852PA3006",
@@ -622,7 +699,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港西灣河大石街20號地舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Sai Wan Ho Street 20 No. Shop"
     },
     {
       "code": "852MA3017",
@@ -630,7 +708,8 @@
       "district": "香港島",
       "area": "",
       "address": "石塘咀皇后大道西425Z永華大廈後座地舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Road 425Z Building Shop"
     },
     {
       "code": "852MA3009",
@@ -638,7 +717,8 @@
       "district": "香港島",
       "area": "",
       "address": "西營盤正街18號啟正中心20樓05室",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Street 18 No. Centre 20/F 05 Room"
     },
     {
       "code": "852MA3015",
@@ -646,7 +726,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港西營盤第一街77B號地下",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Street 77B No.G/F"
     },
     {
       "code": "852TE3005",
@@ -654,7 +735,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港香港仔中心利群商場1樓32號",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Aberdeen Centre Shopping Centre 1/F 32 No."
     },
     {
       "code": "852TB3004",
@@ -662,7 +744,8 @@
       "district": "香港島",
       "area": "",
       "address": "鴨脷洲西村利澤樓16B號舖羽毛球場",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Ap Lei Chau Village /F 16B No. Shop"
     },
     {
       "code": "852PA3012",
@@ -670,7 +753,8 @@
       "district": "香港島",
       "area": "",
       "address": "香港鰂魚涌海光商場2A3號舖",
-      "type": "partner"
+      "type": "partner",
+      "addressEn": "Quarry Bay Shopping Centre 2A3 No. Shop"
     }
   ]
 }

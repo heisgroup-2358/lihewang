@@ -29,7 +29,8 @@ export async function GET(req: Request) {
     s.name.toLowerCase().includes(q) ||
     (s.area || "").toLowerCase().includes(q) ||
     s.district.toLowerCase().includes(q) ||
-    s.address.toLowerCase().includes(q)
+    s.address.toLowerCase().includes(q) ||
+    (s.addressEn || "").toLowerCase().includes(q)
   );
 
   return NextResponse.json(results.slice(0, 20));
