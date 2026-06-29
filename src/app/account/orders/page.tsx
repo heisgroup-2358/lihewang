@@ -2,34 +2,36 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Package, MapPin, Truck, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { ArrowLeft, Package, MapPin, Truck, ChevronDown, ChevronUp, ExternalLink, CreditCard } from "lucide-react";
 
-// Mock data — will be replaced with real API data
 const ORDERS = [
   {
     id: "ORD-20250622-1024", date: "2025-06-22", total: 1878, status: "shipped",
-    payment: "paid", shippingMethod: "順豐站自取", shippingAddress: "旺角富榮花園2期地下38號舖\n陳大文\n+852 5111 2233",
+    payment: "paid", paymentMethod: "FPS", shippingMethod: "順豐站自取",
+    shippingAddress: "旺角富榮花園2期地下38號舖\n陳大文\n+852 5111 2233",
     trackingNumber: "SF1234567890",
     items: [
-      { name: "白之戀人 12件入", qty: 2, price: 580, image: "🍪" },
-      { name: "六花亭草莓朱古力", qty: 1, price: 320, image: "🍓" },
-      { name: "Royce 朱古力薯片", qty: 3, price: 398, image: "🥔" },
+      { name: "白之戀人 12件入", qty: 2, price: 580, productCode: "ISH-0001" },
+      { name: "六花亭草莓朱古力", qty: 1, price: 320, productCode: "ROY-0003" },
+      { name: "Royce 朱古力薯片", qty: 3, price: 398, productCode: "ROY-0005" },
     ],
   },
   {
     id: "ORD-20250615-0891", date: "2025-06-15", total: 458, status: "pending",
-    payment: "paid", shippingMethod: "上門送貨", shippingAddress: "香港銅鑼灣軒尼詩道500號15樓B室\n李小華\n+852 6222 3344",
+    payment: "unpaid", paymentMethod: "Alipay", shippingMethod: "上門送貨",
+    shippingAddress: "香港銅鑼灣軒尼詩道500號15樓B室\n李小華\n+852 6222 3344",
     trackingNumber: null,
     items: [
-      { name: "京都和菓子禮盒", qty: 1, price: 458, image: "🍡" },
+      { name: "京都和菓子禮盒", qty: 1, price: 458, productCode: "KYO-0002" },
     ],
   },
   {
     id: "ORD-20250610-0567", date: "2025-06-10", total: 894, status: "delivered",
-    payment: "paid", shippingMethod: "順豐站自取", shippingAddress: "沙田新城市廣場3期2樓\n張美玲\n+852 7333 4455",
+    payment: "paid", paymentMethod: "八達通", shippingMethod: "順豐站自取",
+    shippingAddress: "沙田新城市廣場3期2樓\n張美玲\n+852 7333 4455",
     trackingNumber: "SF0987654321",
     items: [
-      { name: "東京抹茶禮盒", qty: 3, price: 298, image: "🍵" },
+      { name: "東京抹茶禮盒", qty: 3, price: 298, productCode: "TKY-0001" },
     ],
   },
 ];
@@ -41,13 +43,19 @@ const STATUS_MAP: Record<string, { label: string; color: string }> = {
   cancelled: { label: "已取消", color: "bg-red-100 text-red-700" },
 };
 
+const PAYMENT_METHOD_LABELS: Record<string, string> = {
+  FPS: "FPS 轉數快", Alipay: "Alipay 支付寶", WeChat: "WeChat Pay",
+  八達通: "八達通", PayMe: "PayMe",
+};
+
 function OrderCard({ order }: { order: typeof ORDERS[0] }) {
   const [expanded, setExpanded] = useState(false);
   const status = STATUS_MAP[order.status] || { label: order.status, color: "bg-gray-100" };
+  const isShipped = order.status === "shipped" || order.status === "delivered";
 
   return (
     <div className="rounded-xl border border-border/60 overflow-hidden">
-      {/* Header */}
+      {/* Header - collapsed view */}
       <button onClick={() => setExpanded(!expanded)} className="w-full text-left p-5 hover:bg-secondary/10 transition-colors">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
@@ -70,11 +78,19 @@ function OrderCard({ order }: { order: typeof ORDERS[0] }) {
         {/* Product summary */}
         <div className="mt-3 flex flex-wrap gap-2">
           {order.items.map((item) => (
-            <span key={item.name} className="flex items-center gap-1 rounded-full bg-secondary/50 px-3 py-1 text-xs text-muted-foreground">
-              {item.image} {item.name} x{item.qty}
+            <span key={item.name} className="rounded-full bg-secondary/50 px-3 py-1 text-xs text-muted-foreground">
+              {item.name} x{item.qty}
             </span>
           ))}
         </div>
+
+        {/* Tracking number in collapsed view (if shipped) */}
+        {isShipped && order.trackingNumber && (
+          <div className="mt-2 flex items-center gap-2 text-xs text-primary">
+            <Truck className="h-3 w-3" />
+            <span>運單：{order.trackingNumber}</span>
+          </div>
+        )}
 
         {/* Expand indicator */}
         <div className="flex items-center justify-center mt-3 text-xs text-muted-foreground">
@@ -88,13 +104,13 @@ function OrderCard({ order }: { order: typeof ORDERS[0] }) {
           {/* Items detail */}
           <div className="px-5 py-4">
             <p className="text-xs font-medium text-muted-foreground mb-3">商品明細</p>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {order.items.map((item) => (
                 <div key={item.name} className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">{item.image}</span>
+                  <div>
                     <span className="text-sm">{item.name}</span>
-                    <span className="text-xs text-muted-foreground">x{item.qty}</span>
+                    <span className="text-xs text-muted-foreground"> x{item.qty}</span>
+                    <p className="text-[10px] text-muted-foreground/60 mt-0.5">{item.productCode}</p>
                   </div>
                   <span className="text-sm font-medium">${(item.price * item.qty).toLocaleString()}</span>
                 </div>
@@ -104,6 +120,14 @@ function OrderCard({ order }: { order: typeof ORDERS[0] }) {
                 <span className="font-heading font-bold">${order.total.toLocaleString()}</span>
               </div>
             </div>
+          </div>
+
+          {/* Payment method */}
+          <div className="px-5 py-4">
+            <p className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">
+              <CreditCard className="h-3 w-3" /> 付款方式
+            </p>
+            <p className="text-sm">{PAYMENT_METHOD_LABELS[order.paymentMethod] || order.paymentMethod}</p>
           </div>
 
           {/* Shipping address */}

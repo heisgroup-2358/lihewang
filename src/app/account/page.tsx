@@ -10,14 +10,15 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 const RECENT_ORDERS = [
-  { id: "ORD-20250622-1024", date: "2025-06-22", total: 1878, status: "已付款", items: 3 },
-  { id: "ORD-20250615-0891", date: "2025-06-15", total: 458, status: "已發貨", items: 1 },
+  { id: "ORD-20250622-1024", date: "2025-06-22", total: 1878, status: "已發貨", items: 3 },
+  { id: "ORD-20250615-0891", date: "2025-06-15", total: 458, status: "待處理", items: 1 },
   { id: "ORD-20250610-0567", date: "2025-06-10", total: 894, status: "已完成", items: 2 },
 ];
 
 const STATUS_COLORS: Record<string, string> = {
+  "待處理": "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400",
   "已付款": "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
-  "已發貨": "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400",
+  "已發貨": "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
   "已完成": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
 };
 
@@ -75,8 +76,9 @@ export default function AccountPage() {
 
         <div className="divide-y divide-border/60">
           {RECENT_ORDERS.map((order) => (
-            <div
+            <Link
               key={order.id}
+              href="/account/orders"
               className="flex items-center justify-between px-6 py-4 transition-colors hover:bg-secondary/20"
             >
               <div className="flex items-center gap-4">
@@ -97,7 +99,7 @@ export default function AccountPage() {
                 </span>
                 <ChevronRight className="h-4 w-4 text-muted-foreground" />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
