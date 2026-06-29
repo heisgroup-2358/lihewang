@@ -80,12 +80,20 @@ function DataSection({ apiPath, fields, newForm }: {
   const update = async (id: string, data: Record<string, string>): Promise<boolean> => {
     const res = await fetch(`${apiPath}/${id}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
     if (res.ok) { load(); return true; }
+    const err = await res.json().catch(() => ({}));
+    alert(err.error || "更新失敗");
     return false;
   };
 
-  const remove = (id: string) => {
+  const remove = async (id: string) => {
     if (!confirm("確定刪除？")) return;
-    fetch(`${apiPath}/${id}`, { method: "DELETE" }).then(() => load());
+    const res = await fetch(`${apiPath}/${id}`, { method: "DELETE" });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      alert(err.error || "刪除失敗");
+      return;
+    }
+    load();
   };
 
   return (
