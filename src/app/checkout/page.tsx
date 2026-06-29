@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ChevronRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,14 @@ export default function CheckoutPage() {
   const [email, setEmail] = useState("");
   const [shippingMethod, setShippingMethod] = useState("順豐站自取");
   const [paymentMethod, setPaymentMethod] = useState("Fps");
+  const [savedAddresses, setSavedAddresses] = useState<Record<string, string>[]>([]);
+  const [useSavedAddress, setUseSavedAddress] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/profile").then((r) => r.json()).then((d) => {
+      if (d.addresses) setSavedAddresses(d.addresses);
+    });
+  }, []);
 
   const PAYMENT_METHODS = [
     { id: "Fps", label: "FPS 轉數快", icon: "💳" },
@@ -103,6 +111,31 @@ export default function CheckoutPage() {
 
       <div className="grid gap-10 lg:grid-cols-5">
         <div className="lg:col-span-3 space-y-8">
+          <div className="mb-6">
+            <label className="flex items-center gap-2 text-sm mb-4">
+              <input type="checkbox" checked={useSavedAddress} onChange={(e) => setUseSavedAddress(e.target.checked)} />
+              使用已儲存地址
+            </label>
+
+            {useSavedAddress && savedAddresses.length > 0 && (
+              <select value="" onChange={(e) => {
+                const addr = savedAddresses.find((a) => a.id === e.target.value);
+                if (addr) {
+                  setName(addr.name);
+                  setPhone(addr.phone);
+                  setDistrict(addr.district);
+                  setAddress(addr.detail);
+                }
+              }}
+              className="w-full rounded-full border border-border h-11 px-5 text-sm bg-background">
+                <option value="">選擇地址</option>
+                {savedAddresses.map((a: Record<string, string>) => (
+                  <option key={a.id} value={a.id}>{a.label} — {a.detail}</option>
+                ))}
+              </select>
+            )}
+          </div>
+
           <section>
             <h2 className="font-heading text-xl font-bold mb-4">送貨地址</h2>
             <div className="grid gap-4 sm:grid-cols-2">
