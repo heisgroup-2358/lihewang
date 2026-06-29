@@ -16,7 +16,7 @@ export async function GET(req: Request) {
 
   if (!q || q.length < 1) return NextResponse.json([]);
 
-  let sources: { code: string; name: string; area: string; district: string; address: string; type: string }[] = [];
+  let sources: { code: string; name: string; area: string; district: string; address: string; addressEn?: string; type: string }[] = [];
 
   if (type === "all") {
     sources = [...ALL_DATA.store, ...ALL_DATA.partner, ...ALL_DATA.locker];
