@@ -9,15 +9,13 @@ function getJwtSecret(): Uint8Array {
 }
 
 const protectedRoutes = ["/wholesale", "/api/orders", "/api/cart", "/api/withdrawals"];
-const adminRoutes = ["/admin"];
 
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   const isProtected = protectedRoutes.some((r) => pathname.startsWith(r));
-  const isAdmin = adminRoutes.some((r) => pathname.startsWith(r));
 
-  if (!isProtected && !isAdmin) {
+  if (!isProtected) {
     return NextResponse.next();
   }
 
@@ -28,12 +26,6 @@ export async function middleware(req: NextRequest) {
 
   try {
     const { payload } = await jwtVerify(token, getJwtSecret());
-    if (isAdmin) {
-      const role = payload.role as string;
-      if (!role.startsWith("wholesale") && role !== "admin") {
-        return NextResponse.redirect(new URL("/", req.url));
-      }
-    }
     return NextResponse.next();
   } catch {
     return NextResponse.redirect(new URL("/auth/login", req.url));
@@ -41,5 +33,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/wholesale/:path*", "/api/orders", "/api/cart", "/api/withdrawals"],
+  matcher: ["/wholesale/:path*", "/api/orders", "/api/cart", "/api/withdrawals"],
 };
